@@ -16,6 +16,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var viewWaitFitre: UIView!
     @IBOutlet weak var tblPieces: UITableView!
+
     
     var arrFiltre: Array<CKRecord> = []
     var choixContrats : Array<CKRecord> = []

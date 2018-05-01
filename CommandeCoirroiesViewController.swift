@@ -189,7 +189,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
          let theLabelContrat : UILabel  = self.view.viewWithTag(3) as! UILabel
          let theLabelInstal : UILabel  = self.view.viewWithTag(4) as! UILabel
          let theLabelBati : UILabel  = self.view.viewWithTag(5) as! UILabel
-        
+         let quantiteCourroies : UILabel  = self.view.viewWithTag(6) as! UILabel
         
         
         if arrCourroies.count == 0 {
@@ -208,6 +208,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
             theLabelContrat.text = listecourroies["nomContrat"] as? String
             theLabelInstal.text = listecourroies["nomInstal"] as? String
             theLabelBati.text = listecourroies["nomBati"] as? String
+            quantiteCourroies.text = listecourroies["quantite"] as? String
 
            // cell.detailTextLabel?.text = listecourroies["type"] as? String
             

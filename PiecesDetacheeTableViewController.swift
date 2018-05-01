@@ -59,27 +59,20 @@ class PiecesDetacheeTableViewController: UITableViewController,UIPickerViewDeleg
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         let listePieces = choixContrats[row]
-       selectButton.setTitle((listePieces["content"] as? String), for: .normal)
+        selectButton.setTitle((listePieces["content"] as? String), for: .normal)
         texFieldContrat.text = (listePieces["content"] as? String)
-           pickerView.isHidden = true
+        pickerView.isHidden = false
         fetchNotes()
  }
-    
-    
-    
-    
-    
-    
-    
+
         
      //   MARK: - LIFE VIEW
 override func viewDidLoad() {
-            super.viewDidLoad()
     
+    super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
-    
-         pickerView.isHidden = true
+        pickerView.isHidden = true
          // texFieldContrat.inputView = pickerView
         //  texFieldContrat.placeholder = "Selecte Contrat"
             /*
@@ -91,9 +84,6 @@ override func viewDidLoad() {
             */
            ContratData ()
     
-            
-            
-            // Do any additional setup after loading the view.
         }
         
 override func didReceiveMemoryWarning() {
@@ -108,14 +98,10 @@ override func didReceiveMemoryWarning() {
     {
         self.viewWait.isHidden = false
         view.bringSubview(toFront: viewWait)
-        
         choixContrats = [CKRecord]()
-       
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let privateData = monContainaire.privateCloudDatabase
-  
         //  let customZone = CKRecordZone(zoneName: "Contrats")
-        
         let query = CKQuery(recordType: "Contrats",
                             predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
         

@@ -416,7 +416,7 @@ numberOfRowsInComponent:(NSInteger)component
      [addconsomable setObject:_typeDeGaz.text forKey:@"typeGaz"];
      [addconsomable setObject:_dateControl.date forKey:@"date"];
      [addconsomable setObject:_labelQ.text forKey:@"quantite"];
-     [addconsomable setObject:@"En stock" forKey:@"Etat"];
+     [addconsomable setObject:@"en Stock" forKey:@"Etat"];
      [addconsomable setObject:@0 forKey:@"EtatComande"];
      
 ////////////////SAUVEGARDE //////////////////////

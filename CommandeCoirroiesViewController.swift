@@ -199,24 +199,32 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
         let listecourroies = arrCourroies[(indexPath as NSIndexPath).row]
         
         
-        if let typecourroies = listecourroies["dimention"] as? String{
-        //let taillecoirroies = listecourroies["type"] as? String
-            
-            
-            theLabeldim.text = typecourroies
-             theLabeltype.text = listecourroies["type"] as? String
+         //let typecourroies = listecourroies["dimention"] as? String{
+       
+            theLabeldim.text = listecourroies["dimention"] as? String
+            theLabeltype.text = listecourroies["type"] as? String
             theLabelContrat.text = listecourroies["nomContrat"] as? String
             theLabelInstal.text = listecourroies["nomInstal"] as? String
             theLabelBati.text = listecourroies["nomBati"] as? String
             quantiteCourroies.text = listecourroies["quantite"] as? String
-
-           // cell.detailTextLabel?.text = listecourroies["type"] as? String
+           
+            
+            if ((listecourroies.value(forKeyPath: "EtatComande") as? integer_t) != 1)
+                
+            {
+                switchDemo.setOn(false, animated: true)
+                
+            }
+                
+            else
+            {
+                switchDemo .setOn(true, animated: true)
+            }
             
             
+            return cell
         }
-        
-        return cell
-    }
+    
  
     
     @objc func switchCommande(_ sender: UISwitch)
@@ -277,7 +285,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
             
             publicDB.save(switchAction, completionHandler: { (record, error) -> Void in
                 
-                
+               
                 
                 if (error != nil) {
                     print("error switch en stock")
@@ -289,8 +297,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
                     // print(self.arrNotes)
                     // self.fetchNotes()
                     // self.tblPieces.reloadData()
-                    
-                    self.alertReception()
+                     self.alertReception()
                 })
             })
             

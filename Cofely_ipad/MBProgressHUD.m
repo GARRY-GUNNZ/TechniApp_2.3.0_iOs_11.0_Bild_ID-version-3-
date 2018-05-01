@@ -350,7 +350,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 			self.transform = CGAffineTransformConcat(rotationTransform, CGAffineTransformMakeScale(0.5f, 0.5f));
 		}
 
-		self.alpha = 0.02f;
+		 self.alpha = 0.02f;
 		[UIView commitAnimations];
 	}
 	else {

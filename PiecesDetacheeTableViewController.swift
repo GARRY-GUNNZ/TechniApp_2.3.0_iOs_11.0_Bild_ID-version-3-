@@ -129,7 +129,7 @@ override func didReceiveMemoryWarning() {
 override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Commande des Pièces détachées"
     }
-    
+    /*
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
@@ -140,7 +140,7 @@ override func tableView(_ tableView: UITableView, titleForHeaderInSection sectio
            // cell.layer.transform = CATransform3DIdentity
         }
     }
-    
+    */
     override func numberOfSections(in tableView: UITableView) -> Int {
             
             return 1
@@ -187,7 +187,8 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
             let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MMMM dd, yyyy, hh:mm"
                 theLabelDate.text = dateFormatter.string(from: listePieces.value(forKey: "noteEditedDate") as! Date)
-            let imageAsset: CKAsset = listePieces.value(forKey: "noteImage") as! CKAsset
+    
+    let imageAsset: CKAsset = listePieces.value(forKey: "noteImage") as! CKAsset
                 imageView.image = UIImage(contentsOfFile: imageAsset.fileURL.path)
                 imageView.contentMode = UIViewContentMode.scaleAspectFit
                 theLabelTitre.text = listePieces["noteTitle"] as? String

@@ -194,13 +194,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         let theLabelEpaisseur : UILabel  = self.view.viewWithTag(8) as! UILabel
         let theLabelQuantite : UILabel  = self.view.viewWithTag(9) as! UILabel
        // let textview : UITextView  = self.view.viewWithTag(8) as! UITextView
-        
-        
-        
-        
-        
-        
-        
+       
         let listePieces = arrFiltre[(indexPath as NSIndexPath).row]
         
        
@@ -217,77 +211,24 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         
         
-        
-        //  ====================AVATAR PIECES BUG ===========================================
-        //cell.detailTextLabel?.text = listecourroies["type"] as? String
-        // let imageAsset: CKAsset = listePieces.value(forKey: "noteImage") as! CKAsset
-        // image.image = UIImage(contentsOfFile: imageAsset.fileURL.path)
-        //image.contentMode = UIViewContentMode.scaleAspectFit
-        
-        //  ==============================================================
-        
-        
-        
-        
-        /*
-        
-        if (listePieces.value(forKey: "EtatComande") as! Bool) {
+        if ((listePieces.value(forKeyPath: "EtatComande") as? integer_t) != 1)
             
-            
-            switchDemo.isOn = true
-            print(switchDemo.isOn)
-            print("on")
+        {
+            switchDemo.setOn(false, animated: true)
             
         }
-        
-        */
-        
-        
-        
-        
-        
-        /*
-         else
-         {
-         // switchDemo.isOn = false
-         print(switchDemo.isOn)
-         print("off")
-         
-         }
-         */
-        
-        
-        
-        
-        
-        
+            
+        else
+        {
+            switchDemo .setOn(true, animated: true)
+        }
         
         
         return cell
     }
     
     
-    /////////  ///// Action Boutton/////////////////////////////////////
-    /*
-     func switchCommande(_ sender: UISwitch)
-     {
-     
-     
-     if (sender.isOn == true)
-     {
-     print("on")
-     }
-     else
-     {
-     print("off")
-     
-     }
-     
-     
-     }
-     */
-    
-    //////////////////////////////////////////////////////////////
+
     
     @objc func switchCommande(_ sender: UISwitch)
     {
@@ -296,7 +237,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         
         
         
-        if (sender.isOn == false){
+        if (sender.isOn == true){
             
             print(sender.tag)
             
@@ -328,6 +269,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
                     // self.fetchNotes()
                     //self.tblPieces.reloadData()
                     
+                    
                 })
             })
         }
@@ -358,7 +300,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
                     // self.fetchNotes()
                     // self.tblPieces.reloadData()
                     
-                    self.alertReceptionFiltres()
+                     self.alertReceptionFiltres()
                 })
             })
             
@@ -398,36 +340,16 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         
         view.bringSubview(toFront: viewWaitFitre)
         
- 
-        
-        
-        
         let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let publicDatabase = container.publicCloudDatabase
-        //let predicate = NSPredicate(value: true)
-        
         let number = "A commander"
-         let cont = texFieldContrat!.text
-        // print(number)
-        // let predicate = NSPredicate (format: "(nomBati == %@) AND (nomInstal == %@)",batiLabel.text!,instalLabel.text!)
-        
-        // (arrNotes as NSArray).filteredArrayUsingPredicate(<#T##predicate: NSPredicate##NSPredicate#>)
-        
-        // let predicate = NSPredicate (format: "nomBati == %@ ",nomBatisegu )
-        
-        // NSPredicate predicate = nil;
-        
-         let predicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",number,cont!)
-        //let predicate = NSPredicate (format: "Etat == %@ ",number)
-        
-        
-        let query = CKQuery(recordType: "Filtres", predicate: predicate)
+        let cont = texFieldContrat!.text
+        let flitrePredicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",number,cont!)
+        let query = CKQuery(recordType: "Filtres", predicate: flitrePredicate)
         
        
         query.sortDescriptors = [NSSortDescriptor(key: "nomBati", ascending: true)]
   
-        
-        
         
         publicDatabase.perform(query, inZoneWith: nil) { (results, error) -> Void in
             

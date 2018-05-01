@@ -10,29 +10,116 @@ import UIKit
 import CloudKit
 
 
-class CommandeCoirroiesViewController: UITableViewController {
+class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
-       // MARK: - OUTLET
+    //   MARK: - OUTLET
+   
+    @IBOutlet weak var texFieldContrat: UITextField!
+    @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var viewWaitCourroies: UIView!
     
     @IBOutlet weak var tblCourroies: UITableView!
     
        // MARK: - VARRIABLE
+     var choixContrats : Array<CKRecord> = []
+     var arrCourroies: Array<CKRecord> = []
+     var refresh:UIRefreshControl!
     
-    var arrCourroies: Array<CKRecord> = []
-    var refresh:UIRefreshControl!
+    
+    //   MARK: Action Picker
+    @IBAction func selectPressed(_ sender: UIButton) {
+        pickerView.isHidden = false
+        
+    }
+    //   MARK: DataSource - Picker
+    
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return choixContrats.count
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        
+        
+        
+        let listePieces = choixContrats[row]
+        return (listePieces["content"] as? String)
+        
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let listePieces = choixContrats[row]
+        selectButton.setTitle((listePieces["content"] as? String), for: .normal)
+        texFieldContrat.text = (listePieces["content"] as? String)
+        pickerView.isHidden = false
+       
+        fetchNotes()
+    }
+    
+    
+    //   MARK: Fetch Contrats
+    
+    
+    @objc func ContratData ()
+    {
+        self.viewWaitCourroies.isHidden = false
+        view.bringSubview(toFront: viewWaitCourroies)
+        choixContrats = [CKRecord]()
+        let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+        let privateData = monContainaire.privateCloudDatabase
+        //  let customZone = CKRecordZone(zoneName: "Contrats")
+        let query = CKQuery(recordType: "Contrats",
+                            predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        
+        query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
+        
+        privateData.perform(query, inZoneWith:nil) {
+            (results, error) -> Void in
+            
+            if let contratRecup = results {
+                self.choixContrats = contratRecup
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    
+                    // self.pickerView.reloadData()
+                    self.pickerView.reloadAllComponents()
+                    //self.refresh.endRefreshing()
+                    self.viewWaitCourroies.isHidden = true
+                })
+            }
+        }     }
+
+    
+    
     
     
   //   MARK: - LIFE VIEW
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.isHidden = true
+        
         /////  refresh button
-        refresh = UIRefreshControl()
-        refresh.attributedTitle = NSAttributedString(string: "Chargement Courroies")
-        refresh.addTarget(self, action:#selector(CommandeCoirroiesViewController.fetchNotes), for: .valueChanged)
-        self.tblCourroies.addSubview(refresh)
- 
-        fetchNotes()
+        //   refresh = UIRefreshControl()
+        //  refresh.attributedTitle = NSAttributedString(string: "Chargement les filtres à commander")
+        //   refresh.addTarget(self, action:#selector(CommandeFiltreTableViewController.fetchNotes), for: .valueChanged)
+        //  self.tblPieces.addSubview(refresh)
+        
+        
+        
+        ContratData()
 
     }
 
@@ -43,8 +130,8 @@ class CommandeCoirroiesViewController: UITableViewController {
     
     
     
-    //   MARK: - TABLEVIEW CUSTOMISATION
-    
+    //   MARK: - TABLEVIEW CUSTOMISATION animation
+    /*
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
@@ -55,6 +142,7 @@ class CommandeCoirroiesViewController: UITableViewController {
             cell.layer.transform = CATransform3DIdentity
         }
     }
+ */
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Commande des Courroies"
@@ -227,24 +315,22 @@ class CommandeCoirroiesViewController: UITableViewController {
     @objc func fetchNotes() {
         
         
-     
+        viewWaitCourroies.isHidden = false
+        
+        view.bringSubview(toFront: viewWaitCourroies)
         
         let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
-        
-    
-        
-        
         let publicDatabase = container.publicCloudDatabase
-        //let predicate = NSPredicate(value: true)
-        
+
         let etatCommande = "A commander"
-       
-      let predicat = NSPredicate (format: "Etat == %@ ", etatCommande)
+        let filtreContrat = texFieldContrat!.text
+        let fitreFetch = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",etatCommande,filtreContrat!)
+     
         
         
-       
-        
-        let query = CKQuery(recordType: "Courroies", predicate: predicat)
+       // let predicat = NSPredicate (format: "Etat == %@ ", etatCommande)
+      
+        let query = CKQuery(recordType: "Courroies", predicate: fitreFetch)
         
          query.sortDescriptors = [NSSortDescriptor(key: "nomBati", ascending: true)]
         
@@ -257,9 +343,10 @@ class CommandeCoirroiesViewController: UITableViewController {
                 DispatchQueue.main.async(execute: { () -> Void in
                     
                     self.tblCourroies.reloadData()
-                    self.refresh.endRefreshing()
+                   // self.refresh.endRefreshing()
                     
                     self.tblCourroies.isHidden = false
+                    self.viewWaitCourroies.isHidden = true
                 })
             }
         }

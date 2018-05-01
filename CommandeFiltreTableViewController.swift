@@ -8,30 +8,116 @@
 import CloudKit
 import UIKit
 
-class CommandeFiltreTableViewController: UITableViewController {
+class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     
-    //@IBOutlet weak var viewWait: UIView!
+    //   MARK: - OUTLET
+    @IBOutlet weak var texFieldContrat: UITextField!
+    @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var viewWaitFitre: UIView!
+    
     @IBOutlet weak var tblPieces: UITableView!
     
     var arrFiltre: Array<CKRecord> = []
-    
+    var choixContrats : Array<CKRecord> = []
     var refresh:UIRefreshControl!
     
+    
+    //   MARK: PICKERVIEW Methode
+    
+    
+    //   MARK: Action Picker
+    @IBAction func selectPressed(_ sender: UIButton) {
+        pickerView.isHidden = false
+        
+    }
+    //   MARK: DataSource - Picker
+    
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return choixContrats.count
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        
+        
+        
+        let listePieces = choixContrats[row]
+        return (listePieces["content"] as? String)
+        
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let listePieces = choixContrats[row]
+        selectButton.setTitle((listePieces["content"] as? String), for: .normal)
+        texFieldContrat.text = (listePieces["content"] as? String)
+        pickerView.isHidden = false
+        fetchNotes()
+    }
+    
+    
+    //   MARK: Fetch Contrats
+    
+    
+    @objc func ContratData ()
+    {
+        self.viewWaitFitre.isHidden = false
+        view.bringSubview(toFront: viewWaitFitre)
+        choixContrats = [CKRecord]()
+        let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+        let privateData = monContainaire.privateCloudDatabase
+        //  let customZone = CKRecordZone(zoneName: "Contrats")
+        let query = CKQuery(recordType: "Contrats",
+                            predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        
+        query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
+        
+        privateData.perform(query, inZoneWith:nil) {
+            (results, error) -> Void in
+            
+            if let contratRecup = results {
+                self.choixContrats = contratRecup
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    
+                    // self.pickerView.reloadData()
+                    self.pickerView.reloadAllComponents()
+                    //self.refresh.endRefreshing()
+                    self.viewWaitFitre.isHidden = true
+                })
+            }
+        }     }
+
+    
+    
+    //   MARK: LifeView
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.isHidden = true
         
-        
-         /////  refresh button
-         refresh = UIRefreshControl()
-         refresh.attributedTitle = NSAttributedString(string: "Chargement les filtres à commander")
-         refresh.addTarget(self, action:#selector(CommandeFiltreTableViewController.fetchNotes), for: .valueChanged)
-         self.tblPieces.addSubview(refresh)
+        /////  refresh button
+      //   refresh = UIRefreshControl()
+       //  refresh.attributedTitle = NSAttributedString(string: "Chargement les filtres à commander")
+      //   refresh.addTarget(self, action:#selector(CommandeFiltreTableViewController.fetchNotes), for: .valueChanged)
+       //  self.tblPieces.addSubview(refresh)
  
         
         
-        fetchNotes()
+        ContratData()
         
         
         // Do any additional setup after loading the view.
@@ -308,11 +394,12 @@ class CommandeFiltreTableViewController: UITableViewController {
     
     @objc func fetchNotes() {
         
-        /*
-        viewWait.isHidden = false
-        view.bringSubview(toFront: viewWait)
         
-        */
+        viewWaitFitre.isHidden = false
+        
+        view.bringSubview(toFront: viewWaitFitre)
+        
+ 
         
         
         
@@ -321,6 +408,7 @@ class CommandeFiltreTableViewController: UITableViewController {
         //let predicate = NSPredicate(value: true)
         
         let number = "A commander"
+         let cont = texFieldContrat!.text
         // print(number)
         // let predicate = NSPredicate (format: "(nomBati == %@) AND (nomInstal == %@)",batiLabel.text!,instalLabel.text!)
         
@@ -329,7 +417,9 @@ class CommandeFiltreTableViewController: UITableViewController {
         // let predicate = NSPredicate (format: "nomBati == %@ ",nomBatisegu )
         
         // NSPredicate predicate = nil;
-        let predicate = NSPredicate (format: "Etat == %@ ",number)
+        
+         let predicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",number,cont!)
+        //let predicate = NSPredicate (format: "Etat == %@ ",number)
         
         
         let query = CKQuery(recordType: "Filtres", predicate: predicate)
@@ -347,10 +437,10 @@ class CommandeFiltreTableViewController: UITableViewController {
                 DispatchQueue.main.async(execute: { () -> Void in
                     
                     self.tblPieces.reloadData()
-                     self.refresh.endRefreshing()
+                    // self.refresh.endRefreshing()
                     
                     self.tblPieces.isHidden = false
-                   // self.viewWait.isHidden = true
+                    self.viewWaitFitre.isHidden = true
                 })
             }
             else {

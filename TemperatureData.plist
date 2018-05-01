@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>f</key>
+		<string>60°C</string>
+		<key>c</key>
+		<string>80°C</string>
+		<key>g</key>
+		<string>-7°C</string>
+		<key>d</key>
+		<string>Very Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>58,4°C</string>
+		<key>c</key>
+		<string>77,6°C</string>
+		<key>g</key>
+		<string>-6°C</string>
+		<key>d</key>
+		<string>Very Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>56,8°C</string>
+		<key>c</key>
+		<string>75,2°C</string>
+		<key>g</key>
+		<string>-5°C</string>
+		<key>d</key>
+		<string>Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>55,2°C</string>
+		<key>c</key>
+		<string>72,8°C</string>
+		<key>g</key>
+		<string>-4°C</string>
+		<key>d</key>
+		<string>Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>53,6°C</string>
+		<key>c</key>
+		<string>70,4°C</string>
+		<key>g</key>
+		<string>-3°C</string>
+		<key>d</key>
+		<string>Moderate</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>52°C</string>
+		<key>c</key>
+		<string>68°C</string>
+		<key>g</key>
+		<string>-2°C</string>
+		<key>d</key>
+		<string>Moderate</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>50,4°C</string>
+		<key>c</key>
+		<string>65,6°C</string>
+		<key>g</key>
+		<string>-1°C</string>
+		<key>d</key>
+		<string>Moderately Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>48,8°C</string>
+		<key>c</key>
+		<string>63,2°C</string>
+		<key>g</key>
+		<string>0°C</string>
+		<key>d</key>
+		<string>Moderately Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>47,2°C</string>
+		<key>c</key>
+		<string>60,8°C</string>
+		<key>g</key>
+		<string>1°C</string>
+		<key>d</key>
+		<string>Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>45,6°C</string>
+		<key>c</key>
+		<string>58,4°C</string>
+		<key>g</key>
+		<string>2°C</string>
+		<key>d</key>
+		<string>Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>44°C</string>
+		<key>c</key>
+		<string>56°C</string>
+		<key>g</key>
+		<string>3°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>42,4°C</string>
+		<key>c</key>
+		<string>53,6°C</string>
+		<key>g</key>
+		<string>4°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>40,8°C</string>
+		<key>c</key>
+		<string>51,2°C</string>
+		<key>g</key>
+		<string>5°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>39,2°C</string>
+		<key>c</key>
+		<string>48,8°C</string>
+		<key>g</key>
+		<string>6°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>37,6°C</string>
+		<key>c</key>
+		<string>46,4°C</string>
+		<key>g</key>
+		<string>7°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>36°C</string>
+		<key>c</key>
+		<string>44°C</string>
+		<key>g</key>
+		<string>8°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>34,4°C</string>
+		<key>c</key>
+		<string>41,6°C</string>
+		<key>g</key>
+		<string>9°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>32,8°C</string>
+		<key>c</key>
+		<string>39,2°C</string>
+		<key>g</key>
+		<string>10°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>31,2°C</string>
+		<key>c</key>
+		<string>36,8°C</string>
+		<key>g</key>
+		<string>11°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>29,6°C</string>
+		<key>c</key>
+		<string>34,4°C</string>
+		<key>g</key>
+		<string>12°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>28°C</string>
+		<key>c</key>
+		<string>32°C</string>
+		<key>g</key>
+		<string>13°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>26,4°C</string>
+		<key>c</key>
+		<string>29,6°C</string>
+		<key>g</key>
+		<string>14°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>28°C</string>
+		<key>c</key>
+		<string>32°C</string>
+		<key>g</key>
+		<string>15°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>23,2°C</string>
+		<key>c</key>
+		<string>24,8°C</string>
+		<key>g</key>
+		<string>16°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>21,6°C</string>
+		<key>c</key>
+		<string>22,4°C</string>
+		<key>g</key>
+		<string>17°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>20°C</string>
+		<key>c</key>
+		<string>20°C</string>
+		<key>g</key>
+		<string>18°C</string>
+		<key>d</key>
+		<string>Very Hot</string>
+	</dict>
+</array>
+</plist>

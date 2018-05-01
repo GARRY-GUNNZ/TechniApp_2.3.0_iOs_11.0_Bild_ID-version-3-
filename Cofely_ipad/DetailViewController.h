@@ -7,10 +7,54 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CloudKit/CloudKit.h>
+@class Instalation;
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+
+@interface DetailViewController : UITableViewController
+
+<UISplitViewControllerDelegate,UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate,UIImagePickerControllerDelegate>
+{
+    //UILabel *eSwith;
+   UIImage *currentAvatar_;
+    NSMutableArray *consomableListe_;
+    NSMutableArray * infoInstal_;
+    NSArray         *consomable_;
+     //NSMutableArray *listeGaz_;
+    NSArray *filtre;
+  NSDateFormatter *sessionDateFormatter_;
+    NSString * contrat;
+}
+
+
+@property (weak, nonatomic) IBOutlet UILabel *contratLabel;
+
+@property(nonatomic,readonly) CKContainer *_container;
+@property(nonatomic,readonly) CKDatabase *_publicDB;
+@property (weak, nonatomic) IBOutlet UITableView *tableConso;
+@property (weak, nonatomic) IBOutlet UILabel *nominstal;
+//@property(nonatomic, readonly, copy) NSURL *fileUrl;
+@property (strong, nonatomic) CKRecord *Batiment;
+@property (nonatomic, strong) NSMutableArray *listeGaz_;
+@property (nonatomic, strong) NSArray *filtre;
+@property (nonatomic, strong) NSMutableArray *consomableListe_;
+@property (weak, nonatomic) IBOutlet UITextField *nomInstaltion;
+@property (nonatomic, strong) Instalation * instalation;
+@property (weak, nonatomic) IBOutlet UITableView *detailTable;
+@property (weak, nonatomic) IBOutlet UITextField *marqueTexfield;
+@property (weak, nonatomic) IBOutlet UITextField *referenceTexfield;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarInstal;
+
 
 @property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) id detailItembat;
+@property (assign) BOOL singleEdit;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+
+
+
+
+
+
 @end

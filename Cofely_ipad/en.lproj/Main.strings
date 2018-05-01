@@ -1,0 +1,552 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Ji-mU-DDH"; */
+"0Ji-mU-DDH.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "0Jx-Cg-9EK"; */
+"0Jx-Cg-9EK.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Jz-Ae-rZy"; */
+"0Jz-Ae-rZy.text" = "Label";
+
+/* Class = "UILabel"; text = "SPZ300"; ObjectID = "0bp-9y-3Qb"; */
+"0bp-9y-3Qb.text" = "SPZ300";
+
+/* Class = "UIBarButtonItem"; title = "Batiments"; ObjectID = "18B-f5-2DU"; */
+"18B-f5-2DU.title" = "Batiments";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Lf-U1-Ut4"; */
+"1Lf-U1-Ut4.text" = "Label";
+
+/* Class = "UILabel"; text = "T°Exterieur"; ObjectID = "1Mq-dm-28z"; */
+"1Mq-dm-28z.text" = "T°Exterieur";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1gV-9T-ncq"; */
+"1gV-9T-ncq.text" = "Label";
+
+/* Class = "UILabel"; text = "C07"; ObjectID = "1tW-GX-rLj"; */
+"1tW-GX-rLj.text" = "C07";
+
+/* Class = "UILabel"; text = "Vanne 4 voies "; ObjectID = "2A8-3S-iNA"; */
+"2A8-3S-iNA.text" = "Vanne 4 voies ";
+
+/* Class = "UITextField"; placeholder = "Marque Equipement"; ObjectID = "2BK-bV-2N4"; */
+"2BK-bV-2N4.placeholder" = "Marque Equipement";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2al-FT-wIk"; */
+"2al-FT-wIk.text" = "Label";
+
+/* Class = "UILabel"; text = "C80"; ObjectID = "2uy-zi-zLg"; */
+"2uy-zi-zLg.text" = "C80";
+
+/* Class = "UILabel"; text = "Réseau"; ObjectID = "34p-Du-FSe"; */
+"34p-Du-FSe.text" = "Réseau";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Tk-mk-uyR"; */
+"3Tk-mk-uyR.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Installations"; ObjectID = "4h3-zh-aJa"; */
+"4h3-zh-aJa.title" = "Installations";
+
+/* Class = "UIBarButtonItem"; title = "👤 Profil"; ObjectID = "5Ay-K5-h90"; */
+"5Ay-K5-h90.title" = "👤 Profil";
+
+/* Class = "UILabel"; text = "DJU (-7°C Ext)"; ObjectID = "5Yp-tD-it7"; */
+"5Yp-tD-it7.text" = "DJU (-7°C Ext)";
+
+/* Class = "UILabel"; text = "Réalisé"; ObjectID = "6CH-jk-8uI"; */
+"6CH-jk-8uI.text" = "Réalisé";
+
+/* Class = "UILabel"; text = "13/10/2015"; ObjectID = "6aV-D9-wFQ"; */
+"6aV-D9-wFQ.text" = "13/10/2015";
+
+/* Class = "UITextField"; text = "nombati"; ObjectID = "6j9-ag-FAo"; */
+"6j9-ag-FAo.text" = "nombati";
+
+/* Class = "UILabel"; text = "Nova 1 "; ObjectID = "6lJ-ki-1BT"; */
+"6lJ-ki-1BT.text" = "Nova 1 ";
+
+/* Class = "UIBarButtonItem"; title = "Instalation"; ObjectID = "7je-m2-Xdg"; */
+"7je-m2-Xdg.title" = "Instalation";
+
+/* Class = "UILabel"; text = "Nom "; ObjectID = "7zX-NE-LUv"; */
+"7zX-NE-LUv.text" = "Nom ";
+
+/* Class = "UILabel"; text = "Nova 4"; ObjectID = "8Ok-W5-cq1"; */
+"8Ok-W5-cq1.text" = "Nova 4";
+
+/* Class = "UITextField"; placeholder = "Saisir nom Equipement"; ObjectID = "8oY-5Z-Mt3"; */
+"8oY-5Z-Mt3.placeholder" = "Saisir nom Equipement";
+
+/* Class = "UISegmentedControl"; 9gw-TX-Qe6.segmentTitles[0] = "Contôle Réalisé"; ObjectID = "9gw-TX-Qe6"; */
+"9gw-TX-Qe6.segmentTitles[0]" = "Contôle Réalisé";
+
+/* Class = "UISegmentedControl"; 9gw-TX-Qe6.segmentTitles[1] = "Contrôle à faire"; ObjectID = "9gw-TX-Qe6"; */
+"9gw-TX-Qe6.segmentTitles[1]" = "Contrôle à faire";
+
+/* Class = "UITableViewSection"; footerTitle = "Design by KERCKWEB"; ObjectID = "9yn-sK-e2A"; */
+"9yn-sK-e2A.footerTitle" = "Design by KERCKWEB";
+
+/* Class = "UITableViewSection"; headerTitle = "💡 Aide"; ObjectID = "9yn-sK-e2A"; */
+"9yn-sK-e2A.headerTitle" = "💡 Aide";
+
+/* Class = "UINavigationItem"; title = "Traitement d'eau"; ObjectID = "AG6-vx-IuU"; */
+"AG6-vx-IuU.title" = "Traitement d'eau";
+
+/* Class = "UITableViewController"; title = "Master"; ObjectID = "AOM-nL-8h1"; */
+"AOM-nL-8h1.title" = "Master";
+
+/* Class = "UILabel"; text = "Synthèse des Filtres - Site MMA"; ObjectID = "BBt-FX-nBR"; */
+"BBt-FX-nBR.text" = "Synthèse des Filtres - Site MMA";
+
+/* Class = "UILabel"; text = "A Commander"; ObjectID = "Btp-Z8-zMs"; */
+"Btp-Z8-zMs.text" = "A Commander";
+
+/* Class = "UIButton"; normalTitle = "Ajouter Photos"; ObjectID = "Bvr-Dy-Gwe"; */
+"Bvr-Dy-Gwe.normalTitle" = "Ajouter Photos";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CZd-2P-o5Y"; */
+"CZd-2P-o5Y.text" = "Label";
+
+/* Class = "UILabel"; text = "🔩"; ObjectID = "ChY-Fp-m9e"; */
+"ChY-Fp-m9e.text" = "🔩";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cud-AB-4cR"; */
+"Cud-AB-4cR.text" = "Label";
+
+/* Class = "UILabel"; text = "Ventilo-convecteurs"; ObjectID = "DJT-2Z-FjZ"; */
+"DJT-2Z-FjZ.text" = "Ventilo-convecteurs";
+
+/* Class = "UILabel"; text = "Carrier"; ObjectID = "DmU-ov-p87"; */
+"DmU-ov-p87.text" = "Carrier";
+
+/* Class = "UILabel"; text = "Ajouter Consomable"; ObjectID = "ELe-At-f0B"; */
+"ELe-At-f0B.text" = "Ajouter Consomable";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EZF-fD-fpB"; */
+"EZF-fD-fpB.text" = "Label";
+
+/* Class = "UILabel"; text = "Filtres"; ObjectID = "Eb4-nT-Gdd"; */
+"Eb4-nT-Gdd.text" = "Filtres";
+
+/* Class = "UINavigationItem"; title = "Batiments"; ObjectID = "Egn-V5-uwV"; */
+"Egn-V5-uwV.title" = "Batiments";
+
+/* Class = "UILabel"; text = "CTA"; ObjectID = "FZE-PC-xam"; */
+"FZE-PC-xam.text" = "CTA";
+
+/* Class = "UISegmentedControl"; GHy-2X-oB3.segmentTitles[0] = "Filtres à Commander"; ObjectID = "GHy-2X-oB3"; */
+"GHy-2X-oB3.segmentTitles[0]" = "Filtres à Commander";
+
+/* Class = "UISegmentedControl"; GHy-2X-oB3.segmentTitles[1] = "Filtres en Stock"; ObjectID = "GHy-2X-oB3"; */
+"GHy-2X-oB3.segmentTitles[1]" = "Filtres en Stock";
+
+/* Class = "UITableViewSection"; headerTitle = "👤 Profil"; ObjectID = "GQv-AW-OM8"; */
+"GQv-AW-OM8.headerTitle" = "👤 Profil";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "H9Z-vZ-rb2"; */
+"H9Z-vZ-rb2.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "Nom du Batiment"; ObjectID = "HOx-zD-blf"; */
+"HOx-zD-blf.text" = "Nom du Batiment";
+
+/* Class = "UIButton"; normalTitle = "Annuler"; ObjectID = "I9H-7S-Jmf"; */
+"I9H-7S-Jmf.normalTitle" = "Annuler";
+
+/* Class = "UILabel"; text = "Accéder à la Documentations "; ObjectID = "IDI-03-pCZ"; */
+"IDI-03-pCZ.text" = "Accéder à la Documentations ";
+
+/* Class = "UILabel"; text = "R 410A / 30Kg"; ObjectID = "IGI-0n-mlT"; */
+"IGI-0n-mlT.text" = "R 410A / 30Kg";
+
+/* Class = "UILabel"; text = "Contrôle d'Etancheité"; ObjectID = "IGV-ju-xwB"; */
+"IGV-ju-xwB.text" = "Contrôle d'Etancheité";
+
+/* Class = "UILabel"; text = "Gaz"; ObjectID = "IOf-qV-LmB"; */
+"IOf-qV-LmB.text" = "Gaz";
+
+/* Class = "UIBarButtonItem"; title = "🌍 Blog TechniApp"; ObjectID = "JCq-9N-PCt"; */
+"JCq-9N-PCt.title" = "🌍 Blog TechniApp";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "JZM-px-DNt"; */
+"JZM-px-DNt.text" = "X";
+
+/* Class = "UILabel"; text = "App"; ObjectID = "JkJ-I1-WKV"; */
+"JkJ-I1-WKV.text" = "App";
+
+/* Class = "UIButton"; normalTitle = "Type de Filtres"; ObjectID = "Jlc-gk-5bN"; */
+"Jlc-gk-5bN.normalTitle" = "Type de Filtres";
+
+/* Class = "UILabel"; text = "30 déc.2015"; ObjectID = "JuL-AM-s9a"; */
+"JuL-AM-s9a.text" = "30 déc.2015";
+
+/* Class = "UILabel"; text = "Reprise"; ObjectID = "Jy7-Hg-njN"; */
+"Jy7-Hg-njN.text" = "Reprise";
+
+/* Class = "UILabel"; text = "Climatiseurs Autonome Salle UC"; ObjectID = "KFx-ec-8zu"; */
+"KFx-ec-8zu.text" = "Climatiseurs Autonome Salle UC";
+
+/* Class = "UILabel"; text = "Reference"; ObjectID = "KR5-SZ-uS9"; */
+"KR5-SZ-uS9.text" = "Reference";
+
+/* Class = "UILabel"; text = "Nova 6"; ObjectID = "L3b-ar-Em6"; */
+"L3b-ar-Em6.text" = "Nova 6";
+
+/* Class = "UILabel"; text = "20000"; ObjectID = "L5D-Lx-fRV"; */
+"L5D-Lx-fRV.text" = "20000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LDW-px-PSi"; */
+"LDW-px-PSi.text" = "Label";
+
+/* Class = "UILabel"; text = "Contrat : MMA"; ObjectID = "Lb7-WN-xMi"; */
+"Lb7-WN-xMi.text" = "Contrat : MMA";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "LeT-7T-dEd"; */
+"LeT-7T-dEd.text" = "100";
+
+/* Class = "UINavigationItem"; title = "Blog TechniApp"; ObjectID = "LtP-QF-md1"; */
+"LtP-QF-md1.title" = "Blog TechniApp";
+
+/* Class = "UIButton"; normalTitle = "Ajouter"; ObjectID = "M2y-PJ-msX"; */
+"M2y-PJ-msX.normalTitle" = "Ajouter";
+
+/* Class = "UIBarButtonItem"; title = "Menu"; ObjectID = "Mb3-hw-dQs"; */
+"Mb3-hw-dQs.title" = "Menu";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MvE-pi-l3m"; */
+"MvE-pi-l3m.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NN0-c0-lOd"; */
+"NN0-c0-lOd.text" = "Label";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "OIm-x6-pfH"; */
+"OIm-x6-pfH.text" = "0";
+
+/* Class = "UILabel"; text = "CARRIER"; ObjectID = "OQS-5Q-c3f"; */
+"OQS-5Q-c3f.text" = "CARRIER";
+
+/* Class = "UILabel"; text = "Contrats"; ObjectID = "Oho-8V-zeT"; */
+"Oho-8V-zeT.text" = "Contrats";
+
+/* Class = "UILabel"; text = "Synthèse Gaz - Site MMA"; ObjectID = "QOT-Hy-vlW"; */
+"QOT-Hy-vlW.text" = "Synthèse Gaz - Site MMA";
+
+/* Class = "UILabel"; text = "Contrat MMA Le Mans"; ObjectID = "QSw-GY-oZH"; */
+"QSw-GY-oZH.text" = "Contrat MMA Le Mans";
+
+/* Class = "UILabel"; text = "Liste des Pièces Détachées à Commander"; ObjectID = "Qja-Rz-fZX"; */
+"Qja-Rz-fZX.text" = "Liste des Pièces Détachées à Commander";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Qs9-ks-OAE"; */
+"Qs9-ks-OAE.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Note Title"; ObjectID = "QsP-1u-mSU"; */
+"QsP-1u-mSU.placeholder" = "Note Title";
+
+/* Class = "UILabel"; text = "Numéro de Contrat:"; ObjectID = "R59-Nx-jRB"; */
+"R59-Nx-jRB.text" = "Numéro de Contrat:";
+
+/* Class = "UITextField"; text = "nom instal"; ObjectID = "R8u-LZ-bf1"; */
+"R8u-LZ-bf1.text" = "nom instal";
+
+/* Class = "UIBarButtonItem"; title = "Details instalations"; ObjectID = "RKP-9z-Kzv"; */
+"RKP-9z-Kzv.title" = "Details instalations";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SNO-uB-YOy"; */
+"SNO-uB-YOy.text" = "Label";
+
+/* Class = "UILabel"; text = "GoogleDrive"; ObjectID = "SnT-VL-WyZ"; */
+"SnT-VL-WyZ.text" = "GoogleDrive";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T1u-Fm-yVG"; */
+"T1u-Fm-yVG.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Doc Technique"; ObjectID = "T7A-KB-PNG"; */
+"T7A-KB-PNG.title" = "Doc Technique";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TFY-mA-LCv"; */
+"TFY-mA-LCv.text" = "Label";
+
+/* Class = "UISegmentedControl"; TRG-di-9bV.segmentTitles[0] = "Gaz"; ObjectID = "TRG-di-9bV"; */
+"TRG-di-9bV.segmentTitles[0]" = "Gaz";
+
+/* Class = "UISegmentedControl"; TRG-di-9bV.segmentTitles[1] = "Filtres"; ObjectID = "TRG-di-9bV"; */
+"TRG-di-9bV.segmentTitles[1]" = "Filtres";
+
+/* Class = "UISegmentedControl"; TRG-di-9bV.segmentTitles[2] = "Courroies"; ObjectID = "TRG-di-9bV"; */
+"TRG-di-9bV.segmentTitles[2]" = "Courroies";
+
+/* Class = "UISegmentedControl"; TRG-di-9bV.segmentTitles[3] = "Pièces"; ObjectID = "TRG-di-9bV"; */
+"TRG-di-9bV.segmentTitles[3]" = "Pièces";
+
+/* Class = "UILabel"; text = "PAC 30XA "; ObjectID = "TTL-sy-CZC"; */
+"TTL-sy-CZC.text" = "PAC 30XA ";
+
+/* Class = "UIButton"; normalTitle = "Photos Filtres"; ObjectID = "U5b-dV-FAM"; */
+"U5b-dV-FAM.normalTitle" = "Photos Filtres";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "U8a-MS-ig9"; */
+"U8a-MS-ig9.text" = "Label";
+
+/* Class = "UILabel"; text = "Novaxis 6"; ObjectID = "UaQ-TU-EWY"; */
+"UaQ-TU-EWY.text" = "Novaxis 6";
+
+/* Class = "UITextField"; placeholder = "Nom Equipement"; ObjectID = "VvP-O6-cbe"; */
+"VvP-O6-cbe.placeholder" = "Nom Equipement";
+
+/* Class = "UILabel"; text = "20000"; ObjectID = "W8d-lV-xZc"; */
+"W8d-lV-xZc.text" = "20000";
+
+/* Class = "UILabel"; text = "Liste de Filtres à commander"; ObjectID = "XMc-El-gMh"; */
+"XMc-El-gMh.text" = "Liste de Filtres à commander";
+
+/* Class = "UILabel"; text = "2000"; ObjectID = "XNS-nm-PTY"; */
+"XNS-nm-PTY.text" = "2000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xj5-6F-E4a"; */
+"Xj5-6F-E4a.text" = "Label";
+
+/* Class = "UILabel"; text = "Steve Aglaee"; ObjectID = "XkL-UH-6qG"; */
+"XkL-UH-6qG.text" = "Steve Aglaee";
+
+/* Class = "UILabel"; text = "📽 Vidéothèque"; ObjectID = "YJ5-BS-ArM"; */
+"YJ5-BS-ArM.text" = "📽 Vidéothèque";
+
+/* Class = "UINavigationItem"; title = "Menu P1"; ObjectID = "YTh-tK-9wG"; */
+"YTh-tK-9wG.title" = "Menu P1";
+
+/* Class = "UILabel"; text = "Techni"; ObjectID = "aLT-5L-l3W"; */
+"aLT-5L-l3W.text" = "Techni";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "aLt-fe-t8p"; */
+"aLt-fe-t8p.text" = "100";
+
+/* Class = "UILabel"; text = "Eau de ville"; ObjectID = "aOv-cF-k6g"; */
+"aOv-cF-k6g.text" = "Eau de ville";
+
+/* Class = "UIButton"; normalTitle = "Ajouter"; ObjectID = "aZ2-RD-x9K"; */
+"aZ2-RD-x9K.normalTitle" = "Ajouter";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b91-Tt-f4F"; */
+"b91-Tt-f4F.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Annuler"; ObjectID = "bmU-bw-U5D"; */
+"bmU-bw-U5D.normalTitle" = "Annuler";
+
+/* Class = "UINavigationItem"; title = "Détail instatalation"; ObjectID = "cES-Fy-kr1"; */
+"cES-Fy-kr1.title" = "Détail instatalation";
+
+/* Class = "UILabel"; text = "Listes des pièces détachées "; ObjectID = "cxJ-Ke-LwP"; */
+"cxJ-Ke-LwP.text" = "Listes des pièces détachées ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dLg-TR-7BX"; */
+"dLg-TR-7BX.text" = "Label";
+
+/* Class = "UILabel"; text = "Pompe à Chaleur"; ObjectID = "dYc-R0-fLq"; */
+"dYc-R0-fLq.text" = "Pompe à Chaleur";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "duR-Yr-aiu"; */
+"duR-Yr-aiu.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Installations"; ObjectID = "e0Q-bH-W1C"; */
+"e0Q-bH-W1C.title" = "Installations";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter Contrat"; ObjectID = "e8s-i4-YdR"; */
+"e8s-i4-YdR.title" = "Ajouter Contrat";
+
+/* Class = "UILabel"; text = "Commande"; ObjectID = "eN1-6s-cHM"; */
+"eN1-6s-cHM.text" = "Commande";
+
+/* Class = "UILabel"; text = "T°Départ"; ObjectID = "eSP-49-jvn"; */
+"eSP-49-jvn.text" = "T°Départ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fGZ-b0-poK"; */
+"fGZ-b0-poK.text" = "Label";
+
+/* Class = "UILabel"; text = "Poids :"; ObjectID = "fI2-Pg-2oJ"; */
+"fI2-Pg-2oJ.text" = "Poids :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fhC-ol-muz"; */
+"fhC-ol-muz.text" = "Label";
+
+/* Class = "UILabel"; text = "000"; ObjectID = "fjz-bf-vCm"; */
+"fjz-bf-vCm.text" = "000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ftd-DE-GO6"; */
+"ftd-DE-GO6.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Menu "; ObjectID = "ftt-5h-UOJ"; */
+"ftt-5h-UOJ.title" = "Menu ";
+
+/* Class = "UILabel"; text = "R33"; ObjectID = "gHh-T1-Mp7"; */
+"gHh-T1-Mp7.text" = "R33";
+
+/* Class = "UILabel"; text = "2000"; ObjectID = "gU2-OQ-Yi1"; */
+"gU2-OQ-Yi1.text" = "2000";
+
+/* Class = "UILabel"; text = "📽 Vidéothèque"; ObjectID = "gdk-rQ-ip2"; */
+"gdk-rQ-ip2.text" = "📽 Vidéothèque";
+
+/* Class = "UILabel"; text = "Fluide frigorigène"; ObjectID = "hm8-xc-x4I"; */
+"hm8-xc-x4I.text" = "Fluide frigorigène";
+
+/* Class = "UILabel"; text = "📦"; ObjectID = "i3V-DH-Dy8"; */
+"i3V-DH-Dy8.text" = "📦";
+
+/* Class = "UILabel"; text = "Pac 30XA"; ObjectID = "iBl-IK-SJX"; */
+"iBl-IK-SJX.text" = "Pac 30XA";
+
+/* Class = "UILabel"; text = "📊 Traitement d'Eau"; ObjectID = "iDo-4G-QO9"; */
+"iDo-4G-QO9.text" = "📊 Traitement d'Eau";
+
+/* Class = "UINavigationItem"; title = "🎬Tuto Vidéo"; ObjectID = "jjc-bs-qyA"; */
+"jjc-bs-qyA.title" = "🎬Tuto Vidéo";
+
+/* Class = "UILabel"; text = "Equipe M3X - Site MMA"; ObjectID = "jxs-zX-QC9"; */
+"jxs-zX-QC9.text" = "Equipe M3X - Site MMA";
+
+/* Class = "UILabel"; text = "Contrats"; ObjectID = "jyl-82-7IV"; */
+"jyl-82-7IV.text" = "Contrats";
+
+/* Class = "UILabel"; text = "🎬Tuto Vidéo"; ObjectID = "kO1-gj-dHa"; */
+"kO1-gj-dHa.text" = "🎬Tuto Vidéo";
+
+/* Class = "UILabel"; text = "Type de Gaz :"; ObjectID = "mE6-Hl-ysM"; */
+"mE6-Hl-ysM.text" = "Type de Gaz :";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "mQx-pm-3H0"; */
+"mQx-pm-3H0.text" = "Nom";
+
+/* Class = "UILabel"; text = "Dernier Contôle"; ObjectID = "mWi-e1-lDg"; */
+"mWi-e1-lDg.text" = "Dernier Contôle";
+
+/* Class = "UILabel"; text = "Equipe : M3X"; ObjectID = "maO-MI-5K7"; */
+"maO-MI-5K7.text" = "Equipe : M3X";
+
+/* Class = "UILabel"; text = "🌡 Equilibrage P1"; ObjectID = "nAu-yk-751"; */
+"nAu-yk-751.text" = "🌡 Equilibrage P1";
+
+/* Class = "UIButton"; normalTitle = "Select a Photo"; ObjectID = "nCd-dQ-vn2"; */
+"nCd-dQ-vn2.normalTitle" = "Select a Photo";
+
+/* Class = "UILabel"; text = "Marque"; ObjectID = "nGZ-Or-veM"; */
+"nGZ-Or-veM.text" = "Marque";
+
+/* Class = "UILabel"; text = "Chauffage < 110°C"; ObjectID = "owI-QV-Gy5"; */
+"owI-QV-Gy5.text" = "Chauffage < 110°C";
+
+/* Class = "UILabel"; text = "A Commander"; ObjectID = "oyC-IP-X08"; */
+"oyC-IP-X08.text" = "A Commander";
+
+/* Class = "UILabel"; text = "Pièces Détachées"; ObjectID = "p38-dB-UAw"; */
+"p38-dB-UAw.text" = "Pièces Détachées";
+
+/* Class = "UILabel"; text = "NOVA  6"; ObjectID = "pNX-ZZ-ycn"; */
+"pNX-ZZ-ycn.text" = "NOVA  6";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pcA-cs-Pg2"; */
+"pcA-cs-Pg2.text" = "Label";
+
+/* Class = "UILabel"; text = "Quantité :"; ObjectID = "poz-yj-NTj"; */
+"poz-yj-NTj.text" = "Quantité :";
+
+/* Class = "UILabel"; text = "MMA Le Mans"; ObjectID = "pqz-UF-jQl"; */
+"pqz-UF-jQl.text" = "MMA Le Mans";
+
+/* Class = "UILabel"; text = "Pièces Détachées"; ObjectID = "qcO-qq-YWb"; */
+"qcO-qq-YWb.text" = "Pièces Détachées";
+
+/* Class = "UITextView"; text = "Marque :                                                                                                                                                                                                                                        Type:                                                                                                                                                                               Référence:                                                                                                                                                                                           Puissance:                                                                                                                                                                               Intensité:"; ObjectID = "qxc-ll-3ix"; */
+"qxc-ll-3ix.text" = "Marque :                                                                                                                                                                                                                                        Type:                                                                                                                                                                               Référence:                                                                                                                                                                                           Puissance:                                                                                                                                                                               Intensité:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rEg-A5-Wyv"; */
+"rEg-A5-Wyv.text" = "Label";
+
+/* Class = "UILabel"; text = "Quantité:"; ObjectID = "rSD-2a-Dqo"; */
+"rSD-2a-Dqo.text" = "Quantité:";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "rSn-YN-G99"; */
+"rSn-YN-G99.text" = "Subtitle";
+
+/* Class = "UISegmentedControl"; sAC-BQ-cjh.segmentTitles[0] = "☀️ À Remplacer"; ObjectID = "sAC-BQ-cjh"; */
+"sAC-BQ-cjh.segmentTitles[0]" = "☀️ À Remplacer";
+
+/* Class = "UISegmentedControl"; sAC-BQ-cjh.segmentTitles[1] = "🌥 Devis accepté"; ObjectID = "sAC-BQ-cjh"; */
+"sAC-BQ-cjh.segmentTitles[1]" = "🌥 Devis accepté";
+
+/* Class = "UISegmentedControl"; sAC-BQ-cjh.segmentTitles[2] = "🌩 Devis en cours "; ObjectID = "sAC-BQ-cjh"; */
+"sAC-BQ-cjh.segmentTitles[2]" = "🌩 Devis en cours ";
+
+/* Class = "UILabel"; text = "Caracteristique"; ObjectID = "sxU-ou-FaX"; */
+"sxU-ou-FaX.text" = "Caracteristique";
+
+/* Class = "UILabel"; text = "T°Retour"; ObjectID = "tRd-LU-n7w"; */
+"tRd-LU-n7w.text" = "T°Retour";
+
+/* Class = "UIButton"; normalTitle = "Notification"; ObjectID = "teJ-aC-3Rf"; */
+"teJ-aC-3Rf.normalTitle" = "Notification";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "u1L-d5-UOy"; */
+"u1L-d5-UOy.text" = "X";
+
+/* Class = "UILabel"; text = "nom instal"; ObjectID = "uIB-RA-hUq"; */
+"uIB-RA-hUq.text" = "nom instal";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "uQS-ya-6ID"; */
+"uQS-ya-6ID.title" = "Close";
+
+/* Class = "UILabel"; text = "Synthèse Gaz - Site MMA"; ObjectID = "uXF-bB-PMe"; */
+"uXF-bB-PMe.text" = "Synthèse Gaz - Site MMA";
+
+/* Class = "UILabel"; text = "Profondeur :"; ObjectID = "v04-lJ-bej"; */
+"v04-lJ-bej.text" = "Profondeur :";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "vTk-O8-Trh"; */
+"vTk-O8-Trh.title" = "Title";
+
+/* Class = "UILabel"; text = "R 410 A 1,7Kg"; ObjectID = "vUQ-6C-tzW"; */
+"vUQ-6C-tzW.text" = "R 410 A 1,7Kg";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "vmq-vs-11m"; */
+"vmq-vs-11m.text" = "Title";
+
+/* Class = "UILabel"; text = "Courroies"; ObjectID = "vqB-oe-bkY"; */
+"vqB-oe-bkY.text" = "Courroies";
+
+/* Class = "UILabel"; text = "Quantité :"; ObjectID = "wbD-Z5-N31"; */
+"wbD-Z5-N31.text" = "Quantité :";
+
+/* Class = "UILabel"; text = "A Commander"; ObjectID = "whe-Wj-ksM"; */
+"whe-Wj-ksM.text" = "A Commander";
+
+/* Class = "UITableViewSection"; headerTitle = "Commande"; ObjectID = "wvq-8G-hUn"; */
+"wvq-8G-hUn.headerTitle" = "Commande";
+
+/* Class = "UITextField"; placeholder = "nom du batiment"; ObjectID = "xGq-F6-pug"; */
+"xGq-F6-pug.placeholder" = "nom du batiment";
+
+/* Class = "UILabel"; text = "Valeurs"; ObjectID = "xv4-zC-sxh"; */
+"xv4-zC-sxh.text" = "Valeurs";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yJh-AE-wws"; */
+"yJh-AE-wws.text" = "Label";
+
+/* Class = "UILabel"; text = "TypeFiltration"; ObjectID = "yMU-Lg-9qK"; */
+"yMU-Lg-9qK.text" = "TypeFiltration";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ySD-st-XxN"; */
+"ySD-st-XxN.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter Installation"; ObjectID = "zAi-ex-LGa"; */
+"zAi-ex-LGa.title" = "Ajouter Installation";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zBT-7j-Zii"; */
+"zBT-7j-Zii.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter Batiment"; ObjectID = "zPo-Zv-3Vf"; */
+"zPo-Zv-3Vf.title" = "Ajouter Batiment";
+
+/* Class = "UILabel"; text = "2000"; ObjectID = "zro-QX-kxW"; */
+"zro-QX-kxW.text" = "2000";
+
+/* Class = "UITextField"; placeholder = "Référence Equipement"; ObjectID = "zx3-pJ-8ls"; */
+"zx3-pJ-8ls.placeholder" = "Référence Equipement";

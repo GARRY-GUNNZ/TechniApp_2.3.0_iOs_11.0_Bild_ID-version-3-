@@ -7,18 +7,90 @@
 //
 
 #import "AppDelegate.h"
+#import <CloudKit/CloudKit.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
 {
-    // Override point for customization after application launch.
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    splitViewController.delegate = (id)navigationController.topViewController;
+    
+    // Register for push notifications
+  /*
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
+              categories:nil];
+    
+    [application registerUserNotificationSettings:notificationSettings];
+    [application registerForRemoteNotifications];
+    
+    
+    
+    
+    CKModifyBadgeOperation *badgeResetOperation = [[CKModifyBadgeOperation alloc] initWithBadgeValue:0];
+    [badgeResetOperation setModifyBadgeCompletionBlock:^(NSError * operationError) {
+        if (!operationError) {
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        }
+    }];
+    
+   ;
+   
+    
+    [[CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"] addOperation:badgeResetOperation];
+    
+    */
+    
+    
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    // Change the font style of the navigation bar
+  
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:10.0/255.0
+                                                                           green:10.0/255.0
+                                                                            blue:10.0/255.0
+                                                                           alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"verdana"
+                                                                           size:21.0],
+                                                           NSFontAttributeName, nil]];
+    
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    
+    
+    
+    CKNotification *cloudKitNotification = [CKNotification notificationFromRemoteNotificationDictionary:userInfo];
+   // NSString *alertBody = cloudKitNotification.alertBody;
+    
+    if (cloudKitNotification.notificationType == CKNotificationTypeQuery) {
+      //  CKRecordID *recordID = [(CKQueryNotification *)cloudKitNotification recordID];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -27,7 +99,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -39,6 +111,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

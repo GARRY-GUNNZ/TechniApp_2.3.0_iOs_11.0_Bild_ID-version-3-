@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>f</key>
+		<string>TH </string>
+		<key>c</key>
+		<string>25</string>
+		<key>g</key>
+		<string>&lt; 0,5</string>
+		<key>d</key>
+		<string>titre hydrotimétrique (T.H. ou G.H. en allemand pour GesamtHärte), ou dureté1 de l&apos;eau, est l’indicateur de la minéralisation de l’eau. Elle est surtout due aux ions calcium et magnésium.</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>TA</string>
+		<key>c</key>
+		<string>0</string>
+		<key>g</key>
+		<string>5 à 15</string>
+		<key>d</key>
+		<string>Very Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>TAC</string>
+		<key>c</key>
+		<string>20</string>
+		<key>g</key>
+		<string>20 + TA</string>
+		<key>d</key>
+		<string>Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>SiO2</string>
+		<key>c</key>
+		<string>8</string>
+		<key>g</key>
+		<string>75 à150</string>
+		<key>d</key>
+		<string>Slow</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>PO4totaux</string>
+		<key>c</key>
+		<string>0</string>
+		<key>g</key>
+		<string>5 à 30</string>
+		<key>d</key>
+		<string>Moderate</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>Fer total</string>
+		<key>c</key>
+		<string>0</string>
+		<key>g</key>
+		<string>&lt;0,1</string>
+		<key>d</key>
+		<string>Moderate</string>
+	</dict>
+	<dict>
+		<key>f</key>
+		<string>pH</string>
+		<key>c</key>
+		<string>7</string>
+		<key>g</key>
+		<string>9,5 à 10°</string>
+		<key>d</key>
+		<string>Moderately Hot</string>
+	</dict>
+</array>
+</plist>

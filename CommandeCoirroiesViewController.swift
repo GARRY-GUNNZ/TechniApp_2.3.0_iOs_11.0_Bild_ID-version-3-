@@ -25,8 +25,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
      var choixContrats : Array<CKRecord> = []
      var arrCourroies: Array<CKRecord> = []
      var refresh:UIRefreshControl!
-    
-    
+     var  etatCommade : Int!
     //   MARK: Action Picker
     @IBAction func selectPressed(_ sender: UIButton) {
         pickerView.isHidden = false
@@ -229,24 +228,18 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
     
     @objc func switchCommande(_ sender: UISwitch)
     {
-        
         let switchh = sender
-        
-        
-        
-        if (sender.isOn == false){
+        if (sender.isOn == true){
             
             print(sender.tag)
-            
-            
-            
+
             
             let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
             
             let publicDB = monContainaire.publicCloudDatabase
             
             let switchAction: CKRecord = self.arrCourroies[switchh.tag]
-            let etat = "A commander"
+            let etat = "en commande"
             
             switchAction.setValue(etat, forKey: "Etat")
             switchAction.setValue(1, forKey: "EtatComande")
@@ -278,7 +271,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
             
             let publicDB = CKContainer.default().publicCloudDatabase
             let switchAction: CKRecord = self.arrCourroies[switchh.tag]
-            let etats = "En stock"
+            let etats = "en stock"
             switchAction.setValue(etats, forKey: "Etat")
             switchAction.setValue(0, forKey: "EtatComande")
             //switchAction["Etat"] = "en commande"as CKRecordValue?
@@ -329,10 +322,11 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
         
         let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let publicDatabase = container.publicCloudDatabase
-
-        let etatCommande = "A commander"
+       
+        //etatCommade = 1
+        let etatCommande = 1
         let filtreContrat = texFieldContrat!.text
-        let fitreFetch = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",etatCommande,filtreContrat!)
+        let fitreFetch = NSPredicate (format: "(Etat == %d) AND (nomContrat == %@)",etatCommande,filtreContrat!)
      
         
         

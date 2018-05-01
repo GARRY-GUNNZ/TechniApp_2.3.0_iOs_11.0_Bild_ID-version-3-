@@ -16,13 +16,12 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var viewWaitFitre: UIView!
     @IBOutlet weak var tblPieces: UITableView!
-
+  
     
     var arrFiltre: Array<CKRecord> = []
     var choixContrats : Array<CKRecord> = []
     var refresh:UIRefreshControl!
-    
-    
+    var  etatCommade : Int!
     //   MARK: PICKERVIEW Methode
     
     
@@ -234,9 +233,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
     {
         
         let switchh = sender
-        
-        
-        
+   
         if (sender.isOn == true){
             
             print(sender.tag)
@@ -246,7 +243,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
             let publicDB = monContainaire.publicCloudDatabase
             
             let switchAction: CKRecord = self.arrFiltre[switchh.tag]
-            let etat = "A commander"
+            let etat = "en commande"
             
             switchAction.setValue(etat, forKey: "Etat")
             switchAction.setValue(1, forKey: "EtatComande")
@@ -280,7 +277,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
             let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
             let publicDB = monContainaire.publicCloudDatabase
             let switchAction: CKRecord = self.arrFiltre[switchh.tag]
-            let etats = "En Stock"
+            let etats = "en Stock"
             switchAction.setValue(etats, forKey: "Etat")
             switchAction.setValue(0, forKey: "EtatComande")
             //switchAction["Etat"] = "en commande"as CKRecordValue?
@@ -342,9 +339,13 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         
         let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let publicDatabase = container.publicCloudDatabase
-        let number = "A commander"
+        
+        
+        
+        // etatCommade = 1
+        let number = 1
         let cont = texFieldContrat!.text
-        let flitrePredicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",number,cont!)
+        let flitrePredicate = NSPredicate (format: "(EtatComande == %d) AND (nomContrat == %@)",number,cont!)
         let query = CKQuery(recordType: "Filtres", predicate: flitrePredicate)
         
        

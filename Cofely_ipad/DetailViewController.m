@@ -912,7 +912,7 @@ NSString * bati = nil;
         
         
         [tempObject setObject:@1        forKey:@"EtatComande"];
-        [tempObject setObject:@"A commander" forKey:@"Etat"];
+        [tempObject setObject:@"en commande" forKey:@"Etat"];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
                                                   animated:YES];
@@ -941,7 +941,7 @@ NSString * bati = nil;
         
         CKRecord *tempObjec = [consomableListe_ objectAtIndex:senderSwitch.tag];
         [tempObjec setObject: @NO forKey:@"EtatComande"];
-        [tempObjec setObject:@"En stock" forKey:@"Etat"];
+        [tempObjec setObject:@"en Stock" forKey:@"Etat"];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
                                                   animated:YES];
@@ -979,7 +979,7 @@ NSString * bati = nil;
         
         
         [tempObject setObject:@YES           forKey:@"EtatComande"];
-        [tempObject setObject:@"A commander" forKey:@"Etat"];
+        [tempObject setObject:@"en commande" forKey:@"Etat"];
        
         
       
@@ -1014,7 +1014,7 @@ NSString * bati = nil;
         
         CKRecord *tempObjec = [filtre objectAtIndex:senderSwitch.tag];
         [tempObjec setObject: @NO forKey:@"EtatComande"];
-        [tempObjec setObject:@"En stock" forKey:@"Etat"];
+        [tempObjec setObject:@"en Stock" forKey:@"Etat"];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
                                                   animated:YES];

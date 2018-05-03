@@ -165,10 +165,14 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        if arrCourroies.count == 0 {
+            return cell
+        }
+        
         let switchDemo = UISwitch ()
         
         switchDemo.center = CGPoint(x: 800, y: 50)
-        //switchDemo.isOn = true
+        switchDemo.isOn = true
         switchDemo.onTintColor = UIColor .brown
         //  switchDemo.setOn(true, animated: false)
         switchDemo.tag = indexPath.row;
@@ -191,9 +195,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
          let quantiteCourroies : UILabel  = self.view.viewWithTag(6) as! UILabel
         
         
-        if arrCourroies.count == 0 {
-            return cell
-        }
+       
         
         let listecourroies = arrCourroies[(indexPath as NSIndexPath).row]
         
@@ -233,20 +235,13 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
             
             print(sender.tag)
 
-            
             let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
-            
             let publicDB = monContainaire.publicCloudDatabase
-            
             let switchAction: CKRecord = self.arrCourroies[switchh.tag]
             let etat = "en commande"
-            
             switchAction.setValue(etat, forKey: "Etat")
             switchAction.setValue(1, forKey: "EtatComande")
-            // switchAction["EtatComande"] = "YES" as CKRecordValue?
-            // [tempObject setObject:@YES           forKey:@"EtatComande"];
             publicDB.save(switchAction, completionHandler: { (record, error) -> Void in
-                
                 
                 
                 if (error != nil) {
@@ -268,18 +263,15 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
         else {
             
             print(sender.tag)
-            
-            let publicDB = CKContainer.default().publicCloudDatabase
+            let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+            let publicDB = monContainaire.publicCloudDatabase
             let switchAction: CKRecord = self.arrCourroies[switchh.tag]
-            let etats = "en stock"
+            let etats = "en Stock"
             switchAction.setValue(etats, forKey: "Etat")
             switchAction.setValue(0, forKey: "EtatComande")
-            //switchAction["Etat"] = "en commande"as CKRecordValue?
             
             publicDB.save(switchAction, completionHandler: { (record, error) -> Void in
-                
-               
-                
+
                 if (error != nil) {
                     print("error switch en stock")
                 }
@@ -326,7 +318,7 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
         //etatCommade = 1
         let etatCommande = 1
         let filtreContrat = texFieldContrat!.text
-        let fitreFetch = NSPredicate (format: "(Etat == %d) AND (nomContrat == %@)",etatCommande,filtreContrat!)
+        let fitreFetch = NSPredicate (format: "(EtatComande == %d) AND (nomContrat == %@)",etatCommande,filtreContrat!)
      
         
         

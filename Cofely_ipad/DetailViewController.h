@@ -21,7 +21,7 @@
     NSMutableArray * infoInstal_;
     NSArray         *consomable_;
      //NSMutableArray *listeGaz_;
-    NSArray *filtre;
+    NSMutableArray *filtre;
   NSDateFormatter *sessionDateFormatter_;
     NSString * contrat;
 }
@@ -36,7 +36,7 @@
 //@property(nonatomic, readonly, copy) NSURL *fileUrl;
 @property (strong, nonatomic) CKRecord *Batiment;
 @property (nonatomic, strong) NSMutableArray *listeGaz_;
-@property (nonatomic, strong) NSArray *filtre;
+@property (nonatomic, strong) NSMutableArray *filtre;
 @property (nonatomic, strong) NSMutableArray *consomableListe_;
 @property (weak, nonatomic) IBOutlet UITextField *nomInstaltion;
 @property (nonatomic, strong) Instalation * instalation;

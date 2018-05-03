@@ -38,7 +38,7 @@
 // table's section indexes
 //#define TYPE_SECTION            4
 #define CONSOMABLE_SECTION     1
-#define INSTRUCTIONS_SECTION    0
+#define PIECESDETACHE_SECTION    0
 #define GAZ_SECTION 3
 #define FILTRE_SECTION 2
 
@@ -326,7 +326,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
                          
                          NSLog(@"ERREUR %@",error.localizedDescription);
                          
-                     } consomableListe_ = objects;
+                     } self.consomableListe_ = objects;
                      dispatch_async(dispatch_get_main_queue(), ^{
                          
                          [self.refreshControl endRefreshing];
@@ -345,7 +345,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
 
 - (void)handleQueryResponse:(NSArray *)response
 {
-        consomableListe_ = response;
+        self.consomableListe_ = response;
     
     [[self detailTable ] reloadData];
 
@@ -408,7 +408,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     - (void)QueryResponseGaz:(NSArray *)response
 {
  
-    _listeGaz_ = response;
+    self.listeGaz_ = response;
     
    // NSLog(@"le resultat de responseGAZ  %@",response);
     
@@ -483,7 +483,7 @@ NSString * bati = nil;
                      
                      
                      NSLog(@"ERREUR %@",error.localizedDescription);
-                 }filtre = objects;
+                 } self.filtre = objects;
                  dispatch_async(dispatch_get_main_queue(), ^{
                      
                      
@@ -507,7 +507,7 @@ NSString * bati = nil;
 - (void)QueryResponseFiltre:(NSArray *)responseFiltre
 {
     // On récupère le tableau, on le stocke.
-    filtre = responseFiltre;
+    self.filtre = responseFiltre;
     
     //NSLog(@"le resultat de responseFiltre  %@",responseFiltre);
     
@@ -635,7 +635,7 @@ NSString * bati = nil;
             
             
             break;
-        case INSTRUCTIONS_SECTION:
+        case PIECESDETACHE_SECTION :
             title = @"";
             break;
         case FILTRE_SECTION:
@@ -672,7 +672,7 @@ NSString * bati = nil;
        // case TYPE_SECTION:
           //  rows = 1;
           //  break;
-        case INSTRUCTIONS_SECTION:
+        case PIECESDETACHE_SECTION :
             // these sections have only one row
             rows = 1;
             break;
@@ -786,7 +786,7 @@ NSString * bati = nil;
     
             
             
-            case INSTRUCTIONS_SECTION: //cellule Note
+            case PIECESDETACHE_SECTION : //cellule Note
                 cell = [tableView dequeueReusableCellWithIdentifier:@"Instructions" forIndexPath:indexPath];
                 break;
     
@@ -1127,7 +1127,7 @@ NSString * bati = nil;
     // If editing, don't allow instructions to be selected
     // Not editing: Only allow instructions to be selected
     //
-    if ((isEditing && section == INSTRUCTIONS_SECTION) || (!isEditing && section != INSTRUCTIONS_SECTION)) {
+    if ((isEditing && section == PIECESDETACHE_SECTION ) || (!isEditing && section != PIECESDETACHE_SECTION )) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         rowToSelect = nil;
     }
@@ -1139,13 +1139,13 @@ NSString * bati = nil;
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCellEditingStyle style = UITableViewCellEditingStyleNone;
-        if (indexPath.section == CONSOMABLE_SECTION) {
+        if (indexPath.section == CONSOMABLE_SECTION)  {
         // If this is the last item, it's the insertion row.
         if (indexPath.row == (NSInteger)consomableListe_.count) {
             style = UITableViewCellEditingStyleInsert;
         }
-            
-            
+       
+       
             
         else {
             style = UITableViewCellEditingStyleDelete;
@@ -1186,7 +1186,7 @@ NSString * bati = nil;
                                  
                                 
                                  
-                                 CKRecord * del =[consomableListe_ objectAtIndex:indexPath.row];
+                                 CKRecord * del =[self.consomableListe_ objectAtIndex:indexPath.row];
                                  
                                  [database deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
                                   
@@ -1203,7 +1203,7 @@ NSString * bati = nil;
                                                          
                                                          // [recordID removeObjectAtIndex:indexPath.row] ;
                                                          
-                                                         [consomableListe_ removeObjectAtIndex:indexPath.row];
+                                                         [self.consomableListe_ removeObjectAtIndex:indexPath.row];
                                                          
                                                          [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                                                          [hud hide:YES];
@@ -1276,7 +1276,7 @@ NSString * bati = nil;
                                  CKDatabase *database = container.publicCloudDatabase;
                                  
                                  
-                                 CKRecord * del =[_listeGaz_ objectAtIndex:indexPath.row];
+                                 CKRecord * del =[self.listeGaz_ objectAtIndex:indexPath.row];
                                  
                                  [database deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
                                   
@@ -1293,7 +1293,7 @@ NSString * bati = nil;
                                                          
                                                          // [recordID removeObjectAtIndex:indexPath.row] ;
                                                          
-                                                         [_listeGaz_ removeObjectAtIndex:indexPath.row];
+                                                         [self.listeGaz_ removeObjectAtIndex:indexPath.row];
                                                          
                                                          [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                                                          [hud hide:YES];
@@ -1325,6 +1325,92 @@ NSString * bati = nil;
         
         [self presentViewController:alert animated:YES completion:nil];
         
+        
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // user tapped the "+" button to add a new ingredient
+        
+        [self performSegueWithIdentifier:kAddIngredientSegueID sender:self.instalation];
+    }
+    
+    ////////////////////// del gaz ////////////
+    
+    if ((editingStyle == UITableViewCellEditingStyleDelete) && (indexPath.section == FILTRE_SECTION)) {
+        //NSLog(@"click delete");
+        
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"EFFACER "
+                                      message:@"Voulez-vous vraiment cette reference de filte cette opération est irreversible !!! "
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"Effacer"
+                             style:UIAlertActionStyleDestructive
+                             handler:^(UIAlertAction * action)
+                             {
+                                 
+                                 
+                                 MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
+                                                                           animated:YES];
+                                 hud.mode = MBProgressHUDModeIndeterminate;
+                                 hud.labelText = @"Suppression en cours ... ";
+                                 [hud show:YES];
+                                 
+                                 // NSLog(@" liste instal %@",listeInstal);
+                                 
+                                 CKContainer *container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
+                                 CKDatabase *database = container.publicCloudDatabase;
+                                 
+                                 
+                                 CKRecord * del =[self.filtre objectAtIndex:indexPath.row];
+                                 
+                                 [database deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
+                                  
+                                  {
+                                      if (error) {
+                                          
+                                          NSLog(@" erreur ");
+                                          NSLog(@"ERREUR %@",error.localizedDescription);
+                                      }
+                                      dispatch_async(dispatch_get_main_queue(), ^
+                                                     {
+                                                         NSLog(@"recordID %@",recordID);
+                                                         NSLog(@" pas d'erreur ");
+                                                         
+                                                         // [recordID removeObjectAtIndex:indexPath.row] ;
+                                                         
+                                                         [self.filtre removeObjectAtIndex:indexPath.row];
+                                                         
+                                                         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+                                                         [hud hide:YES];
+                                                         NSLog(@" FIN DE SUPRESSION ");
+                                                     });
+                                      
+                                  }];
+                                 
+                                 
+                                 
+                                 
+                                 
+                             }];
+        
+        ///////////////////////////////////////////////////////////////////////
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:@"Annuler"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     
+                                     
+                                 }];
+        
+        [alert addAction:ok];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
         
         
         

@@ -16,12 +16,12 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var viewWaitFitre: UIView!
     @IBOutlet weak var tblPieces: UITableView!
-  
     
     var arrFiltre: Array<CKRecord> = []
     var choixContrats : Array<CKRecord> = []
     var refresh:UIRefreshControl!
     var  etatCommade : Int!
+    
     //   MARK: PICKERVIEW Methode
     
     
@@ -145,6 +145,9 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         return arrFiltre.count
     }
     
+        //   MARK: - Animation TABLEVIEW
+    
+    /*
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
@@ -155,6 +158,10 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
            // cell.layer.transform = CATransform3DIdentity
         }
     }
+
+    */
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
@@ -176,13 +183,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         //cell.addSubview(switchDemo)
         cell.accessoryView = (switchDemo)
         
-       
-        
-        
-        
         /////////////////////////////////////////////////////////
-        
-        
         
         let theLabelInstal : UILabel  = self.view.viewWithTag(2) as! UILabel
         let theLabelContrat : UILabel  = self.view.viewWithTag(3) as! UILabel
@@ -381,10 +382,7 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         alertView.message = "Vous venez de réceptionner une référence de filtre ";
         alertView.show();
     }
-    
-    
-    
-    
+  
 
     
 }

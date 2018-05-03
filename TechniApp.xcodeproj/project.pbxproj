@@ -56,6 +56,9 @@
 		9C2B08A41E95904A00654EBC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B08A31E95904A00654EBC /* StarViewController.swift */; };
 		9C2BE5831E87C23200FF6779 /* AddProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2BE5821E87C23200FF6779 /* AddProfilViewController.swift */; };
 		9C2F55A81F9A9239007E6709 /* SeachbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F55A71F9A9239007E6709 /* SeachbarViewController.swift */; };
+		9C30615C209B262300AA2ACA /* photo_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C30615B209B262200AA2ACA /* photo_logo.png */; };
+		9C30615E209B263700AA2ACA /* 137.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C30615D209B263600AA2ACA /* 137.png */; };
+		9C306160209B264500AA2ACA /* Login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C30615F209B264500AA2ACA /* Login_logo.png */; };
 		9C3F62E7208FC790005BACAB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F62E5208FC790005BACAB /* SWRevealViewController.m */; };
 		9C5BD15120912301005C6EF7 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BD15020912301005C6EF7 /* DesignableButton.swift */; };
 		9C5BD15320912FE8005C6EF7 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BD15220912FE8005C6EF7 /* BounceButton.swift */; };
@@ -198,6 +201,9 @@
 		9C2B08A31E95904A00654EBC /* StarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		9C2BE5821E87C23200FF6779 /* AddProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfilViewController.swift; sourceTree = "<group>"; };
 		9C2F55A71F9A9239007E6709 /* SeachbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachbarViewController.swift; sourceTree = "<group>"; };
+		9C30615B209B262200AA2ACA /* photo_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_logo.png; sourceTree = "<group>"; };
+		9C30615D209B263600AA2ACA /* 137.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 137.png; sourceTree = "<group>"; };
+		9C30615F209B264500AA2ACA /* Login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_logo.png; sourceTree = "<group>"; };
 		9C3F62E5208FC790005BACAB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9C3F62E6208FC790005BACAB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9C5BD15020912301005C6EF7 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
@@ -666,6 +672,9 @@
 		AF6FD2ED1993E13E0005DC27 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9C30615F209B264500AA2ACA /* Login_logo.png */,
+				9C30615D209B263600AA2ACA /* 137.png */,
+				9C30615B209B262200AA2ACA /* photo_logo.png */,
 				4A5477B51FC8C4DC00942498 /* images-3.jpeg */,
 				9C2453101E8FA78100747A1A /* Yammer-logo-e1463436513335.png */,
 				9C25F10E1E45E6AB0096391D /* IMG_0028.jpg */,
@@ -860,6 +869,7 @@
 				9CFFB7741C44327C00343D40 /* bouteil_gaz.png in Resources */,
 				4A4B9A321D64BD43007963E4 /* google_drive_icon_.png in Resources */,
 				9CB2B6341D43B9B000DB0070 /* no_image.png in Resources */,
+				9C30615E209B263700AA2ACA /* 137.png in Resources */,
 				9C6F4F951D844ADB001E5DFA /* nom_appli6plus@2x.png in Resources */,
 				9C7A87861E2CBDAA00E7F83B /* Willy.JPG in Resources */,
 				9C6AE8A21C31DCDE00F5C6DB /* ipad-list-element@2x.png in Resources */,
@@ -881,6 +891,7 @@
 				4A4B9A341D64BF47007963E4 /* running.jpg in Resources */,
 				AF6FD3301993E2130005DC27 /* common_bg@2x.png in Resources */,
 				4A4B9B821AD316600095FD27 /* SVProgressHUD.bundle in Resources */,
+				9C30615C209B262300AA2ACA /* photo_logo.png in Resources */,
 				9C1DC42C1E3A3AB80077410D /* Mathieu.jpg in Resources */,
 				9C6F4F931D844A3F001E5DFA /* nom_appli@2x.png in Resources */,
 				9C6F4F911D843EF2001E5DFA /* Images.xcassets in Resources */,
@@ -892,6 +903,7 @@
 				AF6FD32E1993E2130005DC27 /* cell_top@2x.png in Resources */,
 				4ABCCDC31D5BD5740088E435 /* LaunchiPhone.storyboard in Resources */,
 				9C9421531D529FA2005AB1C7 /* menu.png in Resources */,
+				9C306160209B264500AA2ACA /* Login_logo.png in Resources */,
 				9C6AE8A51C31DF7F00F5C6DB /* ipad-list-item-selected.png in Resources */,
 				9CE6F7411C29568B00841200 /* cadre_filtre.jpg in Resources */,
 				4AA6FE6A1A9BBF1000CB3ADA /* add-photo-placeholder.png in Resources */,

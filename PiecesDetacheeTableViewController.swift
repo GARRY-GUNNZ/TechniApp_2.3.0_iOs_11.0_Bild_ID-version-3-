@@ -285,9 +285,9 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let publicDatabase = container.publicCloudDatabase
         //let predicate = NSPredicate(value: true)
-        let number = "en commande"
+        let number = 1
         let cont = texFieldContrat!.text
-        let predicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",number,cont!)
+        let predicate = NSPredicate (format: "(EtatComande == %d) AND (nomContrat == %@)",number,cont!)
             /*(arrNotes as NSArray).filteredArrayUsingPredicate()*/
             // let predicate = NSPredicate (format: "nomBati == %@ ",nomBatisegu )
             // NSPredicate predicate = nil;

@@ -23,6 +23,14 @@ class AddProfilViewController: UIViewController ,UIImagePickerControllerDelegate
     
     // var editedNoteRecord: CKRecord!
     
+    @IBAction func goBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

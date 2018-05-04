@@ -101,6 +101,8 @@
 		9CEAFC011BC9C6980040B8EC /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAFC001BC9C6980040B8EC /* InstructionsViewController.m */; };
 		9CFFB7741C44327C00343D40 /* bouteil_gaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFFB7731C44327C00343D40 /* bouteil_gaz.png */; };
 		AF4790511D645BBD00AD9409 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF4790501D645BBD00AD9409 /* avatar.jpg */; };
+		AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */; };
+		AF6CF2F5209CAD7F00206D51 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */; };
 		AF6FD2E81993E13E0005DC27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2E71993E13E0005DC27 /* Foundation.framework */; };
 		AF6FD2EA1993E13E0005DC27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2E91993E13E0005DC27 /* CoreGraphics.framework */; };
 		AF6FD2EC1993E13E0005DC27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2EB1993E13E0005DC27 /* UIKit.framework */; };
@@ -257,6 +259,8 @@
 		9CF5AADC1F90C00F006EEEDE /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		9CFFB7731C44327C00343D40 /* bouteil_gaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouteil_gaz.png; sourceTree = "<group>"; };
 		AF4790501D645BBD00AD9409 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
 		AF6FD2E41993E13E0005DC27 /* TechniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6FD2E71993E13E0005DC27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF6FD2E91993E13E0005DC27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -412,6 +416,8 @@
 		9C5BD14F20912282005C6EF7 /* designable */ = {
 			isa = PBXGroup;
 			children = (
+				AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */,
+				AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */,
 				9C5BD15020912301005C6EF7 /* DesignableButton.swift */,
 				9C5BD15220912FE8005C6EF7 /* BounceButton.swift */,
 			);
@@ -957,6 +963,7 @@
 				9C2B089D1E943C7800654EBC /* Missionweb.swift in Sources */,
 				4A0539551B321D00003D91CE /* TypeSelectionViewController.m in Sources */,
 				9C2B08A21E958C1C00654EBC /* CofelyVisionViewController.swift in Sources */,
+				AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */,
 				9C8E07881C3951AC00CB58C5 /* TemperatureCell.m in Sources */,
 				4AF9FFBD1A1FB2DA000E8874 /* InstalViewController.m in Sources */,
 				9C8E07821C39510400CB58C5 /* TemperatureConverterViewController.m in Sources */,
@@ -967,6 +974,7 @@
 				9C6521281DEB7BA300671E28 /* PiecesDetacheeTableViewController.swift in Sources */,
 				9C24F1621D60D5E600B3136F /* AddBatimentViewController.m in Sources */,
 				9C5ED1B61DE5E4CF0089B56D /* CommandeViewTableViewController.swift in Sources */,
+				AF6CF2F5209CAD7F00206D51 /* KaedeTextField.swift in Sources */,
 				9C2F55A81F9A9239007E6709 /* SeachbarViewController.swift in Sources */,
 				9C24F1681D60D90700B3136F /* CHViewController.m in Sources */,
 				AF6FD2FE1993E13E0005DC27 /* MasterViewController.m in Sources */,

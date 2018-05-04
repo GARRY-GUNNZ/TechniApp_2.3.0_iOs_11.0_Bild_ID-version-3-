@@ -2852,18 +2852,13 @@
                                     <action selector="unsetImage:" destination="Cn4-sr-8Ds" eventType="touchUpInside" id="xtm-7t-Yif"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom Pièces Détachées" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-1u-mSU">
-                                <rect key="frame" x="8" y="72" width="1008" height="30"/>
-                                <color key="backgroundColor" red="0.9529411793" green="0.61176472900000001" blue="0.070588238540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18j-M0-Q4F">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="768"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18j-M0-Q4F">
+                                <rect key="frame" x="0.0" y="254" width="600" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-dn-qHU">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-dn-qHU">
                                         <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="color" red="0.9529411793" green="0.61176472900000001" blue="0.070588238540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJh-AE-wws">
@@ -2889,35 +2884,96 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="QcA-dn-qHU" firstAttribute="centerX" secondItem="18j-M0-Q4F" secondAttribute="centerX" id="wh0-n8-D64"/>
-                                    <constraint firstItem="QcA-dn-qHU" firstAttribute="top" secondItem="18j-M0-Q4F" secondAttribute="top" constant="281" id="xPk-Tg-BBI"/>
-                                </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-ll-3ix">
-                                <rect key="frame" x="8" y="272" width="592" height="226"/>
+                                <rect key="frame" x="8" y="305" width="592" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.9529411793" green="0.61176472900000001" blue="0.070588238540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Réference" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-1s-KnW" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="156" width="592" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.92157250639999999" green="0.91768878700000001" blue="0.91749095920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.79907852410000002" green="0.098641462619999995" blue="0.1087822095" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Marque" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvF-tU-oU5" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="114" width="592" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.92157250639999999" green="0.91768878700000001" blue="0.91749095920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.79907852410000002" green="0.098641462619999995" blue="0.1087822095" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Titre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zu-g5-2bI" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="72" width="663" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.92157250639999999" green="0.91768878700000001" blue="0.91749095920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.79907852410000002" green="0.098641462619999995" blue="0.1087822095" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Puissance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ry-nh-IX9" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="192" width="592" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.92157250639999999" green="0.91768878700000001" blue="0.91749095920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.79907852410000002" green="0.098641462619999995" blue="0.1087822095" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Zrx-bB-b7c" secondAttribute="bottom" constant="20" symbolic="YES" id="5bW-sV-bu0"/>
                             <constraint firstItem="H9Z-vZ-rb2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bms-J1-GTK" secondAttribute="leading" constant="20" symbolic="YES" id="8tW-pg-uYE"/>
-                            <constraint firstItem="18j-M0-Q4F" firstAttribute="leading" secondItem="Bms-J1-GTK" secondAttribute="leading" id="O9X-vk-V3J"/>
                             <constraint firstItem="Zrx-bB-b7c" firstAttribute="top" secondItem="H9Z-vZ-rb2" secondAttribute="top" id="T4K-mD-eTH"/>
-                            <constraint firstAttribute="bottom" secondItem="18j-M0-Q4F" secondAttribute="bottom" id="Voa-gP-pt3"/>
-                            <constraint firstItem="QsP-1u-mSU" firstAttribute="top" secondItem="9cy-YG-ng0" secondAttribute="bottom" constant="8" symbolic="YES" id="agW-Sn-j5K"/>
                             <constraint firstItem="Zrx-bB-b7c" firstAttribute="trailing" secondItem="H9Z-vZ-rb2" secondAttribute="trailing" id="cgj-pe-Xgh"/>
                             <constraint firstItem="Zrx-bB-b7c" firstAttribute="centerY" secondItem="nCd-dQ-vn2" secondAttribute="centerY" id="hsh-vB-dan"/>
-                            <constraint firstItem="18j-M0-Q4F" firstAttribute="centerX" secondItem="Zrx-bB-b7c" secondAttribute="centerX" id="hvi-qm-VxR"/>
                             <constraint firstItem="Zrx-bB-b7c" firstAttribute="leading" secondItem="Bms-J1-GTK" secondAttribute="leadingMargin" constant="-4" id="lwO-pT-Wnp"/>
-                            <constraint firstItem="QsP-1u-mSU" firstAttribute="centerX" secondItem="Bms-J1-GTK" secondAttribute="centerX" id="m9Z-gL-1gu"/>
-                            <constraint firstItem="QsP-1u-mSU" firstAttribute="leading" secondItem="Bms-J1-GTK" secondAttribute="leadingMargin" constant="-12" id="mUS-eW-Qte"/>
-                            <constraint firstItem="18j-M0-Q4F" firstAttribute="top" secondItem="Bms-J1-GTK" secondAttribute="top" id="nlV-2O-eVj"/>
                             <constraint firstItem="nCd-dQ-vn2" firstAttribute="top" secondItem="H9Z-vZ-rb2" secondAttribute="bottom" constant="76" id="sG9-Cn-y9c"/>
                         </constraints>
                     </view>
@@ -2943,7 +2999,7 @@
                         <outlet property="imageView" destination="Zrx-bB-b7c" id="MDH-AP-cD6"/>
                         <outlet property="instalLabe" destination="zBT-7j-Zii" id="9uc-oa-ZHj"/>
                         <outlet property="textView" destination="qxc-ll-3ix" id="tfx-qt-IkT"/>
-                        <outlet property="txtNoteTitle" destination="QsP-1u-mSU" id="V06-PR-Onh"/>
+                        <outlet property="txtNoteTitle" destination="9zu-g5-2bI" id="3Ey-Th-grf"/>
                         <outlet property="viewWait" destination="18j-M0-Q4F" id="VQd-DT-8fQ"/>
                     </connections>
                 </viewController>

@@ -80,22 +80,13 @@
     [self getInstal];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-   
-}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
 - (void)didReceiveMemoryWarning
 {
    
     [super didReceiveMemoryWarning];
+    
     
     
     

@@ -84,6 +84,7 @@
 		9C9421531D529FA2005AB1C7 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421511D529FA2005AB1C7 /* menu.png */; };
 		9C9421541D529FA2005AB1C7 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421521D529FA2005AB1C7 /* menu@2x.png */; };
 		9C97C1BE1E37FAE300F05479 /* alteva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C97C1BD1E37FAE300F05479 /* alteva.jpg */; };
+		9CAA42FF209CD07900D87BCA /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAA42FE209CD07900D87BCA /* YoshikoTextField.swift */; };
 		9CB24CE31C18E154007DCC14 /* FiltreViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB24CE21C18E154007DCC14 /* FiltreViewTableViewController.m */; };
 		9CB2B6301D43A85700DB0070 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2B62F1D43A85700DB0070 /* ListNotesViewController.swift */; };
 		9CB2B6321D43A8AB00DB0070 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2B6311D43A8AB00DB0070 /* EditNoteViewController.swift */; };
@@ -102,7 +103,6 @@
 		9CFFB7741C44327C00343D40 /* bouteil_gaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFFB7731C44327C00343D40 /* bouteil_gaz.png */; };
 		AF4790511D645BBD00AD9409 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF4790501D645BBD00AD9409 /* avatar.jpg */; };
 		AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */; };
-		AF6CF2F5209CAD7F00206D51 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */; };
 		AF6FD2E81993E13E0005DC27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2E71993E13E0005DC27 /* Foundation.framework */; };
 		AF6FD2EA1993E13E0005DC27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2E91993E13E0005DC27 /* CoreGraphics.framework */; };
 		AF6FD2EC1993E13E0005DC27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6FD2EB1993E13E0005DC27 /* UIKit.framework */; };
@@ -208,6 +208,7 @@
 		9C30615F209B264500AA2ACA /* Login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login_logo.png; sourceTree = "<group>"; };
 		9C3F62E5208FC790005BACAB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9C3F62E6208FC790005BACAB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		9C56BFD2209CDA3000EE5A45 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
 		9C5BD15020912301005C6EF7 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		9C5BD15220912FE8005C6EF7 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		9C5ED1B51DE5E4CF0089B56D /* CommandeViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandeViewTableViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 		9C9421511D529FA2005AB1C7 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9C9421521D529FA2005AB1C7 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		9C97C1BD1E37FAE300F05479 /* alteva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alteva.jpg; sourceTree = "<group>"; };
+		9CAA42FE209CD07900D87BCA /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
 		9CB24CE11C18E154007DCC14 /* FiltreViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiltreViewTableViewController.h; path = ../FiltreViewTableViewController.h; sourceTree = "<group>"; };
 		9CB24CE21C18E154007DCC14 /* FiltreViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiltreViewTableViewController.m; path = ../FiltreViewTableViewController.m; sourceTree = "<group>"; };
 		9CB2B62F1D43A85700DB0070 /* ListNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
@@ -260,7 +262,6 @@
 		9CFFB7731C44327C00343D40 /* bouteil_gaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouteil_gaz.png; sourceTree = "<group>"; };
 		AF4790501D645BBD00AD9409 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
-		AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
 		AF6FD2E41993E13E0005DC27 /* TechniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6FD2E71993E13E0005DC27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF6FD2E91993E13E0005DC27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -416,7 +417,8 @@
 		9C5BD14F20912282005C6EF7 /* designable */ = {
 			isa = PBXGroup;
 			children = (
-				AF6CF2F3209CAD7E00206D51 /* KaedeTextField.swift */,
+				9C56BFD2209CDA3000EE5A45 /* TextFieldEffects.h */,
+				9CAA42FE209CD07900D87BCA /* YoshikoTextField.swift */,
 				AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */,
 				9C5BD15020912301005C6EF7 /* DesignableButton.swift */,
 				9C5BD15220912FE8005C6EF7 /* BounceButton.swift */,
@@ -511,7 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC2291F1CBA77B900EFA01A /* Batiment */,
-				9CEAFBFE1BC9C6600040B8EC /* Note */,
+				9CEAFBFE1BC9C6600040B8EC /* Piècedetachée */,
 				9CB24CE01C18E0ED007DCC14 /* Type de Filtre */,
 				9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */,
 				9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */,
@@ -567,7 +569,7 @@
 			name = "Image Filtre";
 			sourceTree = "<group>";
 		};
-		9CEAFBFE1BC9C6600040B8EC /* Note */ = {
+		9CEAFBFE1BC9C6600040B8EC /* Piècedetachée */ = {
 			isa = PBXGroup;
 			children = (
 				9CEAFBFF1BC9C6980040B8EC /* InstructionsViewController.h */,
@@ -575,7 +577,7 @@
 				9CB2B62F1D43A85700DB0070 /* ListNotesViewController.swift */,
 				9CB2B6311D43A8AB00DB0070 /* EditNoteViewController.swift */,
 			);
-			name = Note;
+			name = "Piècedetachée";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -965,6 +967,7 @@
 				9C2B08A21E958C1C00654EBC /* CofelyVisionViewController.swift in Sources */,
 				AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */,
 				9C8E07881C3951AC00CB58C5 /* TemperatureCell.m in Sources */,
+				9CAA42FF209CD07900D87BCA /* YoshikoTextField.swift in Sources */,
 				4AF9FFBD1A1FB2DA000E8874 /* InstalViewController.m in Sources */,
 				9C8E07821C39510400CB58C5 /* TemperatureConverterViewController.m in Sources */,
 				9CCD62E32087BA16004976A6 /* MenuTableViewController.swift in Sources */,
@@ -974,7 +977,6 @@
 				9C6521281DEB7BA300671E28 /* PiecesDetacheeTableViewController.swift in Sources */,
 				9C24F1621D60D5E600B3136F /* AddBatimentViewController.m in Sources */,
 				9C5ED1B61DE5E4CF0089B56D /* CommandeViewTableViewController.swift in Sources */,
-				AF6CF2F5209CAD7F00206D51 /* KaedeTextField.swift in Sources */,
 				9C2F55A81F9A9239007E6709 /* SeachbarViewController.swift in Sources */,
 				9C24F1681D60D90700B3136F /* CHViewController.m in Sources */,
 				AF6FD2FE1993E13E0005DC27 /* MasterViewController.m in Sources */,

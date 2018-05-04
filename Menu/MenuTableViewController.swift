@@ -8,21 +8,31 @@
 
 import UIKit
 
+
 class MenuTableViewController: UITableViewController {
   
+ 
     
     @IBOutlet weak var avatarProfil: UIImageView!
-    
     @IBOutlet weak var labelNom: UILabel!
-    
     @IBOutlet weak var labelPrenom: UILabel!
-    
     @IBOutlet weak var nomEquipe: UILabel!
     //let menuArray = ["💼 Mes contrats","🌍 GoogleDrive","⭐️ Star","Yammer"]
+   
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+       
+    
+        
+        
+        
+        
+        ////// Userdefaut Setting
+        
 
         if UserDefaults.standard.object(forKey: "avatar") as? NSData == nil {
             //self.imageDefaut()

@@ -18,6 +18,8 @@ class PiecesDetacheeTableViewController: UITableViewController,UIPickerViewDeleg
     @IBOutlet weak var viewWait: UIView!
     @IBOutlet weak var tblPieces: UITableView!
     
+   
+    
     //   MARK: - VARRIABLE
     
     var arrPieces: Array<CKRecord> = []
@@ -183,7 +185,13 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
             let theLabelBati : UILabel  = self.view.viewWithTag(5) as! UILabel
             let textview : UITextView  = self.view.viewWithTag(8) as! UITextView
             let theLabelDate : UILabel  = self.view.viewWithTag(10) as! UILabel
-            let listePieces = arrPieces[(indexPath as NSIndexPath).row]
+    let thetextfieldMarque : UITextField = self.view.viewWithTag(11) as! UITextField
+     let thetextfieldReference : UITextField = self.view.viewWithTag(12) as! UITextField
+     let thetextfielpuissance : UITextField = self.view.viewWithTag(13) as! UITextField
+    
+    
+    
+    let listePieces = arrPieces[(indexPath as NSIndexPath).row]
             let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MMMM dd, yyyy, hh:mm"
                 theLabelDate.text = dateFormatter.string(from: listePieces.value(forKey: "noteEditedDate") as! Date)
@@ -196,6 +204,11 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
                 theLabelInstal.text = listePieces["nomInstal"] as? String
                 theLabelBati.text = listePieces["nomBati"] as? String
                 textview.text = listePieces["noteText"] as? String
+                thetextfieldMarque.text = listePieces["marque"]as? String
+                thetextfieldReference.text = listePieces["reference"] as? String
+                thetextfielpuissance.text = listePieces["puissance"] as? String
+    
+    
  
              ////////////////////////////////
             

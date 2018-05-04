@@ -30,6 +30,9 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var viewWait: UIView!
     
+    @IBOutlet weak var textfieldMarque: YoshikoTextField!
+    @IBOutlet weak var texfiledPuissance: YoshikoTextField!
+    @IBOutlet weak var textfieldReference: YoshikoTextField!
     
     var nomBatiseg = String ()
     var instalseg = String ()
@@ -81,6 +84,10 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
         if let editedNote = editedNoteRecord {
             txtNoteTitle.text = editedNote.value(forKey: "noteTitle") as? String
             textView.text = editedNote.value(forKey: "noteText") as! String
+            textfieldMarque.text = editedNote.value(forKey: "marque") as? String
+            textfieldReference.text = editedNote.value(forKey: "reference") as? String
+            texfiledPuissance.text = editedNote.value(forKey: "puissance") as? String
+            
             
             let imageAsset: CKAsset = editedNote.value(forKey: "noteImage") as! CKAsset
             imageView.image = UIImage(contentsOfFile: imageAsset.fileURL.path)
@@ -187,7 +194,9 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
         noteRecord.setObject(0 as CKRecordValue?, forKey: "EtatComande")
         noteRecord.setObject(etat as CKRecordValue?, forKey: "Etat")
         
-        
+        noteRecord.setObject(textfieldReference.text as CKRecordValue?, forKey: "reference")
+        noteRecord.setObject(textfieldMarque.text as CKRecordValue?, forKey: "marque")
+        noteRecord.setObject(texfiledPuissance.text as CKRecordValue?, forKey: "puissance")
         
         
         if let url = imageURL {

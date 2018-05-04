@@ -25,7 +25,7 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     var arrNotes: Array<CKRecord> = []
     var selectedNoteIndex: Int!
     var Batiment: CKRecord!
-    var nomBatisegu = String ()
+   @objc var nomBatisegu = String ()
     var instalsegu = String ()
     var contratsegu = String()
     
@@ -280,9 +280,13 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
 
             viewWait.isHidden = false
             view.bringSubview(toFront: viewWait)
-
-            let container = CKContainer.default()
+            
+            
+            let container = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
             let publicDatabase = container.publicCloudDatabase
+
+           // let container = CKContainer.default()
+           // let publicDatabase = container.publicCloudDatabase
             
             publicDatabase.delete(withRecordID: selectedRecordID, completionHandler:
             { (recordID, error) -> Void in

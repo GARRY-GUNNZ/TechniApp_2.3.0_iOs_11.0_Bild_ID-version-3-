@@ -35,8 +35,8 @@
     [super viewDidLoad];
    
     // SEGUE
-    [_nomContrat setText:_viaSegue];
-    _batiTextField.text = self.batiment[@"nomBatiment"];
+   // [_nomContrat setText:_viaSegue];
+   // _batiTextField.text = self.batiment[@"nomBatiment"];
     
     
     CKAsset * asset = self.batiment[@"xavatarBati"];

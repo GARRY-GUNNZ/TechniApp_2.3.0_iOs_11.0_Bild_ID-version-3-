@@ -13,7 +13,7 @@
 {
     UIImage *currentAvatar_;
     NSMutableArray *listeBatiInstal;
-   // UIPickerView *pickerBatiInstal_;
+  
     NSString *label;
     NSMutableArray *listeEquipement_;
     CKContainer *_container;
@@ -30,7 +30,6 @@
 @property (nonatomic, strong) NSString *objectId;
 @property (weak, nonatomic) IBOutlet UITextField     *nameTextField;
 @property (weak, nonatomic) IBOutlet UIImageView     *imageView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UITextField *marqueTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *referenceTextfield;
 

@@ -209,7 +209,7 @@
         shouldEnableDoneButton = NO;
     }
     
-    self.doneButton.enabled = shouldEnableDoneButton;
+   // self.doneButton.enabled = shouldEnableDoneButton;
 }
 
 - (NSString *)title

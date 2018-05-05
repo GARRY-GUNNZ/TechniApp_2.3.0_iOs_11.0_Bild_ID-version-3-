@@ -29,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
 
 @property (nonatomic, strong) NSString *viaSegue;
-@property (nonatomic, weak) IBOutlet UILabel * nomContrat;
+//@property (nonatomic, weak) IBOutlet UILabel * nomContrat;
 @property(nonatomic,readonly) CKContainer *_container;
 @property(nonatomic,readonly) CKDatabase *_publicDB;
 @property (strong, nonatomic) CKRecord           *batiment;

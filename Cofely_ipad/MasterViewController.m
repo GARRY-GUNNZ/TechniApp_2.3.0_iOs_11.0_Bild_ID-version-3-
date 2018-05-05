@@ -168,7 +168,7 @@
         
              
             
-          listeBati = results;
+              self->listeBati = results;
             
             dispatch_async(dispatch_get_main_queue(), ^{
          
@@ -433,15 +433,15 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellB" fo
                                  // NSLog(@" liste instal %@",listeInstal);
                                  
                                  
-                                 _container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
-                                 _publicDB = _container.publicCloudDatabase;
+                                 self->_container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
+                                 self->_publicDB = self->_container.publicCloudDatabase;
                           
                                  
                                  
                                  
-                                 CKRecord * del =[listeBati objectAtIndex:indexPath.row];
+                                 CKRecord * del =[self->listeBati objectAtIndex:indexPath.row];
                                  
-                                 [_publicDB deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
+                                 [self->_publicDB deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
                                   
                                   {
                                       if (error) {
@@ -585,16 +585,16 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellB" fo
         
        
         
-        NSString * nomContrat =[[NSString alloc]init];
-        nomContrat = _viaSegue;
+       // NSString * nomContrat =[[NSString alloc]init];
+       // nomContrat = _viaSegue;
         
         
         
-        AddInfoViewController *infoContrat =
-        (AddInfoViewController *)segue.destinationViewController;
+       // AddInfoViewController *infoContrat =
+      //  (AddInfoViewController *)segue.destinationViewController;
      
         
-        [infoContrat setContratseg:_viaSegue];
+       // [infoContrat setContratseg:_viaSegue];
         
         
         

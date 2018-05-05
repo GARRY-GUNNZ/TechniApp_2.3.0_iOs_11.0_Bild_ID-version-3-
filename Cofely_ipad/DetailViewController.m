@@ -392,7 +392,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
                              
                              
                              NSLog(@"ERREUR %@",error.localizedDescription);
-                         }_listeGaz_ = objects;
+                         } self->_listeGaz_ = objects;
                          dispatch_async(dispatch_get_main_queue(), ^{
                              
                              [self.refreshControl endRefreshing];

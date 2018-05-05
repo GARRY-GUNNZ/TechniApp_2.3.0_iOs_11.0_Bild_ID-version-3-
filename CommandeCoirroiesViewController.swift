@@ -294,12 +294,15 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
 
     func alertReception ()
     {
-        let alertView = UIAlertView();
-        alertView.addButton(withTitle: "ok")
-        // alertView.addButtonWithTitle("Ok");
-        alertView.title = "Courroies Réceptionnées";
-        alertView.message = "Vous venez de réceptionner une référence de courroie ";
-        alertView.show();
+        
+        let alert = UIAlertController(title: "Courroies Réceptionnées", message: "Vous venez de réceptionner une référence de courroie ", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okaction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
     }
 
 

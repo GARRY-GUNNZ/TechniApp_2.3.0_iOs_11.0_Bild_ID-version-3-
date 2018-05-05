@@ -143,8 +143,8 @@
                      NSLog(@" erreur ");
                      NSLog(@"ERREUR %@",error.localizedDescription);
                  }
-                                 listeInstal = results;
-                                 NSLog(@"nombre d instal %lu", (unsigned long)listeInstal.count);
+                                 self->listeInstal = results;
+                                 NSLog(@"nombre d instal %lu", (unsigned long) self->listeInstal.count);
                                  dispatch_async(dispatch_get_main_queue(), ^{
                                  
                     [self.refreshControl endRefreshing];
@@ -314,12 +314,12 @@
                                  
                                 
                                  
-                                 _container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
-                                 _publicDB = _container.publicCloudDatabase;
+                                 self->_container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
+                                 self->_publicDB = self->_container.publicCloudDatabase;
                                  
-                            CKRecord * del =[listeInstal objectAtIndex:indexPath.row];
+                                 CKRecord * del =[self->listeInstal objectAtIndex:indexPath.row];
                         
-                           [_publicDB deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
+                                 [self->_publicDB deleteRecordWithID:(del.recordID) completionHandler:^(CKRecordID *recordID, NSError *error)
                             
                                   {
                                       if (error) {
@@ -334,7 +334,7 @@
                                                          
                                                          // [recordID removeObjectAtIndex:indexPath.row] ;
                                                          
-                                                         [listeInstal removeObjectAtIndex:indexPath.row];
+                                                         [self->listeInstal removeObjectAtIndex:indexPath.row];
                                                          
                                                          [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
                                                          [hud hide:YES];

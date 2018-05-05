@@ -222,7 +222,7 @@ class DetailPieceDetache: UITableViewController {
                     // self.fetchNotes()
                     // self.tblPieces.reloadData()
                     
-                    alertCommande()
+                    //alertCommande()
                 })
             })
             
@@ -300,14 +300,18 @@ class DetailPieceDetache: UITableViewController {
 }
 
   // MARK: - ALERT VIEW COMMANDE PIECES
-
+/*
 func alertCommande ()
 {
-    let alertView = UIAlertView();
-    alertView.addButton(withTitle: "ok")
-    // alertView.addButtonWithTitle("Ok");
-    alertView.title = "Pièces commandé";
-    alertView.message = "Vous venez de solder une commande ";
-    alertView.show();
+    let alertCommandePieces = UIAlertController(title: "Pièces commandé", message: "Vous venez de réceptionner une pièces détachée ", preferredStyle: .alert)
+    let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+    alertCommandePieces.addAction(okaction)
+   
+     present(alertCommandePieces, animated: true, completion: nil)
+    
+    
+    
+    
+    
 }
-
+*/

@@ -44,7 +44,6 @@
 		9C24F1621D60D5E600B3136F /* AddBatimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1611D60D5E600B3136F /* AddBatimentViewController.m */; };
 		9C24F1651D60D76F00B3136F /* AddInstallationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */; };
 		9C24F1681D60D90700B3136F /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1671D60D90700B3136F /* CHViewController.m */; };
-		9C2547BE1F0705CE006E2025 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2547BD1F0705CE006E2025 /* AddInfoViewController.swift */; };
 		9C25F10F1E45E6AB0096391D /* IMG_0028.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C25F10E1E45E6AB0096391D /* IMG_0028.jpg */; };
 		9C25F1111E45F75A0096391D /* banner_TechniApp_bati.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C25F1101E45F75A0096391D /* banner_TechniApp_bati.png */; };
 		9C2776041F58AA6C0024B346 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2776031F58AA6C0024B346 /* CloudKit.framework */; };
@@ -191,7 +190,6 @@
 		9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInstallationViewController.m; sourceTree = "<group>"; };
 		9C24F1661D60D90700B3136F /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		9C24F1671D60D90700B3136F /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
-		9C2547BD1F0705CE006E2025 /* AddInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddInfoViewController.swift; path = ../AddInfoViewController.swift; sourceTree = "<group>"; };
 		9C25F10E1E45E6AB0096391D /* IMG_0028.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0028.jpg; sourceTree = "<group>"; };
 		9C25F1101E45F75A0096391D /* banner_TechniApp_bati.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_TechniApp_bati.png; sourceTree = "<group>"; };
 		9C2776031F58AA6C0024B346 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -535,7 +533,6 @@
 			isa = PBXGroup;
 			children = (
 				9CF5AADC1F90C00F006EEEDE /* MasterViewController.h */,
-				9C2547BD1F0705CE006E2025 /* AddInfoViewController.swift */,
 				AF6FD2FD1993E13E0005DC27 /* MasterViewController.m */,
 				4A96D58B1D68D811004BECC8 /* ContratViewController.swift */,
 			);
@@ -986,7 +983,6 @@
 				4A05394F1B31FBFC003D91CE /* IngredientDetailViewController.m in Sources */,
 				AF6FD2F41993E13E0005DC27 /* main.m in Sources */,
 				9C239FF61E4914AE00EB64C1 /* DetailPieceDetache.swift in Sources */,
-				9C2547BE1F0705CE006E2025 /* AddInfoViewController.swift in Sources */,
 				AF6FD3011993E13E0005DC27 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

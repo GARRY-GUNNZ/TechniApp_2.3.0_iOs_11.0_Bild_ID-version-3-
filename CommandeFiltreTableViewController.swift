@@ -374,13 +374,21 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
     
     
     func alertReceptionFiltres ()
+        
+        
+        
+        
+        
     {
-        let alertView = UIAlertView();
-        alertView.addButton(withTitle: "ok")
-        // alertView.addButtonWithTitle("Ok");
-        alertView.title = "Filtres Réceptionnés";
-        alertView.message = "Vous venez de réceptionner une référence de filtre ";
-        alertView.show();
+        let alert = UIAlertController(title: "Filtres Réceptionnés", message: "Vous venez de réceptionner une référence de filtre  ", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okaction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+        
     }
   
 

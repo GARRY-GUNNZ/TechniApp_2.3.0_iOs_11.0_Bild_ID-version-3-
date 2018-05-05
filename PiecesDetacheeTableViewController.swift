@@ -280,8 +280,29 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
                     // print(self.arrNotes)
                    // self.fetchNotes()
                   // self.tblPieces.reloadData()
-                     alertCommande()
+                    self.alertReception()
                 })})}}
+    
+    
+    
+    func alertReception ()
+    {
+        
+        let alert = UIAlertController(title: " Réception pièces ", message: "Vous venez de réceptionner une pièces détachées ", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okaction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
     
     

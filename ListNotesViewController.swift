@@ -26,8 +26,8 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     var selectedNoteIndex: Int!
     var Batiment: CKRecord!
    @objc var nomBatisegu = String ()
-    var instalsegu = String ()
-    var contratsegu = String()
+    @objc var instalsegu = String ()
+    @objc var contratsegu = String()
     
  
   

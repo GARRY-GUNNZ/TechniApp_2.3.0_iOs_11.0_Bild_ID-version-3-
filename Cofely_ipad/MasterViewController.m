@@ -461,7 +461,7 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellB" fo
                                                          
                                                          // liste = [[NSMutableArray alloc] init];
                                                          
-                                                         [listeBati removeObjectAtIndex:indexPath.row];
+                                                         [self->listeBati removeObjectAtIndex:indexPath.row];
                                                          
                                                          [self.tableviewBati deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
                                                          [hud hide:YES];

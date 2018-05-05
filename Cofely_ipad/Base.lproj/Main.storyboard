@@ -78,6 +78,7 @@
                             </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" title="Ajouter Contrat" id="e8s-i4-YdR">
+                            <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addContartButton:" destination="E7P-mA-ET1" id="r8M-OX-e8x"/>
                             </connections>
@@ -152,14 +153,12 @@
                     <tabBarItem key="tabBarItem" title="Vos Contrats" id="1F3-HB-yoL"/>
                     <navigationItem key="navigationItem" title="Batiments" id="Egn-V5-uwV">
                         <barButtonItem key="backBarButtonItem" title="Batiments" id="18B-f5-2DU"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="zPo-Zv-3Vf">
-                                <connections>
-                                    <segue destination="asn-nc-NRm" kind="modal" identifier="addBati" modalPresentationStyle="formSheet" id="VOC-kF-X50"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="info Contrat" id="yaB-Ty-try"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Ajouter Batiment" id="zPo-Zv-3Vf">
+                            <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="asn-nc-NRm" kind="modal" identifier="addBati" modalPresentationStyle="formSheet" id="VOC-kF-X50"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addBatiment" destination="zPo-Zv-3Vf" id="Cxi-pg-HR8"/>
@@ -195,7 +194,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-c2-HeG" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
-                                            <rect key="frame" x="223" y="280" width="95" height="30"/>
+                                            <rect key="frame" x="223" y="284" width="95" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="tintColor" red="0.031372549020000001" green="0.31764705879999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +227,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
                                                     <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1276,12 +1275,14 @@
                     <navigationItem key="navigationItem" title="Installations" id="e0Q-bH-W1C">
                         <barButtonItem key="backBarButtonItem" title="Installations" id="4h3-zh-aJa"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="zAi-ex-LGa">
+                            <barButtonItem title="Ajouter Installation" id="zAi-ex-LGa">
+                                <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="W8F-X5-NKW" kind="modal" identifier="addInstal" modalPresentationStyle="formSheet" id="xOD-Et-KEp"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="🔩         | " id="RX7-d2-Xyj">
+                            <barButtonItem title="Pièces Détachées      | " id="RX7-d2-Xyj">
+                                <color key="tintColor" red="0.031372549020000001" green="0.31764705879999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="Ks2-sz-cEY" kind="popover" identifier="detailCommande" popoverAnchorBarButtonItem="RX7-d2-Xyj" id="fNV-9G-BGq">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -1350,8 +1351,8 @@
                                     <action selector="cancelButtonAction:" destination="W8F-X5-NKW" eventType="touchUpInside" id="IfT-kJ-Gb4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-photo-placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="REr-CB-1uI">
-                                <rect key="frame" x="100" y="320" width="342" height="214"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REr-CB-1uI">
+                                <rect key="frame" x="100" y="330" width="342" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8a-MS-ig9">
@@ -1395,7 +1396,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
                                         <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1416,7 +1417,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
                                         <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1454,7 +1455,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvr-Dy-Gwe" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
-                                <rect key="frame" x="240" y="260" width="79" height="35"/>
+                                <rect key="frame" x="236" y="270" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" red="0.0" green="0.74509803919999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1473,7 +1474,7 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1693,7 +1694,7 @@
                                                 </view>
                                                 <blurEffect style="light"/>
                                             </visualEffectView>
-                                            <imageView hidden="YES" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-photo-placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCK-0B-fm6">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCK-0B-fm6">
                                                 <rect key="frame" x="465" y="167" width="338" height="248"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1705,10 +1706,9 @@
                                                 </date>
                                                 <locale key="locale" localeIdentifier="fr_FR"/>
                                             </datePicker>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-gk-5bN" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
-                                                <rect key="frame" x="543" y="423" width="166" height="30"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-gk-5bN" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
+                                                <rect key="frame" x="543" y="423" width="147" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.031372549020000001" green="0.31764705879999999" blue="0.68235294120000001" alpha="0.21410831404320987" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="Type de Filtres">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1721,13 +1721,15 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadus">
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5b-dV-FAM" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
                                                 <rect key="frame" x="570" y="97" width="128" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.031372549020000001" green="0.31764705879999999" blue="0.68235294120000001" alpha="0.48728057484567899" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Photos Filtres">
+                                                <state key="normal" title="Add Photos Filtres">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1735,7 +1737,10 @@
                                                         <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadus">
-                                                        <real key="value" value="7"/>
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -2040,29 +2045,15 @@
                                     <rect key="frame" x="3" y="0.0" width="450" height="311"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Référence :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6Q-pd-zVb">
-                                    <rect key="frame" x="474" y="206" width="87" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marque :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-ZD-ztd">
-                                    <rect key="frame" x="493" y="152" width="68" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nom Installation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6j9-ag-FAo">
-                                    <rect key="frame" x="474" y="96" width="416" height="27"/>
+                                    <rect key="frame" x="490" y="128" width="484" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom Batiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-RA-hUq">
-                                    <rect key="frame" x="600" y="32" width="353" height="52"/>
+                                    <rect key="frame" x="596" y="62" width="396" height="52"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                     <nil key="textColor"/>
@@ -2075,20 +2066,6 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Marque" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8u-LZ-bf1">
-                                    <rect key="frame" x="569" y="147" width="393" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Référence" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wik-2x-a56">
-                                    <rect key="frame" x="569" y="201" width="393" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASP-Qr-b8S" customClass="DesignableButton" customModule="TechniApp" customModuleProvider="target">
                                     <rect key="frame" x="875" y="8" width="126" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -2114,12 +2091,54 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Batiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIU-tR-FQE">
-                                    <rect key="frame" x="488" y="32" width="104" height="52"/>
+                                    <rect key="frame" x="490" y="62" width="104" height="52"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Marque" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="in6-Z5-4aP" customClass="YoshikoTextField" customModule="TechniApp" customModuleProvider="target">
+                                    <rect key="frame" x="498" y="163" width="464" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                            <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                            <color key="value" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                            <color key="value" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Référence" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVl-La-dme" customClass="YoshikoTextField" customModule="TechniApp" customModuleProvider="target">
+                                    <rect key="frame" x="498" y="236" width="464" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                            <color key="value" red="0.3021732271" green="0.26395642759999999" blue="0.55874562260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                            <color key="value" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                            <color key="value" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -2340,17 +2359,19 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Détail instatalation" id="cES-Fy-kr1">
                         <barButtonItem key="backBarButtonItem" title="Details instalations" id="RKP-9z-Kzv"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WRW-rf-cYV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WRW-rf-cYV">
+                            <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="avatarInstal" destination="XBc-zg-sBr" id="jl4-GY-b3i"/>
                         <outlet property="contratLabel" destination="1gV-9T-ncq" id="uXx-Nx-sqA"/>
                         <outlet property="detailTable" destination="x4c-Tg-8gb" id="LEi-F4-grb"/>
-                        <outlet property="marqueTexfield" destination="R8u-LZ-bf1" id="US2-dg-p9N"/>
+                        <outlet property="marqueTexfield" destination="in6-Z5-4aP" id="y7N-Sq-QHB"/>
                         <outlet property="nomInstaltion" destination="6j9-ag-FAo" id="fVx-j6-ryT"/>
                         <outlet property="nominstal" destination="uIB-RA-hUq" id="8eX-dU-Xm9"/>
-                        <outlet property="referenceTexfield" destination="wik-2x-a56" id="g6e-Ze-7x7"/>
+                        <outlet property="referenceTexfield" destination="PVl-La-dme" id="vBS-aH-ifi"/>
                         <outlet property="tableConso" destination="x4c-Tg-8gb" id="NHa-Vu-2VB"/>
                     </connections>
                 </tableViewController>
@@ -2376,7 +2397,7 @@
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkO-um-jap">
                                 <rect key="frame" x="0.0" y="72" width="1024" height="652"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="meD-PL-4FF">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="652"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2543,7 +2564,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-ll-3ix">
                                 <rect key="frame" x="588" y="125" width="389" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="textColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
@@ -2567,7 +2588,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="u8t-kb-N87">
-                            <color key="tintColor" red="0.0" green="0.43921568630000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveNote:" destination="Cn4-sr-8Ds" id="NoD-Jx-c3y"/>
                             </connections>

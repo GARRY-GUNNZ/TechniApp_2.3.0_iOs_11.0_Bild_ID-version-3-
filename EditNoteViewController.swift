@@ -63,7 +63,7 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageURL = nil
         
         batiLabe.text! = nomBatiseg
         instalLabe.text = instalseg
@@ -288,6 +288,11 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    deinit {
+        print( "la page addPièces détaché  est des-initialiez ")
     }
 }
 

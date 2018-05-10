@@ -131,9 +131,9 @@
 {
     // Il s'agit simplement de garder un pointeur vers l'image
     // et de l'afficher ...
-    currentAvatar_       = image;
+   // currentAvatar_       = image;
     self.imageView.image = image;
-    [self updateDoneButtonStatus];
+   // [self updateDoneButtonStatus];
 }
 
 
@@ -160,9 +160,9 @@
     [hud show:YES];
     //[self setLoadingProgress:-1];
     
+    NSData *imageData = [[NSData alloc] init];
     
-    
-    NSData *imageData = UIImageJPEGRepresentation(self.imageView.image, 0.80);
+      imageData = UIImageJPEGRepresentation(self.imageView.image, 0.30);
     ///////////////// cloudkit///////////////////////////
     
     
@@ -198,25 +198,25 @@
 }
 
 
-
+/*
 - (void)updateDoneButtonStatus
 {
     // Le bouton done n'est activé que si on a un nom et un avatar
     BOOL shouldEnableDoneButton = YES;
     
     if ((self.nameTextField.text == nil) || (self.nameTextField.text.length < 1) || (currentAvatar_ == nil)
-        /* ||(self.referenceTextfield == nil) || (self.marqueTextfield == nil)*/) {
-        shouldEnableDoneButton = NO;
+         ||(self.referenceTextfield == nil) || (self.marqueTextfield == nil)) {
+       // shouldEnableDoneButton = NO;
     }
     
    // self.doneButton.enabled = shouldEnableDoneButton;
 }
-
+*/
 - (NSString *)title
 {
     return NSLocalizedString(@"Ajouter Instalation", @"");
 }
-
+/*
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -229,6 +229,8 @@
     [self updateDoneButtonStatus];
     return NO;
 }
+
+*/
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.nameTextField resignFirstResponder];
@@ -238,7 +240,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   // return NSDebugDescriptionErrorKey (@"probleme memoire",@"");
 }
 
 - (IBAction)cancelButtonAction:(id)sender

@@ -37,7 +37,7 @@
     // SEGUE
    // [_nomContrat setText:_viaSegue];
    // _batiTextField.text = self.batiment[@"nomBatiment"];
-    
+    _avatarBati.imageURL = nil;
     
     CKAsset * asset = self.batiment[@"xavatarBati"];
     _avatarBati.imageURL = asset.fileURL;
@@ -87,7 +87,8 @@
    
     [super didReceiveMemoryWarning];
     
-    
+    NSLog(@"probleme memoire dans le menu Installation");
+    NSLog(@"%@", self.description);
     
     
   
@@ -242,7 +243,7 @@
     UITableViewCell *cell           = [tableViEw dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell== 0) {
-        return cell;
+        return cell ;
     }
     
     

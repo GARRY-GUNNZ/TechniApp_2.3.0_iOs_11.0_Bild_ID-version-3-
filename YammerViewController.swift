@@ -81,7 +81,10 @@ class YammerViewController: UIViewController,UIWebViewDelegate {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             vueChargement.isHidden = true
         }
-        
+    
+    deinit {
+        print( "la page Yammer est des-initialiez ")
+    }
         
         
         

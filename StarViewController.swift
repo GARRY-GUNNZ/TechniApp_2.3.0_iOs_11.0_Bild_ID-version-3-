@@ -81,6 +81,9 @@ class StarViewController: UIViewController,UIWebViewDelegate {
         vueChargement.isHidden = true
     }
     
+    deinit {
+        print( "la page Staz est des-initialiez ")
+    }
    
     
     

@@ -297,6 +297,12 @@ class DetailPieceDetache: UITableViewController {
      }
      */
     
+    deinit {
+        print( "la page DetailPièce est des-initialiez ")
+    }
+    
+    
+    
 }
 
   // MARK: - ALERT VIEW COMMANDE PIECES

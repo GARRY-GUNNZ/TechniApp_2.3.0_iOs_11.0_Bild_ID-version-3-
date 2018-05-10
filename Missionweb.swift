@@ -70,4 +70,8 @@ class Missionweb: UIViewController,UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         vueChargement.isHidden = true
     }
+    
+    deinit {
+        print( "la page MissionWeb est des-initialiez ")
+    }
 }

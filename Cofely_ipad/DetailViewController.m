@@ -343,7 +343,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
 
 
 
-- (void)handleQueryResponse:(NSArray *)response
+- (void)handleQueryResponse:(NSMutableArray *)response
 {
         self.consomableListe_ = response;
     
@@ -405,7 +405,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
         }
     
     
-    - (void)QueryResponseGaz:(NSArray *)response
+    - (void)QueryResponseGaz:(NSMutableArray *)response
 {
  
     self.listeGaz_ = response;
@@ -504,7 +504,7 @@ NSString * bati = nil;
 
 
 
-- (void)QueryResponseFiltre:(NSArray *)responseFiltre
+- (void)QueryResponseFiltre:(NSMutableArray *)responseFiltre
 {
     // On récupère le tableau, on le stocke.
     self.filtre = responseFiltre;
@@ -1503,7 +1503,8 @@ NSString * bati = nil;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"probleme memoire dans le menu Detail Installation");
+    NSLog(@"%@", self.description);
 }
 
 

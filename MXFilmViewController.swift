@@ -81,7 +81,10 @@ class MXFilmViewController: UIViewController,UIWebViewDelegate {
             vueChargement.isHidden = true
         }
         
-        
+    
+    deinit {
+        print( "la page googledrive est des-initialiez ")
+    }
         
         
 }

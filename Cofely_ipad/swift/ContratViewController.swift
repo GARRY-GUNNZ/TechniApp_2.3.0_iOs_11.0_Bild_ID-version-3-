@@ -17,7 +17,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     
        // MARK: - varriable
     
-    let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+  //  let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
     let tempImageName = "temp_image.jpg"
     var numeroContratPass = String ()
     var contratPass = String()
@@ -150,8 +150,10 @@ alert.addTextField
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
         
+        print("probleme memoire dans le menu contrat")
+        print(self.description)
     }
     //   MARK: - TABLEVIEW CUSTOMISATION
     
@@ -479,6 +481,11 @@ alert.addTextField
         }
         */
         
+    }
+    
+    
+    deinit {
+        print( "la page contrat est des-initialiez ")
     }
     
 }

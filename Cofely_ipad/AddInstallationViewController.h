@@ -11,7 +11,7 @@
 
 @interface AddInstallationViewController : CHViewController <UITextFieldDelegate>
 {
-    UIImage *currentAvatar_;
+   // UIImage *currentAvatar_;
     NSMutableArray *listeBatiInstal;
   
     NSString *label;

@@ -18,7 +18,7 @@
     NSString *label;
     CKContainer *_container;
     CKDatabase *_publicDB;
-    UIImage *currentAvatar_;
+   // UIImage *currentAvatar_;
     
 }
 

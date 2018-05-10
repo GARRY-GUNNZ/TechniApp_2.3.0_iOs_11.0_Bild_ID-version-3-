@@ -14,25 +14,20 @@
 
 <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoBatiment;
+
+
+@property (strong, nonatomic) IBOutlet UIImageView *photoBatiment;
 - (IBAction)boutonAddPhoto:(id)sender;
 
-
-
 @end
-
 
 @implementation AddBatimentViewController {
     
 }
 
 
-
-
-
-- (void)imagePickerController:(UIImagePickerController *)picker
-        didFinishPickingImage:(UIImage *)image
-                  editingInfo:(NSDictionary *)editingInfo
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo
 {
     // Quand il a séléctionné une image, on la stocke
     [self handleImagePick:image];
@@ -49,25 +44,11 @@
 {
     // Il s'agit simplement de garder un pointeur vers l'image
     // et de l'afficher ...
-    currentAvatar_       = image;
+   // currentAvatar_       = image;
+    
     self.photoBatiment.image = image;
     //[self updateDoneButtonStatus];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -75,7 +56,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.photoBatiment.image = nil ;
     }
     return self;
 }
@@ -89,19 +70,18 @@
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = @"Téléchargement ";
     [hud show:YES];
+    NSData *imageData = [[NSData alloc] init];
     
-    
-     NSData *imageData = UIImageJPEGRepresentation(self.photoBatiment.image, 0.80);
-    
+    imageData = UIImageJPEGRepresentation(self.photoBatiment.image, 0.30);
     CKRecord *addBatiment = [[CKRecord alloc]initWithRecordType:@"Batiment"];
 
     
     // Il suffit de setter tous les champs
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *file = [documentsDirectory stringByAppendingPathComponent:@"data.jpg"];
-    [imageData writeToFile:file
-                atomically:YES];
+    [imageData writeToFile:file atomically:YES];
     
     CKAsset *asset = [[CKAsset alloc] initWithFileURL:[NSURL fileURLWithPath:file]];
     [addBatiment setObject:asset forKey:@"xavatarBati"];
@@ -121,8 +101,11 @@
                                                      
                                                      // Si tout s'est bien passé, on ferme le vc modal.
                                                      [hud hide:YES];
+                                                     
                                                      [self dismissViewControllerAnimated:YES completion:nil];
                                                      }];
+    
+    
     
 }
 
@@ -130,6 +113,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _photoBatiment = Nil;
     
      [_nomdeContrat setText: _viaSegue];
    
@@ -147,7 +132,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"probleme memoire dans le menu AddBatiment");
+    NSLog(@"%@", self.description);
 }
 
 

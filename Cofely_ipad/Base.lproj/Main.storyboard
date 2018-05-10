@@ -156,7 +156,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Ajouter Batiment" id="zPo-Zv-3Vf">
                             <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="asn-nc-NRm" kind="modal" identifier="addBati" modalPresentationStyle="formSheet" id="VOC-kF-X50"/>
+                                <segue destination="asn-nc-NRm" kind="modal" identifier="addBati" modalPresentationStyle="formSheet" id="XtO-yM-XEh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="-1288" y="-4718"/>
         </scene>
-        <!--Add Batiment View Controller-->
+        <!--Add Batiments-->
         <scene sceneID="y6n-BF-jv3">
             <objects>
-                <viewController id="asn-nc-NRm" customClass="AddBatimentViewController" sceneMemberID="viewController">
+                <viewController id="asn-nc-NRm" customClass="AddBatiments" customModule="TechniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0yB-zz-4l8"/>
                         <viewControllerLayoutGuide type="bottom" id="s53-8Q-BCz"/>
@@ -215,7 +215,7 @@
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="ajouterPhotos:" destination="W8F-X5-NKW" eventType="touchUpInside" id="xuO-pp-Lax"/>
-                                                <action selector="boutonAddPhoto:" destination="asn-nc-NRm" eventType="touchUpInside" id="r49-eI-Gpq"/>
+                                                <action selector="choixPhoto:" destination="asn-nc-NRm" eventType="touchUpInside" id="Jhq-8D-bHF"/>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-ll-dz0">
@@ -262,7 +262,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="doneButtonAction:" destination="asn-nc-NRm" eventType="touchUpInside" id="uO9-wK-eSE"/>
+                                                <action selector="addBatiment:" destination="asn-nc-NRm" eventType="touchUpInside" id="PF0-9d-U5n"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZF-fD-fpB">
@@ -316,7 +316,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cancel:" destination="asn-nc-NRm" eventType="touchUpInside" id="lKd-Ni-2Kk"/>
+                                    <action selector="dissmiss:" destination="asn-nc-NRm" eventType="touchUpInside" id="hNn-Ko-hHf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,10 +326,10 @@
                     <navigationItem key="navigationItem" id="Fah-Wi-VnB"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="nomDuBatiment" destination="eUO-ep-YD1" id="jKJ-7r-UrD"/>
-                        <outlet property="nomdeContrat" destination="EZF-fD-fpB" id="3Gx-vY-vYh"/>
-                        <outlet property="numeroContratTextField" destination="p5g-po-0VT" id="ouT-YV-Lf6"/>
-                        <outlet property="photoBatiment" destination="MfV-ll-dz0" id="LcW-hV-m6m"/>
+                        <outlet property="contratlabel" destination="EZF-fD-fpB" id="OgH-UR-hxV"/>
+                        <outlet property="imageBatiment" destination="MfV-ll-dz0" id="4Tw-Rg-OtD"/>
+                        <outlet property="nomBatimentTexfield" destination="eUO-ep-YD1" id="rjb-Ww-uHg"/>
+                        <outlet property="numerotexfiled" destination="p5g-po-0VT" id="r8N-6B-daF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezy-Ed-gQO" userLabel="First Responder" sceneMemberID="firstResponder"/>

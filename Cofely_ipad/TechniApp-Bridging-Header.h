@@ -5,12 +5,12 @@
 #import "SWRevealViewController.h"
 #import "CHViewController.h"
 #import "MBProgressHUD.h"
-#import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "Instalation.h"
 #import "InstalViewController.h"
 #import "TextFieldEffects.h"
 #import "AddInstallationViewController.h"
+#import "MasterViewController.h"
 
 
 

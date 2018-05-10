@@ -17,7 +17,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     
        // MARK: - varriable
     
-  //  let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+    let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
     let tempImageName = "temp_image.jpg"
     var numeroContratPass = String ()
     var contratPass = String()
@@ -485,7 +485,8 @@ alert.addTextField
     
     
     deinit {
-        print( "la page contrat est des-initialiez ")
+        //self.ContratViewController = nil
+        print( "la page Contrat  est des-initialiez ")
     }
     
 }

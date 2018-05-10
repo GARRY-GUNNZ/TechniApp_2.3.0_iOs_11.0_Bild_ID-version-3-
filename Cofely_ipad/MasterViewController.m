@@ -244,10 +244,6 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    NSLog(@"probleme memoire dans le menu Batiment");
-    NSLog(@"%@", self.description);
-    
-    
     // Release any cached data, images, etc that aren't in use.
 }
 

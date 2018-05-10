@@ -14,6 +14,7 @@
 #import "Instalation.h"
 #import "TechniApp-Swift.h"
 
+
 #import <UIKit/UIKit.h>
 
 @interface InstalViewController ()
@@ -37,7 +38,7 @@
     // SEGUE
    // [_nomContrat setText:_viaSegue];
    // _batiTextField.text = self.batiment[@"nomBatiment"];
-    _avatarBati.imageURL = nil;
+   #import "TechniApp-Swift.h" _avatarBati.imageURL = nil;
     
     CKAsset * asset = self.batiment[@"xavatarBati"];
     _avatarBati.imageURL = asset.fileURL;

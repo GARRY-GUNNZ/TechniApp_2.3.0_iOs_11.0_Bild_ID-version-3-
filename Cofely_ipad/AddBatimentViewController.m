@@ -7,7 +7,7 @@
 //
 #import <UIKit/UIKit.h>
 #import "AddBatimentViewController.h"
-#import "MasterViewController.h"
+
 #import "MBProgressHUD.h"
 #import "InstalViewController.h"
 @interface AddBatimentViewController ()

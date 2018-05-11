@@ -65,6 +65,7 @@ class AddProfilViewController: UIViewController ,UIImagePickerControllerDelegate
         
         
     {
+      
         
        // let imageAvatar = UIImage(named:"51456_1448924M.png")
         let imagedata : NSData = UIImagePNGRepresentation(avatarProfil.image!)! as NSData
@@ -77,20 +78,22 @@ class AddProfilViewController: UIViewController ,UIImagePickerControllerDelegate
         print(NSError.self)
          self.vueChargement.isHidden = false
     
-        self.dismiss(animated: true, completion: nil)
+       // self.dismiss(animated: true, completion: nil)
          self.vueChargement.isHidden = true
         
-        
+        self.exit()
        
     }
     
     func exit ()  {
-        let alert = UIAlertController(title: "SAVE", message: "Votre Profil à été enregistré , il sera mise à jour au prochain démarrage de l'appilcation  ", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Changement de profil réussie !!", message: " il sera mise à jour au prochain démarrage de l'appilcation  ", preferredStyle: .alert)
         let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
         alert.addAction(okaction)
         self.present(alert, animated: true, completion: nil)
+        
     }
     
+   
     
     
     func saveImageLocally() {

@@ -19,7 +19,6 @@
 		4A36699119D47744009DE1A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A36699019D47744009DE1A4 /* SystemConfiguration.framework */; };
 		4A40660F20815163000402A9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40660E20815163000402A9 /* MenuCell.swift */; };
 		4A4B9A321D64BD43007963E4 /* google_drive_icon_.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4B9A311D64BD43007963E4 /* google_drive_icon_.png */; };
-		4A4B9A341D64BF47007963E4 /* running.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A4B9A331D64BF47007963E4 /* running.jpg */; };
 		4A4B9B821AD316600095FD27 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A4B9B7F1AD316600095FD27 /* SVProgressHUD.bundle */; };
 		4A4B9B831AD316600095FD27 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B9B811AD316600095FD27 /* SVProgressHUD.m */; };
 		4A5477B61FC8C4F300942498 /* images-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A5477B51FC8C4DC00942498 /* images-3.jpeg */; };
@@ -39,7 +38,6 @@
 		9C145E391CC518F30064E99C /* fond@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C145E381CC518F30064E99C /* fond@2x.png */; };
 		9C239FF61E4914AE00EB64C1 /* DetailPieceDetache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */; };
 		9C2453111E8FA78100747A1A /* Yammer-logo-e1463436513335.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2453101E8FA78100747A1A /* Yammer-logo-e1463436513335.png */; };
-		9C24F1621D60D5E600B3136F /* AddBatimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1611D60D5E600B3136F /* AddBatimentViewController.m */; };
 		9C24F1651D60D76F00B3136F /* AddInstallationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */; };
 		9C24F1681D60D90700B3136F /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C24F1671D60D90700B3136F /* CHViewController.m */; };
 		9C25F10F1E45E6AB0096391D /* IMG_0028.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C25F10E1E45E6AB0096391D /* IMG_0028.jpg */; };
@@ -78,7 +76,6 @@
 		9C8E07881C3951AC00CB58C5 /* TemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E07871C3951AC00CB58C5 /* TemperatureCell.m */; };
 		9C8E078B1C3953FB00CB58C5 /* TeauData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E07891C3953FB00CB58C5 /* TeauData.plist */; };
 		9C8E078C1C3953FB00CB58C5 /* TemperatureData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E078A1C3953FB00CB58C5 /* TemperatureData.plist */; };
-		9C901D2A1C22388D00F6C1B4 /* imagegroup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C901D291C22388D00F6C1B4 /* imagegroup.jpg */; };
 		9C9421531D529FA2005AB1C7 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421511D529FA2005AB1C7 /* menu.png */; };
 		9C9421541D529FA2005AB1C7 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421521D529FA2005AB1C7 /* menu@2x.png */; };
 		9C97C1BE1E37FAE300F05479 /* alteva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C97C1BD1E37FAE300F05479 /* alteva.jpg */; };
@@ -90,13 +87,7 @@
 		9CC229231CBA7CB100EFA01A /* TableViewListeRSSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC229221CBA7CB100EFA01A /* TableViewListeRSSTableViewController.m */; };
 		9CC229261CBA7D1A00EFA01A /* UIWebDetailFluxRSS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC229251CBA7D1A00EFA01A /* UIWebDetailFluxRSS.m */; };
 		9CCD62E32087BA16004976A6 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD62E22087BA16004976A6 /* MenuTableViewController.swift */; };
-		9CE6F7411C29568B00841200 /* cadre_filtre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73A1C29568B00841200 /* cadre_filtre.jpg */; };
-		9CE6F7421C29568B00841200 /* carton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73B1C29568B00841200 /* carton.jpg */; };
-		9CE6F7431C29568B00841200 /* cartonF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73C1C29568B00841200 /* cartonF.jpg */; };
-		9CE6F7441C29568B00841200 /* filtres_poche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73D1C29568B00841200 /* filtres_poche.jpg */; };
-		9CE6F7451C29568B00841200 /* media.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73E1C29568B00841200 /* media.jpg */; };
 		9CE6F7461C29568B00841200 /* varicel.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F73F1C29568B00841200 /* varicel.jpeg */; };
-		9CE6F7471C29568B00841200 /* vco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE6F7401C29568B00841200 /* vco.jpg */; };
 		9CEAFC011BC9C6980040B8EC /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAFC001BC9C6980040B8EC /* InstructionsViewController.m */; };
 		9CFFB7741C44327C00343D40 /* bouteil_gaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFFB7731C44327C00343D40 /* bouteil_gaz.png */; };
 		AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6CF2F2209CAD7E00206D51 /* TextFieldEffects.swift */; };
@@ -150,7 +141,6 @@
 		4A36699019D47744009DE1A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4A40660E20815163000402A9 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		4A4B9A311D64BD43007963E4 /* google_drive_icon_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_drive_icon_.png; sourceTree = "<group>"; };
-		4A4B9A331D64BF47007963E4 /* running.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = running.jpg; sourceTree = "<group>"; };
 		4A4B9B7F1AD316600095FD27 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = Cofely_ipad/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		4A4B9B801AD316600095FD27 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		4A4B9B811AD316600095FD27 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -179,8 +169,6 @@
 		9C145E381CC518F30064E99C /* fond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fond@2x.png"; sourceTree = "<group>"; };
 		9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPieceDetache.swift; path = swift/DetailPieceDetache.swift; sourceTree = "<group>"; };
 		9C2453101E8FA78100747A1A /* Yammer-logo-e1463436513335.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yammer-logo-e1463436513335.png"; sourceTree = "<group>"; };
-		9C24F1601D60D5E600B3136F /* AddBatimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBatimentViewController.h; sourceTree = "<group>"; };
-		9C24F1611D60D5E600B3136F /* AddBatimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBatimentViewController.m; sourceTree = "<group>"; };
 		9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInstallationViewController.h; sourceTree = "<group>"; };
 		9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInstallationViewController.m; sourceTree = "<group>"; };
 		9C24F1661D60D90700B3136F /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
@@ -228,7 +216,6 @@
 		9C8E07871C3951AC00CB58C5 /* TemperatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureCell.m; sourceTree = "<group>"; };
 		9C8E07891C3953FB00CB58C5 /* TeauData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TeauData.plist; sourceTree = "<group>"; };
 		9C8E078A1C3953FB00CB58C5 /* TemperatureData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemperatureData.plist; sourceTree = "<group>"; };
-		9C901D291C22388D00F6C1B4 /* imagegroup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imagegroup.jpg; sourceTree = "<group>"; };
 		9C9421511D529FA2005AB1C7 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9C9421521D529FA2005AB1C7 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		9C97C1BD1E37FAE300F05479 /* alteva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alteva.jpg; sourceTree = "<group>"; };
@@ -243,13 +230,7 @@
 		9CC229241CBA7D1A00EFA01A /* UIWebDetailFluxRSS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIWebDetailFluxRSS.h; path = Cofely_ipad/UIWebDetailFluxRSS.h; sourceTree = "<group>"; };
 		9CC229251CBA7D1A00EFA01A /* UIWebDetailFluxRSS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIWebDetailFluxRSS.m; path = Cofely_ipad/UIWebDetailFluxRSS.m; sourceTree = "<group>"; };
 		9CCD62E22087BA16004976A6 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
-		9CE6F73A1C29568B00841200 /* cadre_filtre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cadre_filtre.jpg; sourceTree = "<group>"; };
-		9CE6F73B1C29568B00841200 /* carton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carton.jpg; sourceTree = "<group>"; };
-		9CE6F73C1C29568B00841200 /* cartonF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cartonF.jpg; sourceTree = "<group>"; };
-		9CE6F73D1C29568B00841200 /* filtres_poche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filtres_poche.jpg; sourceTree = "<group>"; };
-		9CE6F73E1C29568B00841200 /* media.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = media.jpg; sourceTree = "<group>"; };
 		9CE6F73F1C29568B00841200 /* varicel.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = varicel.jpeg; sourceTree = "<group>"; };
-		9CE6F7401C29568B00841200 /* vco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vco.jpg; sourceTree = "<group>"; };
 		9CEAFBFF1BC9C6980040B8EC /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		9CEAFC001BC9C6980040B8EC /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
 		9CF2FAF21CE9FB7900FDFE5A /* TechniApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TechniApp-Bridging-Header.h"; path = "Cofely_ipad/TechniApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -513,8 +494,6 @@
 				AF6FD3001993E13E0005DC27 /* DetailViewController.m */,
 				4AF9FFBB1A1FB2DA000E8874 /* InstalViewController.h */,
 				4AF9FFBC1A1FB2DA000E8874 /* InstalViewController.m */,
-				9C24F1601D60D5E600B3136F /* AddBatimentViewController.h */,
-				9C24F1611D60D5E600B3136F /* AddBatimentViewController.m */,
 				4AE8BEA61AAF60EC0042D5D0 /* Instalation.h */,
 				4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */,
 				9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */,
@@ -550,13 +529,7 @@
 		9CE6F7391C29552600841200 /* Image Filtre */ = {
 			isa = PBXGroup;
 			children = (
-				9CE6F73A1C29568B00841200 /* cadre_filtre.jpg */,
-				9CE6F73B1C29568B00841200 /* carton.jpg */,
-				9CE6F73C1C29568B00841200 /* cartonF.jpg */,
-				9CE6F73D1C29568B00841200 /* filtres_poche.jpg */,
-				9CE6F73E1C29568B00841200 /* media.jpg */,
 				9CE6F73F1C29568B00841200 /* varicel.jpeg */,
-				9CE6F7401C29568B00841200 /* vco.jpg */,
 			);
 			name = "Image Filtre";
 			sourceTree = "<group>";
@@ -679,7 +652,6 @@
 				9C2453101E8FA78100747A1A /* Yammer-logo-e1463436513335.png */,
 				9C25F10E1E45E6AB0096391D /* IMG_0028.jpg */,
 				9C25F1101E45F75A0096391D /* banner_TechniApp_bati.png */,
-				4A4B9A331D64BF47007963E4 /* running.jpg */,
 				4A4B9A311D64BD43007963E4 /* google_drive_icon_.png */,
 				4A9743AE1D646FE600FA7728 /* bridge.jpg */,
 				9C9421511D529FA2005AB1C7 /* menu.png */,
@@ -687,7 +659,6 @@
 				9C97C1BD1E37FAE300F05479 /* alteva.jpg */,
 				9C053D4F1CC64C7A00CC6D1B /* fond_iPhonr6@2x.png */,
 				9C145E381CC518F30064E99C /* fond@2x.png */,
-				9C901D291C22388D00F6C1B4 /* imagegroup.jpg */,
 				4AA6FE691A9BBF1000CB3ADA /* add-photo-placeholder.png */,
 				9CC229201CBA784100EFA01A /* Cell */,
 				9CE6F7391C29552600841200 /* Image Filtre */,
@@ -855,20 +826,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CE6F7471C29568B00841200 /* vco.jpg in Resources */,
 				4A5477B61FC8C4F300942498 /* images-3.jpeg in Resources */,
-				9CE6F7441C29568B00841200 /* filtres_poche.jpg in Resources */,
 				9C25F1111E45F75A0096391D /* banner_TechniApp_bati.png in Resources */,
 				4A9743AF1D646FE600FA7728 /* bridge.jpg in Resources */,
 				9C8E078C1C3953FB00CB58C5 /* TemperatureData.plist in Resources */,
-				9C901D2A1C22388D00F6C1B4 /* imagegroup.jpg in Resources */,
 				9CFFB7741C44327C00343D40 /* bouteil_gaz.png in Resources */,
 				4A4B9A321D64BD43007963E4 /* google_drive_icon_.png in Resources */,
 				9CB2B6341D43B9B000DB0070 /* no_image.png in Resources */,
 				9C30615E209B263700AA2ACA /* 137.png in Resources */,
 				9C6F4F951D844ADB001E5DFA /* nom_appli6plus@2x.png in Resources */,
 				9C6AE8A21C31DCDE00F5C6DB /* ipad-list-element@2x.png in Resources */,
-				9CE6F7431C29568B00841200 /* cartonF.jpg in Resources */,
 				9CE6F7461C29568B00841200 /* varicel.jpeg in Resources */,
 				9C0FDBEF1E312E3D00B5F474 /* Image_Threshold_390x375.png in Resources */,
 				AF6FD3291993E2130005DC27 /* cell_bottom@2x.png in Resources */,
@@ -879,15 +846,12 @@
 				9C25F10F1E45E6AB0096391D /* IMG_0028.jpg in Resources */,
 				AF6FD32F1993E2130005DC27 /* common_bg.png in Resources */,
 				AF6FD32B1993E2130005DC27 /* cell_middle@2x.png in Resources */,
-				9CE6F7421C29568B00841200 /* carton.jpg in Resources */,
 				9C2453111E8FA78100747A1A /* Yammer-logo-e1463436513335.png in Resources */,
-				4A4B9A341D64BF47007963E4 /* running.jpg in Resources */,
 				AF6FD3301993E2130005DC27 /* common_bg@2x.png in Resources */,
 				4A4B9B821AD316600095FD27 /* SVProgressHUD.bundle in Resources */,
 				9C30615C209B262300AA2ACA /* photo_logo.png in Resources */,
 				9C6F4F931D844A3F001E5DFA /* nom_appli@2x.png in Resources */,
 				9C6F4F911D843EF2001E5DFA /* Images.xcassets in Resources */,
-				9CE6F7451C29568B00841200 /* media.jpg in Resources */,
 				AF6FD3281993E2130005DC27 /* cell_bottom.png in Resources */,
 				9C053D4E1CC6151A00CC6D1B /* iPhoneboard.storyboard in Resources */,
 				AF6FD32A1993E2130005DC27 /* cell_middle.png in Resources */,
@@ -897,7 +861,6 @@
 				9C9421531D529FA2005AB1C7 /* menu.png in Resources */,
 				9C306160209B264500AA2ACA /* Login_logo.png in Resources */,
 				9C6AE8A51C31DF7F00F5C6DB /* ipad-list-item-selected.png in Resources */,
-				9CE6F7411C29568B00841200 /* cadre_filtre.jpg in Resources */,
 				4AA6FE6A1A9BBF1000CB3ADA /* add-photo-placeholder.png in Resources */,
 				9C8E078B1C3953FB00CB58C5 /* TeauData.plist in Resources */,
 				9C6AE8A11C31DCDE00F5C6DB /* ipad-list-element.png in Resources */,
@@ -961,7 +924,6 @@
 				4A40660F20815163000402A9 /* MenuCell.swift in Sources */,
 				9CC229231CBA7CB100EFA01A /* TableViewListeRSSTableViewController.m in Sources */,
 				9C6521281DEB7BA300671E28 /* PiecesDetacheeTableViewController.swift in Sources */,
-				9C24F1621D60D5E600B3136F /* AddBatimentViewController.m in Sources */,
 				9C5ED1B61DE5E4CF0089B56D /* CommandeViewTableViewController.swift in Sources */,
 				9C2F55A81F9A9239007E6709 /* SeachbarViewController.swift in Sources */,
 				9C24F1681D60D90700B3136F /* CHViewController.m in Sources */,

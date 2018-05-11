@@ -5,7 +5,7 @@
 //  Created by COFELY_Technibook on 07/08/2014.
 //  Copyright (c) 2014 COFELY_Technibook. All rights reserved.
 //
-#import "TypeSelectionViewController.h"
+//#import "TypeSelectionViewController.h"
 #import "IngredientDetailViewController.h"
 #import "ListeFiltre.h"
 #import "DetailViewController.h"
@@ -42,15 +42,9 @@
 #define GAZ_SECTION 3
 #define FILTRE_SECTION 2
 
-// segue ID when "Add Ingredient" cell is tapped
+
 static NSString *kAddIngredientSegueID = @"addFiltre";
-
-// segue ID when "Instructions" cell is tapped
 static NSString *kShowInstructionsSegueID = @"showInstructions";
-
-// segue ID when the recipe (category) cell is tapped
-//static NSString *kShowRecipeTypeSegueID = @"showRecipeType";
-
 static NSString *kShowGazTypeSegueID = @"showGaz";
 static NSString *kShowFiltreTypeSegueID = @"showFiltre";
 
@@ -267,7 +261,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
             self.marqueTexfield.placeholder = @"Saisir Marque";
         } else {
             [self.detailTable deleteRowsAtIndexPaths:ingredientsInsertIndexPath withRowAnimation:UITableViewRowAnimationTop];
-            self.marqueTexfield.placeholder = @"Saisir reference";
+            self.marqueTexfield.placeholder = @"Saisir réference";
         }
         
         [self.detailTable endUpdates];
@@ -455,24 +449,6 @@ NSString * bati = nil;
     
 
     
-    
-   
-     // CKQuery *query = [[CKQuery alloc]initWithRecordType :@"Filtres"
-                  
-    
-       // predicate:[NSPredicate predicateWithFormat:@"nomInstal == %@", noninstal]];
-    
-    
-   // NSPredicate *predicate = nil;
-  //  predicate = [NSPredicate predicateWithFormat:@"batiment == %@", bati];
-  
-    
-    
-    
-   // NSLog(@"PREDICATE FILTRE %@",predicate);
-   // NSLog(@"LISTE FILTRE %@",filtre);
-    
-    
 
 [[self _publicDB] performQuery:query
                   inZoneWithID:nil
@@ -539,22 +515,7 @@ NSString * bati = nil;
 {
     return NSLocalizedString(@"global.error.title", @"");
 }
-/*
-- (NSString *)messageForError:(NSError *)error
-{
-    if (error.domain == NSURLErrorDomain) {
-        if (error.code == kPFErrorConnectionFailed) {
-            return NSLocalizedString(@"global.error.network.offline", @"");
-        } else if (error.code == kPFErrorTimeout) {
-            return NSLocalizedString(@"global.error.network.timeout", @"");
-        } else {
-            return NSLocalizedString(@"global.error.network.default", @"");
-        }
-    }
-    
-    return NSLocalizedString(@"global.error.subtitle", @"");
-}
-*/
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     //UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(30, 9, 200, 40)];
       //label.textColor = [UIColor brownColor];
@@ -1135,6 +1096,18 @@ NSString * bati = nil;
     return rowToSelect;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+   
+     return YES;
+}
+
+
+
+
+
+
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -1145,13 +1118,22 @@ NSString * bati = nil;
             style = UITableViewCellEditingStyleInsert;
         }
        
-       
             
         else {
             style = UITableViewCellEditingStyleDelete;
         }
     }
-    
+    if (indexPath.section == FILTRE_SECTION)  {
+        // If this is the last item, it's the insertion row.
+        if (indexPath.row == (NSInteger)filtre.count) {
+            style = UITableViewCellEditingStyleInsert;
+        }
+        
+        
+        else {
+            style = UITableViewCellEditingStyleDelete;
+        }
+    }
     return style;
 }
 
@@ -1465,6 +1447,8 @@ NSString * bati = nil;
     if (indexPath.section == CONSOMABLE_SECTION) {
         canMove = indexPath.row != (NSInteger)self.consomableListe_.count;
     }
+    
+    
     return canMove;
 }
 

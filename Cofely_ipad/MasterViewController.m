@@ -14,7 +14,7 @@
 //#import "SWRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "TechniApp-Bridging-Header.h"
-#import "AddBatimentViewController.h"
+
 #import "AddInstallationViewController.h"
 #import "TechniApp-Swift.h"
 
@@ -290,7 +290,7 @@
     
     {
  
-        NSString * titreHeader = [[NSString alloc]initWithFormat: @"🏢  Bâtiment  %@  ",_nomContrat.text];
+        NSString * titreHeader = [[NSString alloc]initWithFormat: @"🏢  Bâtiments  %@  ",_nomContrat.text];
         
        
         return titreHeader;
@@ -381,6 +381,8 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellB" fo
         
         //NSLog(@"liste bati tableview %@" ,listeBati);
         nameBatiment.text = [record objectForKey:@"nomBatiment"];
+    
+    
         numeroInstal.text = [NSString stringWithFormat:@"Contrat n°%@ ",[record objectForKey:@"numberContrat"]];
         
        
@@ -573,9 +575,9 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellB" fo
         
        
         
-        AddBatimentViewController * maVuAddBatiment = (AddBatimentViewController *)segue.destinationViewController;
+        AddBatiments * vuBati = (AddBatiments *)segue.destinationViewController;
         
-        [maVuAddBatiment setViaSegue:nomC];
+        [vuBati setViaSegue:nomC];
        
         // AddFiltreViewController *vc = [segue destinationViewController];
        // NSLog(@"_nomContrat %@",_nomContrat);

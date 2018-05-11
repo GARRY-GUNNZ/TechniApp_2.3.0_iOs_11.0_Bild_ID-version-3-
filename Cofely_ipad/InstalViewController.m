@@ -7,7 +7,7 @@
 //
 
 #import "InstalViewController.h"
-#import "MasterViewController.h"
+//#import "MasterViewController.h"
 #import "AddInstallationViewController.h"
 #import "MBProgressHUD.h"
 #import "AsyncImageView.h"
@@ -35,10 +35,8 @@
     
     [super viewDidLoad];
    
-    // SEGUE
-   // [_nomContrat setText:_viaSegue];
-   // _batiTextField.text = self.batiment[@"nomBatiment"];
-   #import "TechniApp-Swift.h" _avatarBati.imageURL = nil;
+  
+    _avatarBati.imageURL = nil;
     
     CKAsset * asset = self.batiment[@"xavatarBati"];
     _avatarBati.imageURL = asset.fileURL;
@@ -383,7 +381,7 @@
         
         NSIndexPath *indexPath = [[self tableView] indexPathForCell:sender];
         
-         InstalViewController *destViewController = segue.destinationViewController;
+         InstalViewController * destViewController = segue.destinationViewController;
         
         
         CKRecord *listinstal = [ listeInstal objectAtIndex:indexPath.row];

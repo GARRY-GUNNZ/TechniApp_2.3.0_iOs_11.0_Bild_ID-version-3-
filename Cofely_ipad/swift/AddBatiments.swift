@@ -18,7 +18,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
     @IBOutlet weak var nomBatimentTexfield: YoshikoTextField!
     @IBOutlet weak var numerotexfiled: YoshikoTextField!
     @IBOutlet weak var imageBatiment: UIImageView!
-    var ViaSegue = String()
+    @objc var ViaSegue = String()
    // var delegate: EditNoteViewControllerDelegate!
     var imageURL: URL!
     let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString

@@ -391,7 +391,7 @@ alert.addTextField
     {
         selectedNoteIndex = (indexPath as NSIndexPath).row
         
-          print("j'ai selectionné  ")
+         // print("j'ai selectionné  ")
         
     }
  
@@ -400,7 +400,7 @@ alert.addTextField
         
     {
         
-        print("la fonction est lancer ")
+     //   print("la fonction est lancer ")
         
         
      if editingStyle == UITableViewCellEditingStyle.delete

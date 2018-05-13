@@ -35,7 +35,7 @@
     
     [super viewDidLoad];
    
-  
+    self.batiTextField.text = self.batiment[@"nomBatiment"];
     _avatarBati.imageURL = nil;
     
     CKAsset * asset = self.batiment[@"xavatarBati"];
@@ -408,17 +408,17 @@
         // NSString * nom = [[NSString alloc]init];
         //nom =self.Batiment[@"nomInstal"];
         
-        NSString * nomC =[[NSString alloc]init];
-        nomC = _viaSegue ;
+       // NSString * nomC =[[NSString alloc]init];
+       // nomC = _viaSegue ;
         
-        NSString * nomB =[[NSString alloc]init];
-        nomB = self.batiment [@"nomBatiment" ] ;
+       // NSString * nomB =[[NSString alloc]init];
+       // nomB = self.batiment [@"nomBatiment" ] ;
         
         
         AddInstallationViewController * maVuAddBatiment = (AddInstallationViewController *)segue.destinationViewController;
         
-        [maVuAddBatiment setViaSegue:nomC];
-        [maVuAddBatiment setSegueBati:nomB];
+        [maVuAddBatiment setViaSegue:(self.batiment [@"Contrat"])];
+        [maVuAddBatiment setSegueBati:(self.batiment [@"nomBatiment" ])];
         
         // AddFiltreViewController *vc = [segue destinationViewController];
        // NSLog(@"_nomContrat %@",_nomContrat);
@@ -429,8 +429,8 @@
         
         
         
-        NSString * nomB =[[NSString alloc]init];
-        nomB = self.batiment [@"nomBatiment" ] ;
+      //  NSString * nomB =[[NSString alloc]init];
+      //  nomB = self.batiment [@"nomBatiment" ] ;
         
         
         DetailPieceDetache *infoContrat = (DetailPieceDetache *)segue.destinationViewController;
@@ -438,7 +438,7 @@
         
         //[infoContrat setnomBatisegu:@"ziziziziziz"];
         
-        [infoContrat setNomBatisegu:nomB];
+        [infoContrat setNomBatisegu:(self.batiment [@"nomBatiment" ])];
         
         
         

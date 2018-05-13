@@ -117,6 +117,8 @@
                   editingInfo:(NSDictionary *)editingInfo
 {
     // Quand il a séléctionné une image, on la stocke
+    
+    
     [self handleImagePick:image];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -132,7 +134,10 @@
     // Il s'agit simplement de garder un pointeur vers l'image
     // et de l'afficher ...
    // currentAvatar_       = image;
+    self.imageView.image = nil;
+    image = nil ;
     self.imageView.image = image;
+    
    // [self updateDoneButtonStatus];
 }
 
@@ -162,7 +167,7 @@
     
     NSData *imageData = [[NSData alloc] init];
     
-      imageData = UIImageJPEGRepresentation(self.imageView.image, 0.30);
+      imageData = UIImageJPEGRepresentation(self.imageView.image, 0.3);
     ///////////////// cloudkit///////////////////////////
     
     

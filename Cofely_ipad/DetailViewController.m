@@ -1502,20 +1502,20 @@ NSString * bati = nil;
     if ([[segue identifier] isEqualToString:@"addFiltre"]){
         
         
-        NSString * nom = [[NSString alloc]init];
-        nom =self.Batiment[@"nomInstal"];
+      //  NSString * nom = [[NSString alloc]init];
+       // nom = self.Batiment[@"nomInstal"];
         
-        NSString * nombat =[[NSString alloc]init];
-        nombat =self.Batiment[@"nomBatiment"];
+       // NSString * nombat =[[NSString alloc]init];
+       // nombat = self.Batiment[@"nomBatiment"];
         
-        NSString * nomCon =[[NSString alloc]init];
-        nomCon =self.Batiment[@"Contrat"];
+       // NSString * nomCon =[[NSString alloc]init];
+       // nomCon = self.Batiment[@"Contrat"];
      
         AddFiltreViewController *controller = (AddFiltreViewController *)[[segue destinationViewController]
                                                                     topViewController];
-        [controller setDetailItem:nom];
-        [controller setDetailItembat:nombat];
-        [controller setMaVariableATransmet:nomCon];
+        [controller setDetailItem:(self.Batiment[@"nomInstal"])];
+        [controller setDetailItembat:(self.Batiment[@"nomBatiment"])];
+        [controller setMaVariableATransmet:(self.Batiment[@"Contrat"])];
         
  
  
@@ -1524,37 +1524,37 @@ NSString * bati = nil;
     if ([[segue identifier] isEqualToString:kShowInstructionsSegueID]){
         
         
-        NSString * nom = [[NSString alloc]init];
-        nom =self.Batiment[@"nomInstal"];
+        //NSString * nom = [[NSString alloc]init];
+       // nom = self.Batiment[@"nomInstal"];
         
-        NSString * nombat =[[NSString alloc]init];
-        nombat =self.Batiment[@"nomBatiment"];
+        //NSString * nombat =[[NSString alloc]init];
+       // nombat =self.Batiment[@"nomBatiment"];
   
         InstructionsViewController *instructionsViewController =
         (InstructionsViewController *)segue.destinationViewController;
-        [instructionsViewController setDetailItem:nom];
-        [instructionsViewController setDetailItembat:nombat];
+        [instructionsViewController setDetailItem:(self.Batiment[@"nomInstal"])];
+        [instructionsViewController setDetailItembat:(self.Batiment[@"nomBatiment"])];
 
    
         
     }
     if ([segue.identifier isEqualToString:@"ShowNote"]) {
       
-        NSString * nom = [[NSString alloc]init];
-        nom =self.Batiment[@"nomInstal"];
+      //  NSString * nom = [[NSString alloc]init];
+       // nom = self.Batiment[@"nomInstal"];
         
-        NSString * nombat =[[NSString alloc]init];
-        nombat = self.Batiment[@"nomBatiment"];
+       // NSString * nombat =[[NSString alloc]init];
+       // nombat = self.Batiment[@"nomBatiment"];
         
-        NSString * nomCon =[[NSString alloc]init];
-        nomCon =self.Batiment[@"Contrat"];
+       // NSString * nomCon =[[NSString alloc]init];
+       // nomCon = self.Batiment[@"Contrat"];
         
     
         ListNotesViewController *listeNote =
         (ListNotesViewController *)segue.destinationViewController;
-      [listeNote setNomBatisegu:nombat];
-        [listeNote setInstalsegu:nom];
-        [listeNote setContratsegu:nomCon];
+      [listeNote setNomBatisegu:(self.Batiment[@"nomBatiment"])];
+        [listeNote setInstalsegu:(self.Batiment[@"nomInstal"])];
+        [listeNote setContratsegu:(self.Batiment[@"Contrat"])];
      
       
         

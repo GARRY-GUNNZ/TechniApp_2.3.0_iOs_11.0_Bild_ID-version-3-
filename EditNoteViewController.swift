@@ -65,6 +65,7 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
         super.viewDidLoad()
         imageURL = nil
         
+        
         batiLabe.text! = nomBatiseg
         instalLabe.text = instalseg
         contratLabe.text = contratseg

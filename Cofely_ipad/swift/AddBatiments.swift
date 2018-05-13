@@ -20,6 +20,9 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
     @IBOutlet weak var imageBatiment: UIImageView!
     @objc var ViaSegue = String()
    // var delegate: EditNoteViewControllerDelegate!
+    
+    @IBOutlet weak var waitView: UIView!
+    
     var imageURL: URL!
     let documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
     let tempImageName = "temp_image.jpg"
@@ -28,7 +31,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.waitView.isHidden = true
         contratlabel.text = ViaSegue
 
         // Do any additional setup after loading the view.
@@ -73,7 +76,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
         
             
            // isEditingNote = false
-        
+         self.waitView.isHidden = false
         
          let noteRecord = CKRecord(recordType: "Batiment")
         
@@ -91,7 +94,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
             noteRecord.setObject(imageAsset, forKey: "xavatarBati")
         }
         else {
-            let fileURL = Bundle.main.url(forResource: "no_image", withExtension: "png")
+            let fileURL = Bundle.main.url(forResource: "Fond_Batiments", withExtension: "jpg")
             let imageAsset = CKAsset(fileURL: fileURL!)
             noteRecord.setObject(imageAsset, forKey: "xavatarBati")
         }
@@ -111,7 +114,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
             OperationQueue.main.addOperation({ () -> Void in
                 
              self.dismiss(animated: true, completion: nil)
-               // self.viewWait.isHidden = true
+                self.waitView.isHidden = true
             })
         })
         
@@ -143,7 +146,7 @@ class AddBatiments: UIViewController,UIImagePickerControllerDelegate, UINavigati
     }
     
     func saveImageLocally() {
-        let imageData: Data = UIImageJPEGRepresentation(imageBatiment.image!, 0.3)!
+        let imageData: Data = UIImageJPEGRepresentation(imageBatiment.image!, 0.1)!
         let path = documentsDirectoryPath.appendingPathComponent(tempImageName)
         imageURL = URL(fileURLWithPath: path)
         try? imageData.write(to: imageURL, options: [.atomic])

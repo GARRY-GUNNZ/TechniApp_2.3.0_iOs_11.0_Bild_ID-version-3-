@@ -1460,13 +1460,13 @@ const int FrontViewPositionNone = 0xff;
     UIView *view = nil;
     
     if ( operation == SWRevealControllerOperationReplaceRearController )
-        old = _rearViewController, _rearViewController = new, view = _contentView.rearView;
+        (void)(old = _rearViewController), (void)(_rearViewController = new), view = _contentView.rearView;
     
     else if ( operation == SWRevealControllerOperationReplaceFrontController )
-        old = _frontViewController, _frontViewController = new, view = _contentView.frontView;
+        (void)(old = _frontViewController), (void)(_frontViewController = new), view = _contentView.frontView;
     
     else if ( operation == SWRevealControllerOperationReplaceRightController )
-        old = _rightViewController, _rightViewController = new, view = _contentView.rightView;
+        (void)(old = _rightViewController), (void)(_rightViewController = new), view = _contentView.rightView;
 
     void (^completion)(void) = [self _transitionFromViewController:old toViewController:new inView:view];
     

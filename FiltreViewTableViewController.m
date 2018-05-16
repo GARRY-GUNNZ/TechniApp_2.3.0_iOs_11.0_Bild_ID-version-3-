@@ -67,7 +67,7 @@
                          
                          
                          NSLog(@"ERREUR %@",error.localizedDescription);
-                     } listeFiltreModel_ = results;
+                     } self->listeFiltreModel_ = results;
                      dispatch_async(dispatch_get_main_queue(), ^{
                          
                          [self.refreshControl endRefreshing];

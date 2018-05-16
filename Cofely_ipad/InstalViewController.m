@@ -408,8 +408,8 @@
         // NSString * nom = [[NSString alloc]init];
         //nom =self.Batiment[@"nomInstal"];
         
-       // NSString * nomC =[[NSString alloc]init];
-       // nomC = _viaSegue ;
+        NSString * nomC =[[NSString alloc]init];
+        nomC = _viaSegue ;
         
        // NSString * nomB =[[NSString alloc]init];
        // nomB = self.batiment [@"nomBatiment" ] ;
@@ -417,7 +417,7 @@
         
         AddInstallationViewController * maVuAddBatiment = (AddInstallationViewController *)segue.destinationViewController;
         
-        [maVuAddBatiment setViaSegue:(self.batiment [@"Contrat"])];
+        [maVuAddBatiment setViaSegue:_viaSegue];
         [maVuAddBatiment setSegueBati:(self.batiment [@"nomBatiment" ])];
         
         // AddFiltreViewController *vc = [segue destinationViewController];

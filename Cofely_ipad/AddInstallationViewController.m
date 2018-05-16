@@ -134,8 +134,7 @@
     // Il s'agit simplement de garder un pointeur vers l'image
     // et de l'afficher ...
    // currentAvatar_       = image;
-    self.imageView.image = nil;
-    image = nil ;
+    
     self.imageView.image = image;
     
    // [self updateDoneButtonStatus];

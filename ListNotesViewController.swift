@@ -54,6 +54,11 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+       
+        
+        
+        print("probleme memoire dans le menu liste des pièces détachée")
+        print(self.description)
         // Dispose of any resources that can be recreated.
     }
     
@@ -61,7 +66,7 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Listes des Pièces détachées"
+        return ""
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -155,7 +160,7 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
 
 
     //   MARK: - TABLEVIEW CUSTOMISATION
-    
+   /*
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0.5
         let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 30, 0)
@@ -167,7 +172,7 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
         }
     }
 
-
+*/
 
 
 
@@ -208,8 +213,9 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
          let imageView : UIImageView  = self.view.viewWithTag(1) as! UIImageView
         // let theLabelBati : UILabel  = self.view.viewWithTag(5) as! UILabel
          let textviewD : UITextView  = self.view.viewWithTag(9) as! UITextView
- 
- 
+        let reference : UITextField = self.view.viewWithTag(10) as! UITextField
+        let marque : UITextField = self.view.viewWithTag(11) as! UITextField
+        let puissance : UITextField = self.view.viewWithTag(12) as! UITextField
        // let switchLabel : UILabel  = self.view.viewWithTag(7) as! UILabel
         
         
@@ -230,7 +236,9 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
  
         theLabelInstal.text = noteRecord.value(forKey: "nomInstal") as? String
         theLabelTitre.text = noteRecord.value(forKey: "noteTitle") as? String
-        
+        reference.text = noteRecord.value(forKey: "reference") as? String
+        marque.text = noteRecord.value(forKey: "marque") as? String
+        puissance.text = noteRecord.value(forKey: "puissance") as? String
        // switchLabel.text = noteRecord.value(forKey: "Etat") as? String
         
         
@@ -262,7 +270,7 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 165.0
+        return 230.0
     }
     
     

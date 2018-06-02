@@ -391,7 +391,10 @@ class CommandeFiltreTableViewController: UITableViewController,UIPickerViewDeleg
         
     }
   
-
+    deinit {
+        //self.ContratViewController = nil
+        print( "la page filtres  est des-initialiez ")
+    }
     
 }
 

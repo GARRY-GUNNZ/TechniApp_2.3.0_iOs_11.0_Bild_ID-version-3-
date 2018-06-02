@@ -359,5 +359,10 @@ class CommandeCoirroiesViewController: UITableViewController,UIPickerViewDelegat
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        //self.ContratViewController = nil
+        print( "la page coirroies  est des-initialiez ")
+    }
 
 }

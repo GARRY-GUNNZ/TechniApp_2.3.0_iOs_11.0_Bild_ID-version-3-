@@ -144,7 +144,10 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     self.referenceTexfield.text = self.Batiment[@"reference"];
     CKAsset * asset = self.Batiment[@"avatarInstal"];
     avatarInstal.imageURL = asset.fileURL;
-    contratLabel.text =  self.Batiment[@"Contrat"];
+    //contratLabel.text =  self.Batiment[@"Contrat"];
+    //self.contratLabel.text = contrat;
+   // self.nomInstaltion = _nomInstaltion;
+    
     ///////// design Avatar////////
     self.avatarInstal.clipsToBounds = YES;
     self.avatarInstal.layer.cornerRadius = 3.0f;

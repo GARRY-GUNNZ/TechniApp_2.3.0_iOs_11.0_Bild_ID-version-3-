@@ -356,6 +356,11 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
          // Pass the selected object to the new view controller.
          }
          */
+    
+    deinit {
+        //self.ContratViewController = nil
+        print( "la page piéce détachée  est des-initialiez ")
+    }
         
 }
 

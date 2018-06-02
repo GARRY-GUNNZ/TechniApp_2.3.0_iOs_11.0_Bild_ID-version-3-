@@ -52,6 +52,9 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        print("problème memoire dans le menu installation")
+        print(self.description)
     }
     
     // MARK: - TableView Protocol
@@ -243,8 +246,8 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         ////////////////////////////////////////////////////////////
-        /*
         
+        /*
         let path = tableInstallations.indexPathForSelectedRow
         _ = tableInstallations.cellForRow(at: path!)
         let instal = listeInstallations[(path! as NSIndexPath).row]
@@ -252,30 +255,30 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
             if segue.identifier == "showDetail"
                
             {
-                    let vudetailsPiecesDetache = segue.destination as? DetailInstalViewController
+                    let vudetailsPiecesDetache = segue.destination as? DetailViewController
             
-                   vudetailsPiecesDetache!.envoiLeInstal = (instal.value(forKey: "nomInstal") as? String)!
-                   vudetailsPiecesDetache!.envoiMarque = (instal.value(forKey: "marque") as? String)!
-                   vudetailsPiecesDetache!.envoiReference = (instal.value(forKey: "reference") as? String)!
-                   vudetailsPiecesDetache!.envoiLenomDuContra = (instal.value(forKey: "Contrat") as? String)!
-                   vudetailsPiecesDetache!.envoieLenomDuBatiment = (instal.value(forKey: "nomBatiment") as? String)!
+                   vudetailsPiecesDetache.envoiLeInstal = (instal.value(forKey: "nomInstal") as? String)!
+                   vudetailsPiecesDetache.envoiMarque = (instal.value(forKey: "marque") as? String)!
+                   vudetailsPiecesDetache.envoiReference = (instal.value(forKey: "reference") as? String)!
+                   vudetailsPiecesDetache.envoiLenomDuContra = (instal.value(forKey: "Contrat") as? String)!
+                   vudetailsPiecesDetache.envoieLenomDuBatiment = (instal.value(forKey: "nomBatiment") as? String)!
                 
                 
                 let imageAsset: CKAsset = instal.value(forKey: "avatarInstal") as! CKAsset
                 
-                vudetailsPiecesDetache!.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
+                vudetailsPiecesDetache.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
                
                 
                 
             }
- */
+ 
         /////////////////////////////////////////////////////////////////////////////////
-        
+        */
         
         /// vu detail a coder
         
-        /*
-        if segue.identifier == "Sendetail"
+        
+        if segue.identifier == "addInstal"
         {
             
             if
@@ -283,11 +286,12 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
                 
             {
                 
-                  ajouterInstal.envoiLenomDuContra = (instal.value(forKey: "Contrat") as? String)!
-                  ajouterInstal.envoieLenomDuBatiment = (instal.value(forKey: "nomBatiment") as? String)!
+                  ajouterInstal.viaSegue = envoiLenomDuContra
+                  ajouterInstal.segueBati = envoieLenomDuBatiment
             }
             
         }
+        /*
         if segue.identifier == "Showpiecedetache"
         {
             

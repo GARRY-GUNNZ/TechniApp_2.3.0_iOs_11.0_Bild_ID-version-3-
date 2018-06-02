@@ -50,7 +50,8 @@
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
+            print("problème memoire dans le menu batiment")
+            print(self.description)
         }
         
         
@@ -75,12 +76,14 @@
             
             cell.textLabel?.text = listeBati.value(forKey: "nomBatiment") as? String
             
-            cell.detailTextLabel?.text =  "Contrat n° \(String(describing: (listeBati.value(forKey: "numberContrat") as? String)))"
+            cell.detailTextLabel?.text =  listeBati.value(forKey: "numberContrat") as? String
+            
+           
             
          //   cell.detailTextLabel?.text = listeBati.value(forKey: "numberContrat") as? String
             
-            numeroContat = (listeBati.value(forKey: "numberContrat") as? String)!
-            
+           // numeroContat = (listeBati.value(forKey: "numberContrat") as? String)!
+           // envoiLenomDuContrat = (listeBati.value(forKey: "nomBatiment") as? String)!
             
             return cell
             
@@ -120,7 +123,7 @@
                 })
             }
             
-            print("la fonction est fini")
+           // print("la fonction est fini")
             
         }
         //   MARK: - TABLEVIEW Animations
@@ -252,7 +255,6 @@
  {
  
  
- 
  if segue.identifier == "ShowInstal"
  {
  
@@ -260,14 +262,16 @@
  let destination = segue.destination as? InstallationViewController
  
  {
- let path = tableBatiments.indexPathForSelectedRow
- _ = tableBatiments.cellForRow(at: path!)
- let bati = listeBatiments[(path! as NSIndexPath).row]
  
- destination.envoiLenomDuContra = (bati.value(forKey: "nomContrats") as? String)!
+    let path = tableBatiments.indexPathForSelectedRow
+    _ = tableBatiments.cellForRow(at: path!)
+    let bati = listeBatiments[(path! as NSIndexPath).row]
+ 
+ destination.envoiLenomDuContra = envoiLenomDuContrat
  destination.envoieLenomDuBatiment = (bati.value(forKey: "nomBatiment") as? String)!
  
- let imageAsset: CKAsset = (bati.value(forKey: "xavatarBati") as? CKAsset)!
+
+    let imageAsset: CKAsset = ((bati.value(forKey: "xavatarBati") as? CKAsset))!
  
  
  
@@ -278,8 +282,8 @@
  }
  
  //// add info contrat a codé
-    /*
- 
+
+ /*
  if segue.identifier == "addInfo"
  {
  
@@ -294,30 +298,34 @@
  }
  
  }
- 
+ */
  /*        ///// Créé un addBatiment View controlleur en Swift ////////////// */
  
- /*
- if segue.identifier == "addInfo"
+ 
+ if segue.identifier == "addBati"
  {
  
  if
- let addInfo = segue.destination as? AddBatimentViewController
+ let addInfo = segue.destination as? AddBatiments
  
  {
+    
  
- addInfo.envoiLenomDuContra = envoiLenomDuContrat
- addInfo.envoieLenumeroContrat = numeroContat
+ 
+    addInfo.ViaSegue = envoiLenomDuContrat
+    
+// addInfo.envoiLenomDuContra = envoiLenomDuContrat
+// addInfo.envoieLenumeroContrat = numeroContat
+ 
+ 
  
  }
  
- }
- */
  
- */
+ 
  }
  
-        
+        }
  
         
 }

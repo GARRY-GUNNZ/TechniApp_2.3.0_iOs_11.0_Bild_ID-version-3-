@@ -152,7 +152,7 @@ alert.addTextField
         super.didReceiveMemoryWarning()
        //mesContrats = nil
         
-        print("probleme memoire dans le menu contrat")
+        print("problème memoire dans le menu contrat")
         print(self.description)
     }
     //   MARK: - TABLEVIEW CUSTOMISATION

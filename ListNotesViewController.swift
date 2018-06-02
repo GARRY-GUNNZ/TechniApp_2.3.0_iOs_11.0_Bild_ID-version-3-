@@ -422,6 +422,9 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
             }
         }
     }
-    
+    deinit {
+        //self.ContratViewController = nil
+        print( "la page listes pièces détachée   est des-initialiez ")
+    }
 }
 

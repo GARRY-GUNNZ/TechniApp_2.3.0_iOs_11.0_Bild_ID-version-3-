@@ -242,6 +242,9 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     
  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        ////////////////////////////////////////////////////////////
+        /*
+        
         let path = tableInstallations.indexPathForSelectedRow
         _ = tableInstallations.cellForRow(at: path!)
         let instal = listeInstallations[(path! as NSIndexPath).row]
@@ -265,7 +268,13 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
                 
                 
             }
+ */
+        /////////////////////////////////////////////////////////////////////////////////
         
+        
+        /// vu detail a coder
+        
+        /*
         if segue.identifier == "Sendetail"
         {
             
@@ -293,10 +302,10 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
             }
             
         }
-        
+        */
     }
     
-            
+    
         
         
 }

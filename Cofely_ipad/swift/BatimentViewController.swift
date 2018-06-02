@@ -74,7 +74,10 @@
             
             
             cell.textLabel?.text = listeBati.value(forKey: "nomBatiment") as? String
-            cell.detailTextLabel?.text = listeBati.value(forKey: "numberContrat") as? String
+            
+            cell.detailTextLabel?.text =  "Contrat n° \(String(describing: (listeBati.value(forKey: "numberContrat") as? String)))"
+            
+         //   cell.detailTextLabel?.text = listeBati.value(forKey: "numberContrat") as? String
             
             numeroContat = (listeBati.value(forKey: "numberContrat") as? String)!
             
@@ -250,11 +253,11 @@
  
  
  
- if segue.identifier == "SenContrat"
+ if segue.identifier == "ShowInstal"
  {
  
  if
- let destination = segue.destination as? InstalViewController
+ let destination = segue.destination as? InstallationViewController
  
  {
  let path = tableBatiments.indexPathForSelectedRow
@@ -274,7 +277,8 @@
  
  }
  
- 
+ //// add info contrat a codé
+    /*
  
  if segue.identifier == "addInfo"
  {
@@ -310,7 +314,7 @@
  }
  */
  
- 
+ */
  }
  
         

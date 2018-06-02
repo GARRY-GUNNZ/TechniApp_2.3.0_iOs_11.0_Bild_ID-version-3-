@@ -30,7 +30,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
         
         // MARK: - OUTLET
         
-    @IBOutlet weak var infoUtilisateurs: UILabel!
+   // @IBOutlet weak var infoUtilisateurs: UILabel!
     @IBOutlet weak var viewWait: UIView!
     @IBOutlet weak var tableviewContrat: UITableView!
     @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -150,7 +150,7 @@ alert.addTextField
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-
+       //mesContrats = nil
         
         print("probleme memoire dans le menu contrat")
         print(self.description)
@@ -445,15 +445,18 @@ alert.addTextField
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "SendDataSegue" {
+        if segue.identifier == "SendDataSegue"
+        {
             
-            if let destination = segue.destination as? MasterViewController {
+            if
+                let destination = segue.destination as? BatimentViewController
+                
+            {
                 
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRow(at: path!)
-                destination.viaSegue = (cell?.textLabel?.text!)!
+                destination.envoiLenomDuContrat = (cell?.textLabel?.text!)!
                 
-             
                 
                 
             }

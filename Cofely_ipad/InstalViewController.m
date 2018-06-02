@@ -86,6 +86,8 @@
    
     [super didReceiveMemoryWarning];
     
+    self.listeInstal = nil;
+    
     NSLog(@"probleme memoire dans le menu Installation");
     NSLog(@"%@", self.description);
     
@@ -253,8 +255,12 @@
     
     
     CKRecord *record = self.listeInstal[indexPath.row];
-    CKAsset *imageAsset = record[@"avatarInstal"];
+   CKAsset *imageAsset = record[@"avatarInstal"];
     imageView.imageURL = imageAsset.fileURL;
+    
+ 
+
+    
     
     ///////// design photo////////
     imageView.clipsToBounds = YES;

@@ -25,6 +25,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     var envoiImage = UIImage ()
     
     
+    @IBOutlet weak var waitView: UIView!
     @IBOutlet var avatarBatiment: UIImageView!
     @IBOutlet var nomContrat: UILabel!
     @IBOutlet var tableInstallations: UITableView!
@@ -185,7 +186,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     
     @objc func loadData ()
     {
-        // self.viewWait.isHidden = false
+        self.waitView .isHidden = false
         //view.bringSubview(toFront: viewWait)
         
         listeInstallations = [CKRecord]()
@@ -241,7 +242,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
                     self.refresh.endRefreshing()
                     
                     
-                    // self.viewWait.isHidden = true
+                    self.waitView .isHidden = true
                 })
             }
         }     }
@@ -256,13 +257,15 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     {
         ////////////////////////////////////////////////////////////
         
-        let  indexPa = tableInstallations.indexPath(for: sender as! UITableViewCell)
-        let Instal = listeInstallations[(indexPa! as NSIndexPath).row]
+        
         
             if segue.identifier == "ShowDetail"
                
             {
                     let vudetailsPiecesDetache = segue.destination as? DetailViewController
+                
+                let  indexPa = tableInstallations.indexPath(for: sender as! UITableViewCell)
+                let Instal = listeInstallations[(indexPa! as NSIndexPath).row]
            
             vudetailsPiecesDetache?.envoiLenomDuContra = envoiLenomDuContra;
          // vudetailsPiecesDetache?.envoieLenomDuBatiment = envoieLenomDuBatiment
@@ -321,7 +324,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
             {
               
                  vuListePiecesDetache.contratsegu = envoiLenomDuContra
-                 vuListePiecesDetache.nomBatisegu = envoieLenomDuBatiment
+                vuListePiecesDetache.nomBatisegu = envoieLenomDuBatiment
                 
             }
             

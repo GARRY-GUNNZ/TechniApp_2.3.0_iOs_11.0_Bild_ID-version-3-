@@ -24,6 +24,7 @@
         var numeroContat = String ()
         var envoiLenomDuContrat = String ()
         
+        @IBOutlet weak var waitView: UIView!
         
         
         @IBOutlet weak var ajouterBatiment: UIBarButtonItem!
@@ -72,7 +73,7 @@
             
             let listeBati = listeBatiments[(indexPath as NSIndexPath).row]
             
-            
+           
             
             cell.textLabel?.text = listeBati.value(forKey: "nomBatiment") as? String
             
@@ -193,7 +194,7 @@
         
         @objc func loadData ()
         {
-            // self.viewWait.isHidden = false
+            self.waitView .isHidden = false
             //view.bringSubview(toFront: viewWait)
             
             listeBatiments = [CKRecord]()
@@ -236,7 +237,7 @@
                         self.refresh.endRefreshing()
                         
                         
-                        // self.viewWait.isHidden = true
+                        self.waitView .isHidden = true
                     })
                 }
             }     }

@@ -149,7 +149,7 @@
 		4A4B9B811AD316600095FD27 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		4A5477B51FC8C4DC00942498 /* images-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-3.jpeg"; sourceTree = "<group>"; };
 		4A934BC51A9A7B930089B57A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		4A96D58B1D68D811004BECC8 /* ContratViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContratViewController.swift; path = swift/ContratViewController.swift; sourceTree = "<group>"; };
+		4A96D58B1D68D811004BECC8 /* ContratViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContratViewController.swift; sourceTree = "<group>"; };
 		4A9743AE1D646FE600FA7728 /* bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bridge.jpg; sourceTree = "<group>"; };
 		4AA6FE691A9BBF1000CB3ADA /* add-photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-placeholder.png"; sourceTree = "<group>"; };
 		4ABCCDC21D5BD5740088E435 /* LaunchiPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchiPhone.storyboard; sourceTree = "<group>"; };
@@ -350,7 +350,6 @@
 				9CEF51971CC8131F008432EC /* Menu Instalations */,
 				9C2B089E1E95824400654EBC /* OneDrive */,
 				9C2B08991E943B0F00654EBC /* Mission_swift */,
-				9CEDBC2B1E661EB600F69FD2 /* CofelyVision */,
 				9CEDBC271E6617EF00F69FD2 /* starz */,
 				9C97C1BF1E37FBC600F05479 /* M3XFilm */,
 				AF7BC5EA1D5DC44B00C24FC7 /* Yammer */,
@@ -361,18 +360,31 @@
 			name = Class;
 			sourceTree = "<group>";
 		};
-		4ABDC8A219979B8D00F1CDEB /* Add_Detail */ = {
+		4ABDC8A219979B8D00F1CDEB /* Détail_Installations */ = {
 			isa = PBXGroup;
 			children = (
+				9CEDBC2B1E661EB600F69FD2 /* CofelyVision */,
 				9CB24CE11C18E154007DCC14 /* FiltreViewTableViewController.h */,
 				9CB24CE21C18E154007DCC14 /* FiltreViewTableViewController.m */,
+				AF6FD2FF1993E13E0005DC27 /* DetailViewController.h */,
+				AF6FD3001993E13E0005DC27 /* DetailViewController.m */,
+				4AE8BEA61AAF60EC0042D5D0 /* Instalation.h */,
+				4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */,
 				4AF7384F1B30D5830045722A /* ListeFiltre.h */,
 				4AF738501B30D5830045722A /* ListeFiltre.m */,
 				4AD76EC81B8FAB06006BA304 /* AddFiltreViewController.h */,
 				4AD76EC91B8FAB06006BA304 /* AddFiltreViewController.m */,
 			);
-			name = Add_Detail;
+			name = "Détail_Installations";
 			path = Cofely_ipad;
+			sourceTree = "<group>";
+		};
+		9C1AB6D120C4154E00D57C2F /* Contrats */ = {
+			isa = PBXGroup;
+			children = (
+				4A96D58B1D68D811004BECC8 /* ContratViewController.swift */,
+			);
+			path = Contrats;
 			sourceTree = "<group>";
 		};
 		9C2B08991E943B0F00654EBC /* Mission_swift */ = {
@@ -437,7 +449,7 @@
 			children = (
 				9C24F1661D60D90700B3136F /* CHViewController.h */,
 				9C24F1671D60D90700B3136F /* CHViewController.m */,
-				4ABDC8A219979B8D00F1CDEB /* Add_Detail */,
+				4ABDC8A219979B8D00F1CDEB /* Détail_Installations */,
 			);
 			name = "Type de Filtre";
 			path = ..;
@@ -489,16 +501,10 @@
 		9CC2291D1CBA777F00EFA01A /* Instalations */ = {
 			isa = PBXGroup;
 			children = (
+				9C1AB6D120C4154E00D57C2F /* Contrats */,
 				9CC2291F1CBA77B900EFA01A /* Batiment */,
-				9CEAFBFE1BC9C6600040B8EC /* Piècedetachée */,
 				9CCB9B7420C2DE0200ED382D /* Liste Installations */,
 				9CB24CE01C18E0ED007DCC14 /* Type de Filtre */,
-				9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */,
-				9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */,
-				AF6FD2FF1993E13E0005DC27 /* DetailViewController.h */,
-				AF6FD3001993E13E0005DC27 /* DetailViewController.m */,
-				4AE8BEA61AAF60EC0042D5D0 /* Instalation.h */,
-				4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */,
 			);
 			name = Instalations;
 			path = Cofely_ipad;
@@ -507,9 +513,9 @@
 		9CC2291F1CBA77B900EFA01A /* Batiment */ = {
 			isa = PBXGroup;
 			children = (
-				4A96D58B1D68D811004BECC8 /* ContratViewController.swift */,
 				9C2CEEA020A4814200C7DFC8 /* AddBatiments.swift */,
 				9CCB9B7220C2D7E300ED382D /* BatimentViewController.swift */,
+				9CEAFBFE1BC9C6600040B8EC /* Piècedetachée */,
 			);
 			name = Batiment;
 			sourceTree = "<group>";
@@ -530,6 +536,8 @@
 		9CCB9B7420C2DE0200ED382D /* Liste Installations */ = {
 			isa = PBXGroup;
 			children = (
+				9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */,
+				9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */,
 				9CCB9B7520C2E21F00ED382D /* CellInstalTableViewCell.swift */,
 				9CCB9B7620C2E21F00ED382D /* InstallationViewController.swift */,
 				9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */,
@@ -571,6 +579,7 @@
 				9C2B08A11E958C1C00654EBC /* CofelyVisionViewController.swift */,
 			);
 			name = CofelyVision;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9CEF51961CC812DF008432EC /* Menu blog */ = {

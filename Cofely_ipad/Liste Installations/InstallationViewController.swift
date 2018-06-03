@@ -16,6 +16,9 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
     var listeInstallations: Array<CKRecord> = []
     var envoiLenomDuContra = String()
     var envoieLenomDuBatiment = String ()
+    var recupInstal = String ()
+    var recuMarque = String ()
+    var recuReference = String ()
     var refresh : UIRefreshControl!
     var imageURL: URL!
     var record: CKRecord!
@@ -79,7 +82,9 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
         let Instal = listeInstallations[(indexPath as NSIndexPath).row]
         
         cell.nomInsalLabel.text = Instal.value(forKey: "nomInstal") as? String
+       
         cell.marqueLabel?.text = Instal.value(forKey: "marque") as? String
+       
         
         let imageAsset: CKAsset = Instal.value(forKey: "avatarInstal") as! CKAsset
         cell.imageCellBatiment.image = UIImage(contentsOfFile: imageAsset.fileURL.path)
@@ -87,6 +92,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
         
         cell.imageCellBatiment.layer.cornerRadius = 8
         cell.imageCellBatiment.layer.shadowRadius = 4.0
+        cell.imageCellBatiment.layer.masksToBounds = true
         
         //cell.imageCellBatiment .layer.borderColor = .black as? CGColor
         cell.imageCellBatiment.layer.borderWidth = 0.5
@@ -246,34 +252,41 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         ////////////////////////////////////////////////////////////
+   
         
-        /*
-        let path = tableInstallations.indexPathForSelectedRow
-        _ = tableInstallations.cellForRow(at: path!)
-        let instal = listeInstallations[(path! as NSIndexPath).row]
-        
-            if segue.identifier == "showDetail"
+            if segue.identifier == "ShowDetail"
                
             {
                     let vudetailsPiecesDetache = segue.destination as? DetailViewController
+           
+                vudetailsPiecesDetache?.envoiLenomDuContra = envoiLenomDuContra;
+                 vudetailsPiecesDetache?.envoieLenomDuBatiment = envoieLenomDuBatiment
+                
+              
+               
+                //let path = tableInstallations.indexPathForSelectedRow
+               // let cell = tableInstallations.cellForRow(at: path!)
+               // let Instal = listeInstallations[(indexPath as NSIndexPath).row]
             
-                   vudetailsPiecesDetache.envoiLeInstal = (instal.value(forKey: "nomInstal") as? String)!
-                   vudetailsPiecesDetache.envoiMarque = (instal.value(forKey: "marque") as? String)!
-                   vudetailsPiecesDetache.envoiReference = (instal.value(forKey: "reference") as? String)!
-                   vudetailsPiecesDetache.envoiLenomDuContra = (instal.value(forKey: "Contrat") as? String)!
-                   vudetailsPiecesDetache.envoieLenomDuBatiment = (instal.value(forKey: "nomBatiment") as? String)!
+                 //vudetailsPiecesDetache?.envoiLeInstal = recupInstal
+                // vudetailsPiecesDetache?.envoiMarque = recuMarque
+                // vudetailsPiecesDetache?.envoiReference = recuReference
+               // vudetailsPiecesDetache?.envoiMarque = Instal.value(forKey: "marque") as? String
+              //  vudetailsPiecesDetache?.envoiReference =
+              //  vudetailsPiecesDetache?.envoiLenomDuContra =
+               
                 
                 
-                let imageAsset: CKAsset = instal.value(forKey: "avatarInstal") as! CKAsset
+               // let imageAsset: CKAsset = instal.value(forKey: "avatarInstal") as! CKAsset
                 
-                vudetailsPiecesDetache.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
+              //  vudetailsPiecesDetache?.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
                
                 
                 
             }
  
         /////////////////////////////////////////////////////////////////////////////////
-        */
+        
         
         /// vu detail a coder
         
@@ -291,7 +304,7 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
             }
             
         }
-        /*
+        
         if segue.identifier == "Showpiecedetache"
         {
             
@@ -300,13 +313,13 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
                 
             {
               
-                 vuListePiecesDetache.envoiLenomDuContra = (instal.value(forKey: "Contrat") as? String)!
-                 vuListePiecesDetache.envoieLenomDuBatiment = (instal.value(forKey: "nomBatiment") as? String)!
+                 vuListePiecesDetache.contratsegu = envoiLenomDuContra
+                 vuListePiecesDetache.nomBatisegu = envoieLenomDuBatiment
                 
             }
             
         }
-        */
+        
     }
     
     

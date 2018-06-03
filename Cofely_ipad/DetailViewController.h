@@ -29,6 +29,16 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *contratLabel;
 
+@property (nonatomic, strong) NSString * envoiLeInstal;
+@property (nonatomic, strong) NSString *envoiMarque ;
+@property (nonatomic, strong) NSString *envoiReference ;
+@property (nonatomic, strong) NSString * envoiLenomDuContra;
+@property (nonatomic, strong) NSString * envoieLenomDuBatiment;
+@property (nonatomic, strong) UIImage * envoieImage;
+
+
+
+
 @property(nonatomic,readonly) CKContainer *_container;
 @property(nonatomic,readonly) CKDatabase *_publicDB;
 @property (weak, nonatomic) IBOutlet UITableView *tableConso;

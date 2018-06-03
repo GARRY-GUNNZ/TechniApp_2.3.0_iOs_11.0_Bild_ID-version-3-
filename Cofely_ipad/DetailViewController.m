@@ -73,7 +73,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     return self;
 }
 
-
+/*
 -(void) dataMaster {
     {
         [self recupGaz];}
@@ -85,12 +85,9 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
 
     }
 
-   
-   
-
 }
-
-
+*/
+ 
 #pragma mark - LIFE VIEW
 
 - (void)viewDidLoad {
@@ -119,7 +116,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     
      self.tableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg@2x.png"]];
 
-    [self dataMaster];
+  //  [self dataMaster];
 
     
 }
@@ -137,13 +134,33 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     
     [super viewWillAppear:animated];
     
-    self.nominstal.text = self.Batiment[@"nomBatiment"];
-    self.navigationItem.title = self.instalation.nomInstalation;
-    self.nomInstaltion.text = self.Batiment[@"nomInstal"];
-    self.marqueTexfield.text = self.Batiment[@"marque"];
-    self.referenceTexfield.text = self.Batiment[@"reference"];
-    CKAsset * asset = self.Batiment[@"avatarInstal"];
-    avatarInstal.imageURL = asset.fileURL;
+    
+    
+   
+   
+    // envoiLenomDuContra;
+  //envoieLenomDuBatiment;
+   
+   // self.referenceTexfield.text = _envoiReference ;
+    self.marqueTexfield.text = _envoiMarque ;
+    self.nominstal.text = _envoieLenomDuBatiment;
+    self.contratLabel.text = _envoiLenomDuContra;
+    self.nomInstaltion.text = _envoiLeInstal;
+   // self.marqueTexfield.text = _envoiMarque;
+   // CKAsset * asset = _envoieImage ;
+   // avatarInstal.imageURL = asset.fileURL;
+    
+    //////////////////////////////////////////////////////
+   // self.nominstal.text = self.Batiment[@"nomBatiment"];
+   // self.navigationItem.title = self.instalation.nomInstalation;
+    //self.nomInstaltion.text = self.Batiment[@"nomInstal"];
+    //self.marqueTexfield.text = self.Batiment[@"marque"];
+    //self.referenceTexfield.text = self.Batiment[@"reference"];
+    //CKAsset * asset = self.Batiment[@"avatarInstal"];
+   // avatarInstal.imageURL = asset.fileURL;
+    
+    /////////////////////////////////////////////////////
+    
     //contratLabel.text =  self.Batiment[@"Contrat"];
     //self.contratLabel.text = contrat;
    // self.nomInstaltion = _nomInstaltion;
@@ -155,7 +172,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     self.avatarInstal.layer.shadowRadius = 10.0f;
     self.avatarInstal.layer.borderColor = [UIColor blackColor].CGColor;
     
-    [self dataMaster];
+  //  [self dataMaster];
     
 }
 
@@ -277,7 +294,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
         [self.navigationItem setHidesBackButton:editing animated:YES];
         
         
-        [self dataMaster];
+     //   [self dataMaster];
         
         
            }

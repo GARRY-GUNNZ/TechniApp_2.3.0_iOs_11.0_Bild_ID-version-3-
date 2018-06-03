@@ -172,7 +172,7 @@
 		9C0FDBEE1E312E3D00B5F474 /* Image_Threshold_390x375.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image_Threshold_390x375.png; sourceTree = "<group>"; };
 		9C1040EC1D049C6300BB9DFA /* TechniApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TechniApp.entitlements; sourceTree = "<group>"; };
 		9C145E381CC518F30064E99C /* fond@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fond@2x.png"; sourceTree = "<group>"; };
-		9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPieceDetache.swift; path = swift/DetailPieceDetache.swift; sourceTree = "<group>"; };
+		9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPieceDetache.swift; sourceTree = "<group>"; };
 		9C2453101E8FA78100747A1A /* Yammer-logo-e1463436513335.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yammer-logo-e1463436513335.png"; sourceTree = "<group>"; };
 		9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInstallationViewController.h; sourceTree = "<group>"; };
 		9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInstallationViewController.m; sourceTree = "<group>"; };
@@ -495,9 +495,9 @@
 		9CC2291D1CBA777F00EFA01A /* Instalations */ = {
 			isa = PBXGroup;
 			children = (
-				9CCB9B7420C2DE0200ED382D /* Liste Installations */,
 				9CC2291F1CBA77B900EFA01A /* Batiment */,
 				9CEAFBFE1BC9C6600040B8EC /* Piècedetachée */,
+				9CCB9B7420C2DE0200ED382D /* Liste Installations */,
 				9CB24CE01C18E0ED007DCC14 /* Type de Filtre */,
 				9C24F1631D60D76F00B3136F /* AddInstallationViewController.h */,
 				9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */,
@@ -507,7 +507,6 @@
 				4AF9FFBC1A1FB2DA000E8874 /* InstalViewController.m */,
 				4AE8BEA61AAF60EC0042D5D0 /* Instalation.h */,
 				4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */,
-				9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */,
 			);
 			name = Instalations;
 			path = Cofely_ipad;
@@ -543,6 +542,7 @@
 			children = (
 				9CCB9B7520C2E21F00ED382D /* CellInstalTableViewCell.swift */,
 				9CCB9B7620C2E21F00ED382D /* InstallationViewController.swift */,
+				9C239FF51E4914AE00EB64C1 /* DetailPieceDetache.swift */,
 			);
 			path = "Liste Installations";
 			sourceTree = "<group>";

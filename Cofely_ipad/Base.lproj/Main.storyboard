@@ -3646,6 +3646,7 @@
         <image name="shopping-cart-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ka5-hp-yXR"/>
         <segue reference="EY4-uu-pin"/>
     </inferredMetricsTieBreakers>
 </document>

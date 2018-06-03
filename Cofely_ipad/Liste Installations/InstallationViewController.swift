@@ -252,34 +252,38 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         ////////////////////////////////////////////////////////////
-   
+        
+        let  indexPa = tableInstallations.indexPath(for: sender as! UITableViewCell)
+        let Instal = listeInstallations[(indexPa! as NSIndexPath).row]
         
             if segue.identifier == "ShowDetail"
                
             {
                     let vudetailsPiecesDetache = segue.destination as? DetailViewController
            
-                vudetailsPiecesDetache?.envoiLenomDuContra = envoiLenomDuContra;
-                 vudetailsPiecesDetache?.envoieLenomDuBatiment = envoieLenomDuBatiment
+            vudetailsPiecesDetache?.envoiLenomDuContra = envoiLenomDuContra;
+         // vudetailsPiecesDetache?.envoieLenomDuBatiment = envoieLenomDuBatiment
+            vudetailsPiecesDetache?.envoiMarque = Instal.value(forKey: "marque") as? String
+            vudetailsPiecesDetache?.envoiReference = Instal.value(forKey: "reference") as? String
+            vudetailsPiecesDetache?.envoiLeInstal = Instal.value(forKey: "nomInstal") as? String
+            vudetailsPiecesDetache?.envoieLenomDuBatiment = Instal.value(forKey: "nomBatiment") as? String
                 
-              
-               
-                //let path = tableInstallations.indexPathForSelectedRow
+            //    let path = tableInstallations.indexPathForSelectedRow
                // let cell = tableInstallations.cellForRow(at: path!)
                // let Instal = listeInstallations[(indexPath as NSIndexPath).row]
             
-                 //vudetailsPiecesDetache?.envoiLeInstal = recupInstal
+                
                 // vudetailsPiecesDetache?.envoiMarque = recuMarque
                 // vudetailsPiecesDetache?.envoiReference = recuReference
-               // vudetailsPiecesDetache?.envoiMarque = Instal.value(forKey: "marque") as? String
+              
               //  vudetailsPiecesDetache?.envoiReference =
               //  vudetailsPiecesDetache?.envoiLenomDuContra =
                
                 
                 
-               // let imageAsset: CKAsset = instal.value(forKey: "avatarInstal") as! CKAsset
+                let imageAsset: CKAsset = Instal.value(forKey: "avatarInstal") as! CKAsset
                 
-              //  vudetailsPiecesDetache?.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
+                vudetailsPiecesDetache?.envoieImage = UIImage(contentsOfFile: imageAsset.fileURL.path)!
                
                 
                 

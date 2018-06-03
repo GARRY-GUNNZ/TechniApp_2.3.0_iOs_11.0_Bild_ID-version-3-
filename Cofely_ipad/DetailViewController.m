@@ -73,7 +73,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     return self;
 }
 
-/*
+
 -(void) dataMaster {
     {
         [self recupGaz];}
@@ -86,7 +86,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     }
 
 }
-*/
+
  
 #pragma mark - LIFE VIEW
 
@@ -116,7 +116,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     
      self.tableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg@2x.png"]];
 
-  //  [self dataMaster];
+    [self dataMaster];
 
     
 }
@@ -146,9 +146,12 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     self.nominstal.text = _envoieLenomDuBatiment;
     self.contratLabel.text = _envoiLenomDuContra;
     self.nomInstaltion.text = _envoiLeInstal;
+    self.referenceTexfield.text = _envoiReference;
    // self.marqueTexfield.text = _envoiMarque;
-   // CKAsset * asset = _envoieImage ;
-   // avatarInstal.imageURL = asset.fileURL;
+    
+    self.avatarInstal.image = _envoieImage;
+    
+ 
     
     //////////////////////////////////////////////////////
    // self.nominstal.text = self.Batiment[@"nomBatiment"];
@@ -156,7 +159,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     //self.nomInstaltion.text = self.Batiment[@"nomInstal"];
     //self.marqueTexfield.text = self.Batiment[@"marque"];
     //self.referenceTexfield.text = self.Batiment[@"reference"];
-    //CKAsset * asset = self.Batiment[@"avatarInstal"];
+   // CKAsset * asset = self.Batiment[@"avatarInstal"];
    // avatarInstal.imageURL = asset.fileURL;
     
     /////////////////////////////////////////////////////
@@ -172,7 +175,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     self.avatarInstal.layer.shadowRadius = 10.0f;
     self.avatarInstal.layer.borderColor = [UIColor blackColor].CGColor;
     
-  //  [self dataMaster];
+    [self dataMaster];
     
 }
 
@@ -294,7 +297,7 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
         [self.navigationItem setHidesBackButton:editing animated:YES];
         
         
-     //   [self dataMaster];
+        [self dataMaster];
         
         
            }
@@ -320,12 +323,14 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     
   
 
-    NSString * bati = nil;
-    bati = self.Batiment[@"nomBatiment"];
-    NSString * noninstal = nil;
-    noninstal = self.Batiment[@"nomInstal"];
+  //  NSString * bati = nil;
+  //  bati = self.Batiment[@"nomBatiment"];
+   // NSString * noninstal = nil;
+   // noninstal = self.Batiment[@"nomInstal"];
 
-    NSArray* args = @[noninstal, bati];
+   // NSArray* args = @[noninstal, bati];
+    
+     NSArray* args = @[_envoiLeInstal, _envoieLenomDuBatiment];
     
     NSPredicate *predicat =[NSPredicate predicateWithFormat:@"nomInstal == %@ AND nomBati == %@"
                                               argumentArray: args];
@@ -379,12 +384,12 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
     __container = [CKContainer containerWithIdentifier:@"iCloud.kerck.TechniApp"];
     __publicDB = __container.publicCloudDatabase;
     
-    NSString * bati = nil;
-    bati = self.Batiment[@"nomBatiment"];
-    NSString * noninstal = nil;
-    noninstal = self.Batiment[@"nomInstal"];
+  //  NSString * bati = nil;
+  //  bati = self.Batiment[@"nomBatiment"];
+  //  NSString * noninstal = nil;
+  //  noninstal = self.Batiment[@"nomInstal"];
    
-    NSArray* args = @[noninstal, bati];
+    NSArray* args = @[_envoiLeInstal, _envoieLenomDuBatiment];
     
     NSPredicate *predicat =[NSPredicate predicateWithFormat:@"nomInstal == %@ AND nomBati == %@"
      argumentArray: args];
@@ -448,16 +453,16 @@ hud.labelText = @"Téléchargement ";
     __publicDB = __container.publicCloudDatabase;
 
     
-NSString * bati = nil;
-    bati = self.Batiment[@"nomBatiment"];
-    NSString * noninstal = nil;
-    noninstal = self.Batiment[@"nomInstal"];
+   // NSString * bati = nil;
+//    bati = self.Batiment[@"nomBatiment"];
+ //   NSString * noninstal = nil;
+  //  noninstal = self.Batiment[@"nomInstal"];
     
     NSString * etatcomande = nil;
     etatcomande = self.Batiment[@"Etat"];
     
     
-    NSArray* args = @[noninstal, bati];
+    NSArray* args = @[_envoiLeInstal,_envoieLenomDuBatiment];
     
     NSPredicate *predicat =[NSPredicate predicateWithFormat:@"nomInstal == %@ AND nomBati == %@"
                                               argumentArray: args];
@@ -1533,11 +1538,13 @@ NSString * bati = nil;
      
         AddFiltreViewController *controller = (AddFiltreViewController *)[[segue destinationViewController]
                                                                     topViewController];
-        [controller setDetailItem:(self.Batiment[@"nomInstal"])];
-        [controller setDetailItembat:(self.Batiment[@"nomBatiment"])];
-        [controller setMaVariableATransmet:(self.Batiment[@"Contrat"])];
+        [controller setDetailItem:_envoiLeInstal];
+        [controller setDetailItembat:_envoieLenomDuBatiment];
+        [controller setMaVariableATransmet:_envoiLenomDuContra];
         
- 
+      //  [controller setDetailItem:(self.Batiment[@"nomInstal"])];
+       // [controller setDetailItembat:(self.Batiment[@"nomBatiment"])];
+       // [controller setMaVariableATransmet:(self.Batiment[@"Contrat"])];
  
         
     }
@@ -1572,9 +1579,15 @@ NSString * bati = nil;
     
         ListNotesViewController *listeNote =
         (ListNotesViewController *)segue.destinationViewController;
-      [listeNote setNomBatisegu:(self.Batiment[@"nomBatiment"])];
-        [listeNote setInstalsegu:(self.Batiment[@"nomInstal"])];
-        [listeNote setContratsegu:(self.Batiment[@"Contrat"])];
+       
+        
+        [listeNote setNomBatisegu:_envoieLenomDuBatiment];
+        [listeNote setInstalsegu:_envoiLeInstal];
+        [listeNote setContratsegu:_envoiLenomDuContra];
+        
+       // [listeNote setNomBatisegu:(self.Batiment[@"nomBatiment"])];
+       // [listeNote setInstalsegu:(self.Batiment[@"nomInstal"])];
+       // [listeNote setContratsegu:(self.Batiment[@"Contrat"])];
      
       
         

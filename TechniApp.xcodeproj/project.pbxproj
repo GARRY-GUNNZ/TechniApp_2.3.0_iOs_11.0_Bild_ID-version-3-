@@ -30,7 +30,6 @@
 		4AD76ECA1B8FAB06006BA304 /* AddFiltreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD76EC91B8FAB06006BA304 /* AddFiltreViewController.m */; };
 		4AE8BEA81AAF60EC0042D5D0 /* Instalation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */; };
 		4AF738511B30D5830045722A /* ListeFiltre.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF738501B30D5830045722A /* ListeFiltre.m */; };
-		4AF9FFBD1A1FB2DA000E8874 /* InstalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF9FFBC1A1FB2DA000E8874 /* InstalViewController.m */; };
 		9C053D4E1CC6151A00CC6D1B /* iPhoneboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C053D4D1CC6151A00CC6D1B /* iPhoneboard.storyboard */; };
 		9C053D501CC64C7A00CC6D1B /* fond_iPhonr6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C053D4F1CC64C7A00CC6D1B /* fond_iPhonr6@2x.png */; };
 		9C0B266D20C2C8C800A7D94E /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B266C20C2C8C800A7D94E /* AsyncImageView.m */; };
@@ -51,7 +50,6 @@
 		9C2B08A41E95904A00654EBC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B08A31E95904A00654EBC /* StarViewController.swift */; };
 		9C2BE5831E87C23200FF6779 /* AddProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2BE5821E87C23200FF6779 /* AddProfilViewController.swift */; };
 		9C2CEEA120A4814200C7DFC8 /* AddBatiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CEEA020A4814200C7DFC8 /* AddBatiments.swift */; };
-		9C2CEEA420A4931D00C7DFC8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2CEEA320A4931D00C7DFC8 /* MasterViewController.m */; };
 		9C2F55A81F9A9239007E6709 /* SeachbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F55A71F9A9239007E6709 /* SeachbarViewController.swift */; };
 		9C30615C209B262300AA2ACA /* photo_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C30615B209B262200AA2ACA /* photo_logo.png */; };
 		9C30615E209B263700AA2ACA /* 137.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C30615D209B263600AA2ACA /* 137.png */; };
@@ -163,8 +161,6 @@
 		4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instalation.m; sourceTree = "<group>"; };
 		4AF7384F1B30D5830045722A /* ListeFiltre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeFiltre.h; sourceTree = "<group>"; };
 		4AF738501B30D5830045722A /* ListeFiltre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeFiltre.m; sourceTree = "<group>"; };
-		4AF9FFBB1A1FB2DA000E8874 /* InstalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstalViewController.h; sourceTree = "<group>"; };
-		4AF9FFBC1A1FB2DA000E8874 /* InstalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstalViewController.m; sourceTree = "<group>"; };
 		9C053D4D1CC6151A00CC6D1B /* iPhoneboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneboard.storyboard; path = StoryBoard/iPhoneboard.storyboard; sourceTree = "<group>"; };
 		9C053D4F1CC64C7A00CC6D1B /* fond_iPhonr6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fond_iPhonr6@2x.png"; sourceTree = "<group>"; };
 		9C0B266B20C2C8C700A7D94E /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
@@ -189,8 +185,6 @@
 		9C2B08A31E95904A00654EBC /* StarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		9C2BE5821E87C23200FF6779 /* AddProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfilViewController.swift; sourceTree = "<group>"; };
 		9C2CEEA020A4814200C7DFC8 /* AddBatiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddBatiments.swift; path = swift/AddBatiments.swift; sourceTree = "<group>"; };
-		9C2CEEA220A4931B00C7DFC8 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		9C2CEEA320A4931D00C7DFC8 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		9C2F55A71F9A9239007E6709 /* SeachbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachbarViewController.swift; sourceTree = "<group>"; };
 		9C30615B209B262200AA2ACA /* photo_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_logo.png; sourceTree = "<group>"; };
 		9C30615D209B263600AA2ACA /* 137.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 137.png; sourceTree = "<group>"; };
@@ -503,8 +497,6 @@
 				9C24F1641D60D76F00B3136F /* AddInstallationViewController.m */,
 				AF6FD2FF1993E13E0005DC27 /* DetailViewController.h */,
 				AF6FD3001993E13E0005DC27 /* DetailViewController.m */,
-				4AF9FFBB1A1FB2DA000E8874 /* InstalViewController.h */,
-				4AF9FFBC1A1FB2DA000E8874 /* InstalViewController.m */,
 				4AE8BEA61AAF60EC0042D5D0 /* Instalation.h */,
 				4AE8BEA71AAF60EC0042D5D0 /* Instalation.m */,
 			);
@@ -515,8 +507,6 @@
 		9CC2291F1CBA77B900EFA01A /* Batiment */ = {
 			isa = PBXGroup;
 			children = (
-				9C2CEEA220A4931B00C7DFC8 /* MasterViewController.h */,
-				9C2CEEA320A4931D00C7DFC8 /* MasterViewController.m */,
 				4A96D58B1D68D811004BECC8 /* ContratViewController.swift */,
 				9C2CEEA020A4814200C7DFC8 /* AddBatiments.swift */,
 				9CCB9B7220C2D7E300ED382D /* BatimentViewController.swift */,
@@ -940,11 +930,9 @@
 				4A0539551B321D00003D91CE /* TypeSelectionViewController.m in Sources */,
 				9CCB9B7320C2D7E300ED382D /* BatimentViewController.swift in Sources */,
 				9C2B08A21E958C1C00654EBC /* CofelyVisionViewController.swift in Sources */,
-				9C2CEEA420A4931D00C7DFC8 /* MasterViewController.m in Sources */,
 				AF6CF2F4209CAD7F00206D51 /* TextFieldEffects.swift in Sources */,
 				9C8E07881C3951AC00CB58C5 /* TemperatureCell.m in Sources */,
 				9CAA42FF209CD07900D87BCA /* YoshikoTextField.swift in Sources */,
-				4AF9FFBD1A1FB2DA000E8874 /* InstalViewController.m in Sources */,
 				9C8E07821C39510400CB58C5 /* TemperatureConverterViewController.m in Sources */,
 				9CCD62E32087BA16004976A6 /* MenuTableViewController.swift in Sources */,
 				9C8E07851C39515000CB58C5 /* TeauCell.m in Sources */,

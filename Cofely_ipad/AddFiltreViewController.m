@@ -14,7 +14,7 @@
 //#import "CHViewController.h"
 #import "AddFiltreViewController.h"
 #import "DetailViewController.h"
-#import "InstalViewController.h"
+
 #import "Instalation.h"
 
 

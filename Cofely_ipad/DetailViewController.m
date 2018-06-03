@@ -12,7 +12,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "MBProgressHUD.h"
 #import "Instalation.h"
-#import "InstalViewController.h"
+//#import "InstalViewController.h"
 #import "CHViewController.h"
 #import "AddFiltreViewController.h"
 #import "InstructionsViewController.h"

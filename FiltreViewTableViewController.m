@@ -8,8 +8,8 @@
 
 #import "FiltreViewTableViewController.h"
 #import <CloudKit/CloudKit.h>
-#import "InstalViewController.h"
-#import "MasterViewController.h"
+
+
 #import "AddInstallationViewController.h"
 #import "MBProgressHUD.h"
 #import "AsyncImageView.h"

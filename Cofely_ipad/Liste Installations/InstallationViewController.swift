@@ -39,6 +39,9 @@ class InstallationViewController: UIViewController,UITableViewDelegate,UITableVi
         nomContrat.text! = envoiLenomDuContra
         
 // MARK: Integration image Batiment
+        
+       
+        
         avatarBatiment.image? = envoiImage
         
              // print("liste des batiment",self.listeInstallations)

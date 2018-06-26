@@ -40,7 +40,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchiPhone</string>
 	<key>UIMainStoryboardFile</key>
-	<string>iPhoneboard</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

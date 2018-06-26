@@ -218,8 +218,8 @@ alert.addTextField
     
     
        // MARK: -  N O T I F I C A T I O N S
-    
-    @IBAction func executeCodeButtonClicked() {
+   
+ /*   @IBAction func executeCodeButtonClicked() {
         // Put the CloudKit private database in a constants
        // let publicDatabase = CKContainer.default().publicCloudDatabase
         
@@ -266,7 +266,7 @@ alert.addTextField
             }
         })
     }
-    
+    */
     
     func resetBadgeCounter() {
         let badgeResetOperation = CKModifyBadgeOperation(badgeValue: 0)

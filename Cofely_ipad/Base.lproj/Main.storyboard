@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -161,12 +162,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VRw-pj-MED" secondAttribute="trailing" id="0oW-SM-Shx"/>
                             <constraint firstItem="s6Q-a0-PdS" firstAttribute="leading" secondItem="bbT-ex-9zd" secondAttribute="leading" constant="268" id="1S5-kQ-dar"/>
+                            <constraint firstItem="VRw-pj-MED" firstAttribute="leading" secondItem="bbT-ex-9zd" secondAttribute="leading" id="4ZT-QE-WzY"/>
                             <constraint firstItem="s6Q-a0-PdS" firstAttribute="centerX" secondItem="bbT-ex-9zd" secondAttribute="centerX" id="4rT-jn-ZBP"/>
                             <constraint firstItem="iPs-ic-Eaw" firstAttribute="top" secondItem="s6Q-a0-PdS" secondAttribute="bottom" constant="200" id="ENC-hh-cuF"/>
                             <constraint firstItem="VRw-pj-MED" firstAttribute="leading" secondItem="bbT-ex-9zd" secondAttribute="leading" id="Fke-Hr-k85"/>
                             <constraint firstItem="VRw-pj-MED" firstAttribute="bottom" secondItem="iPs-ic-Eaw" secondAttribute="top" id="JB7-NQ-UUu"/>
                             <constraint firstItem="s6Q-a0-PdS" firstAttribute="centerY" secondItem="bbT-ex-9zd" secondAttribute="centerY" id="VjA-Qz-CaK"/>
+                            <constraint firstItem="iPs-ic-Eaw" firstAttribute="top" secondItem="VRw-pj-MED" secondAttribute="bottom" id="dSo-cO-SbB"/>
+                            <constraint firstItem="VRw-pj-MED" firstAttribute="top" secondItem="g2h-vH-gjQ" secondAttribute="bottom" id="lcA-gO-31q"/>
                             <constraint firstItem="VRw-pj-MED" firstAttribute="centerX" secondItem="s6Q-a0-PdS" secondAttribute="centerX" id="uXB-Ez-6sZ"/>
                             <constraint firstItem="s6Q-a0-PdS" firstAttribute="centerX" secondItem="bbT-ex-9zd" secondAttribute="centerX" id="yoz-PH-Uqp"/>
                             <constraint firstItem="VRw-pj-MED" firstAttribute="top" secondItem="g2h-vH-gjQ" secondAttribute="bottom" id="zox-Ul-bA6"/>
@@ -1553,6 +1558,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UHX-Lz-3jm"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="nomBatiment" destination="JHf-ap-dKj" id="3px-2G-HTd"/>
                         <outlet property="tblPieces" destination="p2M-PC-qYj" id="6Yl-qm-NCc"/>
@@ -3262,25 +3268,25 @@
                         <subviews>
                             <webView contentMode="scaleAspectFit" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qO4-rY-Teb">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2U4-5n-V1a">
                                 <rect key="frame" x="410" y="192" width="205" height="384"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="edN-oX-1l6">
-                                        <rect key="frame" x="86" y="82" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="color" red="0.4745728374" green="0.42121160029999999" blue="0.38028115029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chargement ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t20-eG-4OZ">
-                                        <rect key="frame" x="50" y="127" width="109" height="237"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="50" y="127" width="109" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" red="0.4745728374" green="0.42121160029999999" blue="0.38028115029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="edN-oX-1l6">
+                                        <rect key="frame" x="84" y="174" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.4745728374" green="0.42121160029999999" blue="0.38028115029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                             </view>
                         </subviews>
@@ -3326,10 +3332,10 @@
             </objects>
             <point key="canvasLocation" x="-3863" y="-2379"/>
         </scene>
-        <!--M3XFilm-->
+        <!--Google_Drive-->
         <scene sceneID="eaH-7v-vmi">
             <objects>
-                <viewController storyboardIdentifier="MXFilmViewController" title="MXFilmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B03-wv-8y1" userLabel="M3XFilm" customClass="MXFilmViewController" customModule="TechniApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MXFilmViewController" title="MXFilmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B03-wv-8y1" userLabel="Google_Drive" customClass="MXFilmViewController" customModule="TechniApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AT3-qg-SuF"/>
                         <viewControllerLayoutGuide type="bottom" id="pei-Zd-EvZ"/>
@@ -3338,12 +3344,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJr-Ap-cSW">
+                            <webView contentMode="scaleAspectFit" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJr-Ap-cSW">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrp-dm-HeC">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrp-dm-HeC">
                                 <rect key="frame" x="407" y="192" width="205" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Scl-Az-x1h">
                                         <rect key="frame" x="86" y="82" width="37" height="37"/>
@@ -3361,19 +3369,9 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="pJr-Ap-cSW" firstAttribute="width" secondItem="3RM-PL-Edw" secondAttribute="width" id="50e-7y-Lpx"/>
-                            <constraint firstItem="qrp-dm-HeC" firstAttribute="width" secondItem="pJr-Ap-cSW" secondAttribute="width" constant="-819" id="8ox-9O-nIj"/>
-                            <constraint firstItem="qrp-dm-HeC" firstAttribute="centerY" secondItem="pJr-Ap-cSW" secondAttribute="centerY" constant="-108" id="9gz-wd-jzx"/>
-                            <constraint firstItem="qrp-dm-HeC" firstAttribute="height" secondItem="pJr-Ap-cSW" secondAttribute="height" constant="-600" id="JCN-ZQ-nhW"/>
-                            <constraint firstItem="pJr-Ap-cSW" firstAttribute="centerX" secondItem="3RM-PL-Edw" secondAttribute="centerX" id="ZTm-k3-e3h"/>
-                            <constraint firstItem="pJr-Ap-cSW" firstAttribute="centerY" secondItem="3RM-PL-Edw" secondAttribute="centerY" id="jIP-jc-YRV"/>
-                            <constraint firstItem="qrp-dm-HeC" firstAttribute="centerX" secondItem="pJr-Ap-cSW" secondAttribute="centerX" constant="-2.5" id="qrV-Tl-pGf"/>
-                            <constraint firstItem="pJr-Ap-cSW" firstAttribute="height" secondItem="3RM-PL-Edw" secondAttribute="height" id="vgy-cv-UsN"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="M3X FILM" id="cRJ-R3-CUh">
+                    <navigationItem key="navigationItem" title="Google drive" id="cRJ-R3-CUh">
                         <leftBarButtonItems>
                             <barButtonItem image="menu.png" id="Df9-0j-npr"/>
                             <barButtonItem systemItem="rewind" id="Dru-WZ-ZTG">
@@ -3646,7 +3644,6 @@
         <image name="shopping-cart-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ka5-hp-yXR"/>
         <segue reference="EY4-uu-pin"/>
     </inferredMetricsTieBreakers>
 </document>

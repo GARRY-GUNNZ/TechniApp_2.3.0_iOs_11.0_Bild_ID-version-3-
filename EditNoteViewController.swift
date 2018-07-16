@@ -84,7 +84,7 @@ class EditNoteViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if let editedNote = editedNoteRecord {
             txtNoteTitle.text = editedNote.value(forKey: "noteTitle") as? String
-            textView.text = editedNote.value(forKey: "noteText") as! String
+            textView.text = editedNote.value(forKey: "noteText") as? String
             textfieldMarque.text = editedNote.value(forKey: "marque") as? String
             textfieldReference.text = editedNote.value(forKey: "reference") as? String
             texfiledPuissance.text = editedNote.value(forKey: "puissance") as? String

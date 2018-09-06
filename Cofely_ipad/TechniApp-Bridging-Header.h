@@ -10,7 +10,7 @@
 #import "TextFieldEffects.h"
 #import "AddInstallationViewController.h"
 #import "IngredientDetailViewController.h"
-
+#import "AppDelegate.h"
 
 
 

@@ -25,7 +25,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     var imageURL: URL!
     var refresh:UIRefreshControl!
     var mesContrats = [CKRecord]()
-    //let thisApp = UIApplication.shared.delegate as! UIApplicationDelegate
+     let thisApp = UIApplication.shared.delegate as! AppDelegate
         
         
         // MARK: - OUTLET
@@ -36,8 +36,31 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var addContrat: UIBarButtonItem!
     
-   
-       // MARK: - ACTION BOUTON ADD CONTRAT CLOUDKIT
+    @IBOutlet weak var labelAutentification: UILabel!
+    
+    
+ 
+    
+    
+  /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        
+        if thisApp.value == false {
+            labelAutentification.text = "créé un compte Icloud"
+            
+            
+            return
+        }
+        
+        labelAutentification.text = "Bonjour mec !! "
+        
+        
+    }
+    */
+    
+    // MARK: - ACTION BOUTON ADD CONTRAT CLOUDKIT
+    
     
     
     @IBAction func addContartButton(_ sender: AnyObject)
@@ -179,7 +202,7 @@ alert.addTextField
         let header : UITableViewHeaderFooterView = view as!
         UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
-        header.textLabel?.font = UIFont .systemFont(ofSize: 45)
+        header.textLabel?.font = UIFont .systemFont(ofSize: 35)
         //[header.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:35]];
     }
     
@@ -188,7 +211,9 @@ alert.addTextField
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         let label = "💼  Mes Contrats "
-        //label.size = 20.0
+        //label.text.size = 15
+       // label.textLabel?.font = UIFont .systemFont(ofSize: 15)
+        
         return label
         
     }

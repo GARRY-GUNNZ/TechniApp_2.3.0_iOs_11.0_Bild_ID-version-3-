@@ -154,7 +154,7 @@
             let header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
             
             header.textLabel?.textColor = UIColor.black
-            header.textLabel?.font = UIFont .systemFont(ofSize: 45)
+            header.textLabel?.font = UIFont .systemFont(ofSize: 30)
             //[header.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:35]];
         }
         
@@ -168,7 +168,7 @@
             
             // "   %@  ", envoiLenomDuContrat]
             
-            let label = "🏢  Bâtiments \(envoiLenomDuContrat)"
+            let label = "🏢 \(envoiLenomDuContrat)"
             //label.size = 20.0
             return label
             

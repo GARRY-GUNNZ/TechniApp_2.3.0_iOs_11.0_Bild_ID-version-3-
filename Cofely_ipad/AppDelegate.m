@@ -10,10 +10,39 @@
 #import <CloudKit/CloudKit.h>
 
 @implementation AppDelegate
+//@synthesize value;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
+
+
+
 {
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if ([[NSFileManager defaultManager]
+             URLForUbiquityContainerIdentifier:nil] != nil)
+            NSLog(@"iCloud is available\n");
+        else
+            NSLog(@"This Application requires iCloud, but it is not available.\n");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert Connexion"
+                                                        message:@"Crée un compte iCloud pour pouvoir Utilser le TechniApp rendez-vous dans l'application Réglage, Compte iCloud"
+                                                       delegate:self
+                                              cancelButtonTitle:@"j'ai déja un compte iCloud"
+                                              otherButtonTitles:@"Ok",nil];
+        [alert show];
+      
+        
+        
+    });
+
+
+    
+
+    
+    
     
     // Register for push notifications
   /*

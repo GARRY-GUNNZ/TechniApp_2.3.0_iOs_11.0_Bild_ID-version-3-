@@ -26,7 +26,7 @@
 
 @implementation AddFiltreViewController;
 
-@synthesize dimTexfiled,typeTexfiled,maVariableATransmet,nomDuBati,nomInst,liste;
+@synthesize addPhotoFiltre,dimTexfiled,typeTexfiled,maVariableATransmet,nomDuBati,nomInst,liste;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -50,17 +50,29 @@
     */
     
     liste = [[NSMutableArray alloc] init];
-     [liste addObject:@"R33"];
-    [liste addObject:@"R410a"];
-    [liste addObject:@"R407C"];
-    [liste addObject:@"R134a"];
     [liste addObject:@"R11"];
-    [liste addObject:@"R14"];
-    [liste addObject:@"R401"];
-    [liste addObject:@"R404"];
-    [liste addObject:@"R22"];
-    [liste addObject:@"R12"];
-    [liste addObject:@"R422D"];
+    
+     [liste addObject:@"R12"];
+     [liste addObject:@"R14"];
+     [liste addObject:@"R22"];
+    [liste addObject:@"R33"];
+     [liste addObject:@"R34"];
+    [liste addObject:@"R134a"];
+     [liste addObject:@"R401"];
+     [liste addObject:@"R403"];
+      [liste addObject:@"R404"];
+    [liste addObject:@"R407C"];
+    [liste addObject:@"R410a"];
+     [liste addObject:@"R422D"];
+    
+    
+   
+   
+  
+   
+   
+   
+   
     
    
      
@@ -287,6 +299,7 @@ numberOfRowsInComponent:(NSInteger)component
    
     // Gaz
     if (_segnmentedSel.selectedSegmentIndex == 0) {
+        self.addPhotoFiltre.hidden = YES;
         self.labelQ.text = @"0";
         self.labelA.text = @"Type de Gaz:";
         self.labelB.text = @" Poids en Kg:";
@@ -301,10 +314,12 @@ numberOfRowsInComponent:(NSInteger)component
         self.dateControl.hidden = NO;
         self.profondeurTexfiled.hidden = YES;
         self.avatarFiltre.hidden = YES ;
+        self.boutonTypeDeFiltre.hidden = YES;
     }
     // FILTRES
     else if (_segnmentedSel.selectedSegmentIndex == 1)
     {
+        self.addPhotoFiltre.hidden = NO;
         self.labelQ.text = @"0";
         self.labelA.text = @"Largeur:";
         self.labelB.text = @"Longueur:";
@@ -320,10 +335,13 @@ numberOfRowsInComponent:(NSInteger)component
         self.dateControl.hidden = YES;
         self.profondeurTexfiled.hidden = NO;
         self.avatarFiltre.hidden=NO;
+        self.boutonTypeDeFiltre.hidden = YES;
+        
     }
     // COURROIE
     else if (_segnmentedSel.selectedSegmentIndex == 2)
     {
+        self.addPhotoFiltre.hidden = YES;
         self.labelQ.text = @"0";
         self.labelA.text = @"Type de Courroie:";
         self.labelB.text = @"Taille de la Courroie: ";
@@ -338,6 +356,7 @@ numberOfRowsInComponent:(NSInteger)component
         self.dateControl.hidden = YES;
         self.profondeurTexfiled.hidden = YES;
         self.avatarFiltre.hidden = YES ;
+        self.boutonTypeDeFiltre.hidden = YES;
         
     }
     // Piéces

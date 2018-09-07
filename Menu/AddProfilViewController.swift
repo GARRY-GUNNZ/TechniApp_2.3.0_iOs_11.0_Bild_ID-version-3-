@@ -37,7 +37,21 @@ class AddProfilViewController: UIViewController ,UIImagePickerControllerDelegate
         
         self.vueChargement.isHidden = true
         
-        // Do any additional setup after loading the view.
+        // RECUPÉRATION INFO PROFIL
+        let avatarImage = UserDefaults.standard.object(forKey: "avatar") as? NSData
+        let name = UserDefaults.standard.value(forKey: "nom") as? String
+        let firstname = UserDefaults.standard.value(forKey: "prenom") as? String
+        let equipeName = UserDefaults.standard.value(forKey: "nomEquipe") as? String
+        
+        avatarProfil.image = UIImage(data: (avatarImage! as Data))
+        avatarProfil.layer.cornerRadius = 50
+        avatarProfil.layer.masksToBounds = true
+        
+        prenomProfil.text = name
+        nomProfil.text = firstname
+        nomEquipe.text = equipeName
+        
+        
     }
     
     

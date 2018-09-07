@@ -337,6 +337,8 @@ alert.addTextField
         
         privateData.perform(query, inZoneWith:nil) {
             (results, error) -> Void in
+           
+            
             
             if let contratRecup = results {
                 self.mesContrats = contratRecup
@@ -358,7 +360,18 @@ alert.addTextField
         }     }
     
     
-    
+    func alertReso ()
+    {
+        
+        let alert = UIAlertController(title: "Alerte Réseaux", message: "vous n'avaz pas assez de réseau ou vous n'avez pas de compte iCloud.Rendez-vous dans Réglage et crée un compte iCloud pour pouvoir utilliser le TecniApp", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okaction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+    }
    
     
     

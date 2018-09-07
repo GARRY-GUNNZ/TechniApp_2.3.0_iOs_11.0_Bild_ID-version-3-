@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerGaz;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarFiltre;
 @property (weak, nonatomic) IBOutlet UIButton *boutonTypeDeFiltre;
+@property (weak, nonatomic) IBOutlet UIButton *addPhotoFiltre;
 
 // DIMENTION
 

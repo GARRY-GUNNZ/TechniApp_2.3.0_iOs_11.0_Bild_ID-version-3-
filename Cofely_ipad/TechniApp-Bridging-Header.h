@@ -11,6 +11,7 @@
 #import "AddInstallationViewController.h"
 #import "IngredientDetailViewController.h"
 #import "AppDelegate.h"
+#import "ListeGazTableView.h"
 
 
 

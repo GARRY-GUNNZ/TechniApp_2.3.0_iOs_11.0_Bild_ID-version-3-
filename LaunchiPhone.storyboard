@@ -24,18 +24,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nom_appli.png" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-V9-M4u">
                                 <rect key="frame" x="324.5" y="50.5" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright © 2018 Кегскшев. All rights reserved. Version 3.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="216" y="696" width="650" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2018 Кегскшев. All rights reserved. Version 3.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                                <rect key="frame" x="302" y="651" width="420" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="51" id="5f1-6q-OfH"/>
                             <constraint firstItem="gzQ-V9-M4u" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Bf2-bA-Thy"/>
                             <constraint firstItem="gzQ-V9-M4u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IQ1-sg-BFs"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oj2-c6-IAo"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="300" id="zKD-Sm-L5F"/>
                         </constraints>
                     </view>
                 </viewController>

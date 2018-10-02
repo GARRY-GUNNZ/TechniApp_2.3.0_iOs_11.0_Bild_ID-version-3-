@@ -274,17 +274,35 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
         [self.detailTable beginUpdates];
         
         NSUInteger ingredientsCount = self.consomableListe_.count;
+        //NSUInteger piecesdetacheeCount = 1;
          
         
         NSArray *ingredientsInsertIndexPath = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:ingredientsCount
                                inSection:CONSOMABLE_SECTION]];
+         
+        // NSArray *instructionInsertIndexPath = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:piecesdetacheeCount
+                                                                                      //     inSection:PIECESDETACHE_SECTION]];
+         
+         
         
         if (editing) {
             [self.detailTable insertRowsAtIndexPaths:ingredientsInsertIndexPath withRowAnimation:UITableViewRowAnimationTop];
-            self.marqueTexfield.placeholder = @"Saisir Marque";
+           // [self.detailTable insertRowsAtIndexPaths:instructionInsertIndexPath withRowAnimation:UITableViewRowAnimationTop];
+            
+            self.marqueTexfield.placeholder = @"MODE EDITION : Saisir Marque";
+            self.referenceTexfield.placeholder = @"MODE EDITION : Saisir Référence";
+            
+            // UPDATE REFERENCE - MARQUE - PHOTO INSTALLATION (Obtions)
+            
+            /* [self.updateCloudkitData]
+             
+             */
+            
+            
         } else {
             [self.detailTable deleteRowsAtIndexPaths:ingredientsInsertIndexPath withRowAnimation:UITableViewRowAnimationTop];
-            self.marqueTexfield.placeholder = @"Saisir réference";
+            self.marqueTexfield.placeholder = @"Marque";
+            self.referenceTexfield.placeholder = @"Référence";
         }
         
         [self.detailTable endUpdates];
@@ -306,6 +324,48 @@ static NSString *kShowFiltreTypeSegueID = @"showFiltre";
 
 
 #pragma mark - CLOUDKIT FETCH
+
+
+
+- (void) updateCloudkitData
+
+{
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view
+                                              animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Téléchargement ";
+    [hud show:YES];
+    //[self setLoadingProgress:-1];
+    
+    ///////////////// cloudkit///////////////////////////
+    
+    CKRecord * obj = [[CKRecord alloc] initWithRecordType:@"Installation"];
+   
+    obj[@"marque"] = self.marqueTexfield.text;
+    obj[@"reference"] = self.referenceTexfield.text;
+   // obj[@"Contrat"] = self.nomContrat.text;
+    
+    
+    
+    [[CKContainer defaultContainer].publicCloudDatabase saveRecord:obj completionHandler:^(CKRecord *obj,NSError *error){
+        
+        // Si tout s'est bien passé, on ferme le vc modal.
+        [hud hide:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];}];
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 - (void)recupConso
 {
@@ -1113,9 +1173,10 @@ hud.labelText = @"Téléchargement ";
     // If editing, don't allow instructions to be selected
     // Not editing: Only allow instructions to be selected
     //
+    
     if ((isEditing && section == PIECESDETACHE_SECTION ) || (!isEditing && section != PIECESDETACHE_SECTION )) {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        rowToSelect = nil;
+       [tableView deselectRowAtIndexPath:indexPath animated:YES];
+       rowToSelect = nil;
     }
     
     return rowToSelect;

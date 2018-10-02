@@ -49,9 +49,6 @@ class PiecesDetacheeTableViewController: UITableViewController,UIPickerViewDeleg
 }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
       
-        
-        
-        
         let listePieces = choixContrats[row]
        return (listePieces["content"] as? String)
        
@@ -108,7 +105,6 @@ override func didReceiveMemoryWarning() {
                             predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
         
         query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
-      
         privateData.perform(query, inZoneWith:nil) {
             (results, error) -> Void in
             
@@ -127,6 +123,10 @@ override func didReceiveMemoryWarning() {
 
     
    // MARK: - TABLEVIEW
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
     
 override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Commande des Pièces détachées"

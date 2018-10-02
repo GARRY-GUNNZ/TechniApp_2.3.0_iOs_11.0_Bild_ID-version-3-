@@ -93,10 +93,8 @@
         func tableView (_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
             
         {
-            
-            print("la fonction est lancer ")
-            
-            
+            alertsupression ()
+          
             if editingStyle == UITableViewCellEditingStyle.delete
             {
                 let selectedRecordID = listeBatiments[(indexPath as NSIndexPath).row].recordID
@@ -111,6 +109,7 @@
                     { (recordID, error) -> Void in
                         if error != nil
                         {
+                       
                             print("error de suppression")
                         }
                         else
@@ -123,8 +122,7 @@
                         }
                 })
             }
-            
-           // print("la fonction est fini")
+       
             
         }
         //   MARK: - TABLEVIEW Animations
@@ -177,7 +175,7 @@
         
         func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
         {
-            return 160.0;
+            return 155.0;
         }
         
         
@@ -326,6 +324,19 @@
  
  }
  
+        }
+        
+        
+        func alertsupression ()
+
+        {
+            let alert = UIAlertController(title: "Supression en cours ..", message: "Voulez-vous vraiment effacer ce Batiment ?", preferredStyle: .alert)
+            let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+            
+            alert.addAction(okaction)
+            self.present(alert, animated: true, completion: nil)
+            
+            
         }
  
         

@@ -74,7 +74,7 @@
    
    
     
-   
+   self.addPhotoFiltre.hidden = YES;
      
     _nomContrat.text = self.maVariableATransmet;
     self.typeTexfiled.hidden =YES;
@@ -309,7 +309,7 @@ numberOfRowsInComponent:(NSInteger)component
         self.dimTexfiled.hidden = YES;
         self.pickerGaz.hidden = NO;
         self.typeDeGaz.hidden = NO;
-        self.boutonTypeDeFiltre.hidden = YES;
+      
         self.typeTexfiled.hidden =YES;
         self.dateControl.hidden = NO;
         self.profondeurTexfiled.hidden = YES;

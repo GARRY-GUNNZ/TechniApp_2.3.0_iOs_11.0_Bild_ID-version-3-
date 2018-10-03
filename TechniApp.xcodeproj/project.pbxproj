@@ -116,6 +116,7 @@
 		AF6FD32E1993E2130005DC27 /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6FD3251993E2130005DC27 /* cell_top@2x.png */; };
 		AF6FD32F1993E2130005DC27 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6FD3261993E2130005DC27 /* common_bg.png */; };
 		AF6FD3301993E2130005DC27 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6FD3271993E2130005DC27 /* common_bg@2x.png */; };
+		AF873AC621650E7400EDB51A /* QuantiteGazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +270,7 @@
 		AF6FD3251993E2130005DC27 /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
 		AF6FD3261993E2130005DC27 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
 		AF6FD3271993E2130005DC27 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
+		AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuantiteGazViewController.swift; path = Menu/QuantiteGazViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +474,7 @@
 			children = (
 				9C9248CD214C4DE900696B0D /* ListeGazTableView.h */,
 				9C9248CE214C4DE900696B0D /* ListeGazTableView.m */,
+				AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */,
 			);
 			name = "Menu Gaz";
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				9C24F1681D60D90700B3136F /* CHViewController.m in Sources */,
 				9C5ED1B81DE5EB100089B56D /* CommandeCoirroiesViewController.swift in Sources */,
 				9C5BD15120912301005C6EF7 /* DesignableButton.swift in Sources */,
+				AF873AC621650E7400EDB51A /* QuantiteGazViewController.swift in Sources */,
 				4AF738511B30D5830045722A /* ListeFiltre.m in Sources */,
 				4A05394F1B31FBFC003D91CE /* IngredientDetailViewController.m in Sources */,
 				AF6FD2F41993E13E0005DC27 /* main.m in Sources */,

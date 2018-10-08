@@ -25,19 +25,150 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     var imageURL: URL!
     var refresh:UIRefreshControl!
     var mesContrats = [CKRecord]()
-     let thisApp = UIApplication.shared.delegate as! AppDelegate
-        
-        
-        // MARK: - OUTLET
+    let thisApp = UIApplication.shared.delegate as! AppDelegate
+    let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+    @IBOutlet weak var idLabel: UILabel!
+    
+    
+    // MARK: - OUTLET
         
    // @IBOutlet weak var infoUtilisateurs: UILabel!
     @IBOutlet weak var viewWait: UIView!
     @IBOutlet weak var tableviewContrat: UITableView!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var addContrat: UIBarButtonItem!
-    
     @IBOutlet weak var labelAutentification: UILabel!
     
+    
+    
+    
+    
+      //  ------------GESTION USER ID ----------------------------------------------------------------------------------------------------
+      //  -----------------------------------------------------------------------------------------------------------------
+  
+    
+    
+    
+    
+    
+    // MARK:
+    
+    @objc private func startDiscoveryProcess() {
+      //  self.noAccountView.isHidden = true
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        monContainaire.accountStatus { status, error in
+            DispatchQueue.main.async {
+                
+                // Si j'ai une erreur ont affiche une alerte View
+                if let error = error {
+                    let alert = UIAlertController(title: "Account Error", message: "Unable to determine iCloud account status.\n\(error.localizedDescription)", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                } else {
+                    switch status {
+                    case .available:
+                        self.fetchUserRecordIdentifier()
+                    case .couldNotDetermine, .noAccount, .restricted:
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                        self.showNoAccountInfo()
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: J'affiche la vu "pas de compte détécté
+    
+    private func showNoAccountInfo() {
+       // self.noAccountView.isHidden = false
+    }
+    
+    
+    // MARK: CHERCHER IDENTITÉ UTILISATEUR ID USER
+    
+    private func fetchUserRecordIdentifier() {
+        monContainaire.fetchUserRecordID { recordID, error in
+            guard let recordID = recordID, error == nil else {
+                // error handling magic
+                return
+            }
+            
+            DispatchQueue.main.async {
+              //  self.idLabel.text = recordID.recordName
+                
+                print("Got user record ID \(recordID.recordName). Fetching info...")
+                
+                self.fetchUserRecord(with: recordID)
+                self.discoverIdentity(for: recordID)
+               //  self.discoverFriends()
+            }
+        }
+    }
+    
+    
+    // MARK: CHERCHER IDENTITÉ UTILISATEUR RECUPÈRE LE <CK RECORD > COMPLET
+    
+    
+    private func fetchUserRecord(with recordID: CKRecordID) {
+        monContainaire.publicCloudDatabase.fetch(withRecordID: recordID) { record, error in
+            guard let record = record, error == nil else {
+                // show off your error handling skills
+                return
+            }
+            
+            print("The user record is: \(record)")
+            
+            DispatchQueue.main.async {
+              //  self.userRecord = record
+            }
+        }
+    }
+    
+    
+    // MARK: Recherche de l'identité de l'utilisateur
+    
+    private func discoverIdentity(for recordID: CKRecordID) {
+        monContainaire.requestApplicationPermission(.userDiscoverability) { status, error in
+            guard status == .granted, error == nil else {
+                // error handling voodoo
+                DispatchQueue.main.async {
+                    self.labelAutentification.text = "NOT AUTHORIZED"
+                }
+                return
+            }
+            
+            if #available(iOS 10.0, *) {
+                self.monContainaire.discoverUserIdentity(withUserRecordID: recordID) { identity, error in
+                    defer {
+                        DispatchQueue.main.async {
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                        }
+                    }
+                    
+                    guard let components = identity?.nameComponents, error == nil else {
+                        // more error handling magic
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let formatter = PersonNameComponentsFormatter()
+                        self.labelAutentification.text = formatter.string(from: components)
+                    }
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+    
+   
+    
+    
+   //  -----------------------------------------------------------------------------------------------------------------
+  //  -----------------------------------------------------------------------------------------------------------------
     
  
     
@@ -104,6 +235,14 @@ alert.addTextField
                                             privateData.save(contrat, completionHandler: { (record, error) -> Void in
                                                 
                                                 if (error != nil) {
+                                                    
+                                                    let alert = UIAlertController(title: "Erreur Compte iCloud", message: "Créez un compte iCloud pour pouvoir utiliser le TechniApp.Rendez-vous dans réglage , Compte iCloud                          .\n\(String(describing: error?.localizedDescription))", preferredStyle: .alert)
+                                                    
+                                                    let okaction = UIAlertAction(title: "ok", style: .default, handler: nil)
+                                                    alert.addAction(okaction)
+                                        
+                                                    
+                                                    self.present(alert, animated: true, completion: nil)
                                                     //print(error)
                                                 }
                                                 OperationQueue.main.addOperation({ () -> Void in
@@ -137,6 +276,16 @@ alert.addTextField
     {
         super.viewDidLoad()
         
+        
+          // ---------------------------------------------------------------
+        
+         // ajouter un observer pour savoir si l'utilisateur  a un compte iCloud
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(startDiscoveryProcess), name: Notification.Name.CKAccountChanged, object: nil)
+        startDiscoveryProcess()
+        
+        // ---------------------------------------------------------------
+        
         tableviewContrat.dataSource = self
         tableviewContrat.delegate = self
         
@@ -147,6 +296,7 @@ alert.addTextField
         refresh.addTarget(self, action:#selector(ContratViewController.loadData), for: .valueChanged)
         self.tableviewContrat.addSubview(refresh)
         loadData()
+        
         
         
         
@@ -213,6 +363,7 @@ alert.addTextField
         let label = "💼  Mes Contrats "
         //label.text.size = 15
        // label.textLabel?.font = UIFont .systemFont(ofSize: 15)
+        _ = labelAutentification.text
         
         return label
         
@@ -337,6 +488,9 @@ alert.addTextField
         
         privateData.perform(query, inZoneWith:nil) {
             (results, error) -> Void in
+            if (error != nil) {
+                self.alertReso ()
+            }
            
             
             

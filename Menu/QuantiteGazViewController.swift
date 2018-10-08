@@ -59,7 +59,7 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     
     
     
-    override func viewDidLoad() {
+        func viewDidLoad() {
         super.viewDidLoad()
         
         contratPicker.dataSource = self

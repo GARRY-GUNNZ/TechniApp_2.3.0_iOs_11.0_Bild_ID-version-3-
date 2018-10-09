@@ -219,7 +219,8 @@
             
             
             privateData.perform(query, inZoneWith:nil) {
-                (results, error) -> Void in
+                (results, error) -> Void in 
+                
                 
                 if let contratRecup = results {
                     self.listeBatiments = contratRecup

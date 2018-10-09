@@ -146,7 +146,7 @@
                          
                          
                          NSLog(@"ERREUR %@",error.localizedDescription);
-                     }listeGaz_ = results;
+                     } self->listeGaz_ = results;
                      dispatch_async(dispatch_get_main_queue(), ^{
                          
                          
@@ -228,7 +228,8 @@
                          
                          
                          NSLog(@"ERREUR %@",error.localizedDescription);
-                     }listeGaz_ = results;
+                     }
+                     self->listeGaz_ = results;
                      dispatch_async(dispatch_get_main_queue(), ^{
                          
                          
@@ -362,22 +363,13 @@
 
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-     
-    
-    
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
+/*
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.

@@ -11,7 +11,6 @@ import UIKit
 import CloudKit
 import QuartzCore
 
-
 class ContratViewController: UITableViewController , UITextFieldDelegate
 {
     
@@ -27,7 +26,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     var mesContrats = [CKRecord]()
     let thisApp = UIApplication.shared.delegate as! AppDelegate
     let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
-    @IBOutlet weak var idLabel: UILabel!
+  // @IBOutlet weak var idLabel: UILabel!
     
     
     // MARK: - OUTLET
@@ -45,11 +44,7 @@ class ContratViewController: UITableViewController , UITextFieldDelegate
     
       //  ------------GESTION USER ID ----------------------------------------------------------------------------------------------------
       //  -----------------------------------------------------------------------------------------------------------------
-  
-    
-    
-    
-    
+ 
     
     // MARK:
     
@@ -235,6 +230,8 @@ alert.addTextField
                                             privateData.save(contrat, completionHandler: { (record, error) -> Void in
                                                 
                                                 if (error != nil) {
+                                                    
+                                                    // ALERTE VIEW ERREUR 
                                                     
                                                     let alert = UIAlertController(title: "Erreur Compte iCloud", message: "Créez un compte iCloud pour pouvoir utiliser le TechniApp.Rendez-vous dans réglage , Compte iCloud                          .\n\(String(describing: error?.localizedDescription))", preferredStyle: .alert)
                                                     
@@ -489,6 +486,9 @@ alert.addTextField
         privateData.perform(query, inZoneWith:nil) {
             (results, error) -> Void in
             if (error != nil) {
+                
+              // si j'ai une erreur j'affiche une alerte View
+                
                 self.alertReso ()
             }
            
@@ -594,7 +594,6 @@ alert.addTextField
         
      //   print("la fonction est lancer ")
         
-        
      if editingStyle == UITableViewCellEditingStyle.delete
          {
         let selectedRecordID = mesContrats[(indexPath as NSIndexPath).row].recordID
@@ -622,7 +621,7 @@ alert.addTextField
         })
     }
         
-          print("la fonction est fini")
+        
         
     }
     

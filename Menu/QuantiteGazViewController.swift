@@ -10,11 +10,6 @@ import UIKit
 
 class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
   
- 
-    
-   
-    
-    
     
     @IBOutlet var contratPicker: UIPickerView!
     @IBOutlet var batimentPicker: UIPickerView!
@@ -22,14 +17,11 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     @IBOutlet var contratTextField: UITextField!
     @IBOutlet var batimentTextfield: UITextField!
     @IBOutlet var typeGazTextfield: UITextField!
-    
     @IBOutlet var bnContrat: UIButton!
-    
-    
-    
-    
-    
     var choixContrats : Array<CKRecord> = []
+    
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -54,12 +46,12 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
   //  @IBAction func typeGazBn(_ sender: Any) {
    // }
     
+    }
     
     
     
     
-    
-        func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         contratPicker.dataSource = self
@@ -113,13 +105,13 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     }
     
     
-    @objc func ContratData ()
+func ContratData ()
     {
         /*
         self.viewWaitCourroies.isHidden = false
         view.bringSubview(toFront: viewWaitCourroies)
  */
-        choixContrats = [CKRecord]()
+       var choixContrats = [CKRecord]()
         
         
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
@@ -134,12 +126,14 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
             (results, error) -> Void in
             
             if let contratRecup = results {
-                self.choixContrats = contratRecup
+                choixContrats = contratRecup
                 
                 DispatchQueue.main.async(execute: { () -> Void in
                     
                     // self.pickerView.reloadData()
-                    self.contratPicker.reloadAllComponents()
+                  //   self.contratPicker.reloadAllComponents()
+                
+                
                     //self.refresh.endRefreshing()
                     //self.viewWaitCourroies.isHidden = true
                 })
@@ -159,4 +153,4 @@ class QuantiteGazViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     }
     */
 
-}
+

@@ -196,28 +196,13 @@
             //view.bringSubview(toFront: viewWait)
             
             listeBatiments = [CKRecord]()
-            
-            
-            
             let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
-            
             let privateData = monContainaire.publicCloudDatabase
-            
             let number = envoiLenomDuContrat
-            
             let predicate = NSPredicate(format: " nomContrats == %@",number)
-            
             let query = CKQuery(recordType: "Batiment", predicate: predicate)
-            
-            //  let customZone = CKRecordZone(zoneName: "Contrats")
-            
-            //  let query = CKQuery(recordType: "Batiment",
-            // predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
-            
+           
             query.sortDescriptors = [NSSortDescriptor(key: "nomBatiment", ascending: true)]
-            
-            
-            
             privateData.perform(query, inZoneWith:nil) {
                 (results, error) -> Void in 
                 
@@ -226,16 +211,10 @@
                     self.listeBatiments = contratRecup
                     
                     // contratPass = mesContrats(value(forKey: "nomDuContrat")as? String)
-                    
-                    
-                    
                     DispatchQueue.main.async(execute: { () -> Void in
                         
                         self.tableBatiments.reloadData()
-                        
                         self.refresh.endRefreshing()
-                        
-                        
                         self.waitView .isHidden = true
                     })
                 }

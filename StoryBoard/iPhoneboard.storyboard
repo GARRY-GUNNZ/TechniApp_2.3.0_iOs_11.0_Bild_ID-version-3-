@@ -561,7 +561,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="290" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="GXS-9k-j4r">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="GXS-9k-j4r">
                             <rect key="frame" x="0.0" y="0.0" width="290" height="184"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>

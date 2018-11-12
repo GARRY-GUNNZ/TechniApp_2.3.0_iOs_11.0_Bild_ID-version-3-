@@ -24,8 +24,8 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
     //   MARK: - VARRIABLE
     var arrNotes: Array<CKRecord> = []
     var selectedNoteIndex: Int!
-    var Batiment: CKRecord!
-   @objc var nomBatisegu = String ()
+   // var Batiment: CKRecord!
+    @objc var nomBatisegu = String ()
     @objc var instalsegu = String ()
     @objc var contratsegu = String()
     
@@ -409,15 +409,12 @@ class ListNotesViewController: UITableViewController, EditNoteViewControllerDele
             editNoteViewController.delegate = self
             
             let newVC:EditNoteViewController = segue.destination as! EditNoteViewController
-            
-            
             newVC.nomBatiseg = nomBatisegu
             newVC.instalseg = instalsegu
             newVC.contratseg = contratsegu
             
             if let index = selectedNoteIndex {
-                editNoteViewController.editedNoteRecord = arrNotes[index]
-                
+            editNoteViewController.editedNoteRecord = arrNotes[index]
                 
             }
         }

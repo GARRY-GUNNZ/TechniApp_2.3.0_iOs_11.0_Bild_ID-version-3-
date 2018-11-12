@@ -350,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				4A0C70CF208150CA002B4033 /* Menu */,
-				9CC2291A1CBA767E00EFA01A /* Menu Gaz */,
 				9CC229191CBA766C00EFA01A /* Menu Commande */,
 				9CEF51971CC8131F008432EC /* Menu Instalations */,
 				9C2B089E1E95824400654EBC /* OneDrive */,
@@ -460,6 +459,7 @@
 		9CC229191CBA766C00EFA01A /* Menu Commande */ = {
 			isa = PBXGroup;
 			children = (
+				9CC2291A1CBA767E00EFA01A /* Menu Commande Gaz */,
 				9C5ED1B51DE5E4CF0089B56D /* CommandeViewTableViewController.swift */,
 				9C5ED1B71DE5EB100089B56D /* CommandeCoirroiesViewController.swift */,
 				9C6521271DEB7BA300671E28 /* PiecesDetacheeTableViewController.swift */,
@@ -469,14 +469,14 @@
 			name = "Menu Commande";
 			sourceTree = "<group>";
 		};
-		9CC2291A1CBA767E00EFA01A /* Menu Gaz */ = {
+		9CC2291A1CBA767E00EFA01A /* Menu Commande Gaz */ = {
 			isa = PBXGroup;
 			children = (
 				9C9248CD214C4DE900696B0D /* ListeGazTableView.h */,
 				9C9248CE214C4DE900696B0D /* ListeGazTableView.m */,
 				AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */,
 			);
-			name = "Menu Gaz";
+			name = "Menu Commande Gaz";
 			sourceTree = "<group>";
 		};
 		9CC2291B1CBA76A100EFA01A /* Menu Traitement deau */ = {

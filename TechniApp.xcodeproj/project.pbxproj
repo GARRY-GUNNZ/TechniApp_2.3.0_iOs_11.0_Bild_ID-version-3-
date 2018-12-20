@@ -80,6 +80,7 @@
 		9C9421531D529FA2005AB1C7 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421511D529FA2005AB1C7 /* menu.png */; };
 		9C9421541D529FA2005AB1C7 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9421521D529FA2005AB1C7 /* menu@2x.png */; };
 		9C97C1BE1E37FAE300F05479 /* alteva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C97C1BD1E37FAE300F05479 /* alteva.jpg */; };
+		9CA520AD21CC512500106489 /* abstract-architecture-art-370717.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CA520AC21CC512000106489 /* abstract-architecture-art-370717.jpg */; };
 		9CAA42FF209CD07900D87BCA /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAA42FE209CD07900D87BCA /* YoshikoTextField.swift */; };
 		9CB24CE31C18E154007DCC14 /* FiltreViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB24CE21C18E154007DCC14 /* FiltreViewTableViewController.m */; };
 		9CB2B6301D43A85700DB0070 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2B62F1D43A85700DB0070 /* ListNotesViewController.swift */; };
@@ -224,6 +225,7 @@
 		9C9421511D529FA2005AB1C7 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9C9421521D529FA2005AB1C7 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		9C97C1BD1E37FAE300F05479 /* alteva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alteva.jpg; sourceTree = "<group>"; };
+		9CA520AC21CC512000106489 /* abstract-architecture-art-370717.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "abstract-architecture-art-370717.jpg"; sourceTree = "<group>"; };
 		9CAA42FE209CD07900D87BCA /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
 		9CB24CE11C18E154007DCC14 /* FiltreViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiltreViewTableViewController.h; path = ../FiltreViewTableViewController.h; sourceTree = "<group>"; };
 		9CB24CE21C18E154007DCC14 /* FiltreViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiltreViewTableViewController.m; path = ../FiltreViewTableViewController.m; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 		AF6FD2ED1993E13E0005DC27 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9CA520AC21CC512000106489 /* abstract-architecture-art-370717.jpg */,
 				9C31737820A8761D0010082F /* Fond_Batiments.jpg */,
 				9C31737A20A891630010082F /* Fond_Batiments_vide.png */,
 				9C30615F209B264500AA2ACA /* Login_logo.png */,
@@ -855,6 +858,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA520AD21CC512500106489 /* abstract-architecture-art-370717.jpg in Resources */,
 				4A5477B61FC8C4F300942498 /* images-3.jpeg in Resources */,
 				9C25F1111E45F75A0096391D /* banner_TechniApp_bati.png in Resources */,
 				4A9743AF1D646FE600FA7728 /* bridge.jpg in Resources */,

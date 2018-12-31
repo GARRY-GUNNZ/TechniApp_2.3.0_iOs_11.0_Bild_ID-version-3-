@@ -118,6 +118,7 @@
 		AF6FD32F1993E2130005DC27 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6FD3261993E2130005DC27 /* common_bg.png */; };
 		AF6FD3301993E2130005DC27 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6FD3271993E2130005DC27 /* common_bg@2x.png */; };
 		AF873AC621650E7400EDB51A /* QuantiteGazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */; };
+		AFB417EE21DA6A8000D441E4 /* GazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB417ED21DA6A8000D441E4 /* GazViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +274,7 @@
 		AF6FD3261993E2130005DC27 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
 		AF6FD3271993E2130005DC27 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
 		AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuantiteGazViewController.swift; path = Menu/QuantiteGazViewController.swift; sourceTree = "<group>"; };
+		AFB417ED21DA6A8000D441E4 /* GazViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GazViewController.swift; path = Menu/GazViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +479,7 @@
 				9C9248CD214C4DE900696B0D /* ListeGazTableView.h */,
 				9C9248CE214C4DE900696B0D /* ListeGazTableView.m */,
 				AF873AC521650E7400EDB51A /* QuantiteGazViewController.swift */,
+				AFB417ED21DA6A8000D441E4 /* GazViewController.swift */,
 			);
 			name = "Menu Commande Gaz";
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				4AD76ECA1B8FAB06006BA304 /* AddFiltreViewController.m in Sources */,
 				9C8E077F1C3950D700CB58C5 /* TraitementDeauTableViewController.m in Sources */,
 				9CB24CE31C18E154007DCC14 /* FiltreViewTableViewController.m in Sources */,
+				AFB417EE21DA6A8000D441E4 /* GazViewController.swift in Sources */,
 				9C2BE5831E87C23200FF6779 /* AddProfilViewController.swift in Sources */,
 				9C24F1651D60D76F00B3136F /* AddInstallationViewController.m in Sources */,
 				4AC33B491A11453C0044537D /* MBProgressHUD.m in Sources */,

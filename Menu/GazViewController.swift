@@ -12,11 +12,11 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     
     
     @IBOutlet var pickerGaz: UIPickerView!
-    
     @IBOutlet var boutongaz: DesignableButton!
     @IBOutlet var textfiledGaz: UITextField!
     @IBOutlet var segmendGaz: UISegmentedControl!
-    var arrFiltre: Array<CKRecord> = []
+    @IBOutlet weak var tblPieces: UITableView!
+    var arrayGaz: Array<CKRecord> = []
     var choixContrats : Array<CKRecord> = []
     var refresh:UIRefreshControl!
     var  etatCommade : Int!
@@ -56,22 +56,22 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
         boutongaz.setTitle((listePieces["content"] as? String), for: .normal)
         textfiledGaz.text = (listePieces["content"] as? String)
         pickerView.isHidden = false
-       // fetchNotes()
+        listeGaz()
     }
     
     
     //   MARK: Fetch Contrats
     
     
-    @objc func ContratData ()
+    @objc func listeGaz ()
     {
        // self.viewWaitFitre.isHidden = false
        // view.bringSubview(toFront: viewWaitFitre)
-        choixContrats = [CKRecord]()
+        arrayGaz = [CKRecord]()
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
         let privateData = monContainaire.privateCloudDatabase
         //  let customZone = CKRecordZone(zoneName: "Contrats")
-        let query = CKQuery(recordType: "Contrats",
+        let query = CKQuery(recordType: "Gaz",
                             predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
         
         query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
@@ -80,7 +80,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
             (results, error) -> Void in
             
             if let contratRecup = results {
-                self.choixContrats = contratRecup
+                self.arrayGaz = contratRecup
                 
                 DispatchQueue.main.async(execute: { () -> Void in
                     
@@ -131,19 +131,210 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
         
         
         
-        ContratData()
+        contratData()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+     func contratData ()
+    {
+       // self.viewWait.isHidden = false
+        //view.bringSubview(toFront: viewWait)
+        choixContrats = [CKRecord]()
+        let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+        let privateData = monContainaire.privateCloudDatabase
+        //  let customZone = CKRecordZone(zoneName: "Contrats")
+        let query = CKQuery(recordType: "Contrats",
+                            predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        
+        query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
+        privateData.perform(query, inZoneWith:nil) {
+            (results, error) -> Void in
+            
+            if let contratRecup = results {
+                self.choixContrats = contratRecup
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    
+                    // self.pickerGaz.reloadData()
+                    self.pickerGaz.reloadAllComponents()
+                    //self.refresh.endRefreshing()
+                   // self.viewWait.isHidden = true
+                    
+                   // self.listeGaz ()
+                })
+            }
+        }     }
+    
+    
+    // MARK: - TABLEVIEW
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Liste des gaz frigorifique"
+    }
+    /*
+     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+     cell.alpha = 0
+     let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
+     cell.layer.transform = transform
+     
+     UIView.animate(withDuration: 0.4) {
+     cell.alpha = 1
+     // cell.layer.transform = CATransform3DIdentity
+     }
+     }
+     */
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return arrayGaz.count
+    }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        if arrayGaz.count == 0 {
+            return cell
+        }
+        /// bouton a commander //////////////////////
+        let switchDemo = UISwitch ()
+        
+        switchDemo.center = CGPoint(x: 930, y: 104)
+        switchDemo.isOn = true
+        switchDemo.onTintColor = UIColor .brown
+        //  switchDemo.setOn(true, animated: false)
+        switchDemo.tag = indexPath.row;
+        // action button
+        switchDemo.addTarget(self, action: #selector(PiecesDetacheeTableViewController.switchCommande(_:)), for:.valueChanged )
+        
+        // cell.addSubview(switchDemo)
+        cell.accessoryView = (switchDemo)
+        
+        /////////////////////////////////////////////////////////
+        
+        //let theLabelTitre : UILabel  = self.view.viewWithTag(6) as! UILabel
+        let theLabelInstal : UILabel  = self.view.viewWithTag(2) as! UILabel
+        //let theLabelContrat : UILabel  = self.view.viewWithTag(3) as! UILabel
+       // let imageView : UIImageView  = self.view.viewWithTag(1) as! UIImageView
+        let theLabelBati : UILabel  = self.view.viewWithTag(3) as! UILabel
+       // let textview : UITextView  = self.view.viewWithTag(8) as! UITextView
+        let theLabelDate : UILabel  = self.view.viewWithTag(10) as! UILabel
+        let thetextfieldMarque : UITextField = self.view.viewWithTag(11) as! UITextField
+        let thetextfieldReference : UITextField = self.view.viewWithTag(12) as! UITextField
+        //let thetextfielpuissance : UITextField = self.view.viewWithTag(13) as! UITextField
+        
+        
+        
+        let listePieces = arrayGaz[(indexPath as NSIndexPath).row]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy, hh:mm"
+        theLabelDate.text = dateFormatter.string(from: listePieces.value(forKey: "noteEditedDate") as! Date)
+        
+      
+        theLabelInstal.text = listePieces["nomInstal"] as? String
+        theLabelBati.text = listePieces["nomBati"] as? String
+      
+        thetextfieldMarque.text = listePieces["marque"]as? String
+        thetextfieldReference.text = listePieces["reference"] as? String
+        
+        
+       /* format date et type de gaz
+        
+        typeGaz.text = [NSString stringWithFormat:@"%@ | %@ Kg",
+            instalations[@"typeGaz"], instalations[@"quantite"]];
+        
+        dateControl.text=[[self sessionDateFormatter] stringFromDate:instalations[@"date"]];
+        
+        */
+        
+        ////////////////////////////////
+        
+        if ((listePieces.value(forKeyPath: "EtatComande") as? integer_t) != 1)
+            
+        {
+            switchDemo.setOn(false, animated: true)
+            
+        }
+            
+        else
+        {
+            switchDemo .setOn(true, animated: true)
+        }
+        
+        
+        return cell
+    }
+    
+    
+    
+    @objc func switchCommande(_ sender: UISwitch){
+        
+        let switchh = sender
+        if (sender.isOn == true){
+            
+            //print(sender.tag)
+            
+            let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+            let publicDB = monContainaire.publicCloudDatabase
+            let switchAction: CKRecord = self.arrayGaz[switchh.tag]
+            let etat = "en commande"
+            switchAction.setValue(etat, forKey: "Etat")
+            switchAction.setValue(1, forKey: "EtatComande")
+            publicDB.save(switchAction, completionHandler: { (record, error) -> Void in
+                
+                
+                if (error != nil) {
+                    print("error switch en commande ")
+                }
+                OperationQueue.main.addOperation({ () -> Void in
+                    //self.viewWait.isHidden = true
+                    // self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    //print("ok")
+                    //print(self.arrNotes)
+                    // self.fetchNotes()
+                    //self.tblPieces.reloadData()
+                    
+                })
+            })
+        }
+        else {
+            
+            //  print(sender.tag)
+            let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
+            let publicDB = monContainaire.publicCloudDatabase
+            let switchAction: CKRecord = self.arrayGaz[switchh.tag]
+            let etats = "en Stock"
+            switchAction.setValue(etats, forKey: "Etat")
+            switchAction.setValue(0, forKey: "EtatComande")
+            publicDB.save(switchAction, completionHandler: { (record, error) -> Void in
+                if (error != nil) {
+                    print("error switch en stock")
+                }
+                OperationQueue.main.addOperation({ () -> Void in
+                    //self.viewWait.isHidden = true
+                    // self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    // print("ok")
+                    // print(self.arrNotes)
+                   // self.listeGaz()
+                    // self.tblPieces.reloadData()
+                  //  self.alertReception()
+                })})}}
+    
+    
+    
+    
+    
+    
 
 }

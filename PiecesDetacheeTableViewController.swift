@@ -81,7 +81,7 @@ override func viewDidLoad() {
             refresh.addTarget(self, action:#selector(PiecesDetacheeTableViewController.fetchNotes), for: .valueChanged)
             self.tblPieces.addSubview(refresh)
             */
-           ContratData ()
+           contratData ()
     
         }
         
@@ -93,7 +93,7 @@ override func didReceiveMemoryWarning() {
     //   MARK: Fetch Contrats
     
     
-    @objc func ContratData ()
+    @objc func contratData ()
     {
         self.viewWait.isHidden = false
         view.bringSubview(toFront: viewWait)

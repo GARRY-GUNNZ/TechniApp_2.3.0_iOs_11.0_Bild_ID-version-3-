@@ -16,6 +16,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     @IBOutlet var textfiledGaz: UITextField!
     @IBOutlet var segmendGaz: UISegmentedControl!
     @IBOutlet weak var tblPieces: UITableView!
+    @IBOutlet weak var viewWait: UIView!
     var arrayGaz: Array<CKRecord> = []
     var choixContrats : Array<CKRecord> = []
     var refresh:UIRefreshControl!
@@ -57,6 +58,8 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
         textfiledGaz.text = (listePieces["content"] as? String)
         pickerView.isHidden = false
         listeGaz()
+        print( arrayGaz)
+        
     }
     
     
@@ -65,16 +68,27 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     
     @objc func listeGaz ()
     {
-       // self.viewWaitFitre.isHidden = false
+       self.viewWait.isHidden = false
        // view.bringSubview(toFront: viewWaitFitre)
         arrayGaz = [CKRecord]()
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
-        let privateData = monContainaire.privateCloudDatabase
+        let privateData = monContainaire.publicCloudDatabase
         //  let customZone = CKRecordZone(zoneName: "Contrats")
-        let query = CKQuery(recordType: "Gaz",
-                            predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
         
-        query.sortDescriptors = [NSSortDescriptor(key: "content", ascending: false)]
+        let etat = "En stock"
+        let cont = textfiledGaz.text
+        
+        let predicate = NSPredicate (format: "(Etat == %@) AND (nomContrat == %@)",etat,cont!)
+        /*(arrNotes as NSArray).filteredArrayUsingPredicate()*/
+        // let predicate = NSPredicate (format: "nomBati == %@ ",nomBatisegu )
+        // NSPredicate predicate = nil;
+        // let predicate = NSPredicate (format: "Etat == %@ ",number)
+        
+        let query = CKQuery(recordType: "Gaz", predicate: predicate)
+       // query.sortDescriptors = [NSSortDescriptor(key: "nomBati", ascending: true)]
+        
+        
+        
         
         privateData.perform(query, inZoneWith:nil) {
             (results, error) -> Void in
@@ -85,34 +99,14 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
                 DispatchQueue.main.async(execute: { () -> Void in
                     
                     // self.pickerView.reloadData()
-                    self.pickerGaz.reloadAllComponents()
+                   self.tblPieces.reloadData()
+                    self.tblPieces.isHidden = false
                     //self.refresh.endRefreshing()
-                   // self.viewWaitFitre.isHidden = true
+                   self.viewWait.isHidden = true
                 })
-            }
-        }     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            } else {
+                print(self.description)
+            }            }     }
     
     
 
@@ -138,7 +132,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
 
      func contratData ()
     {
-       // self.viewWait.isHidden = false
+      self.viewWait.isHidden = false
         //view.bringSubview(toFront: viewWait)
         choixContrats = [CKRecord]()
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
@@ -159,7 +153,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
                     // self.pickerGaz.reloadData()
                     self.pickerGaz.reloadAllComponents()
                     //self.refresh.endRefreshing()
-                   // self.viewWait.isHidden = true
+                   self.viewWait.isHidden = true
                     
                    // self.listeGaz ()
                 })
@@ -170,7 +164,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     // MARK: - TABLEVIEW
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 98
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -196,6 +190,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return arrayGaz.count
+        print(arrayGaz.count)
     }
     
     
@@ -230,23 +225,23 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
         let theLabelBati : UILabel  = self.view.viewWithTag(3) as! UILabel
        // let textview : UITextView  = self.view.viewWithTag(8) as! UITextView
         let theLabelDate : UILabel  = self.view.viewWithTag(10) as! UILabel
-        let thetextfieldMarque : UITextField = self.view.viewWithTag(11) as! UITextField
-        let thetextfieldReference : UITextField = self.view.viewWithTag(12) as! UITextField
-        //let thetextfielpuissance : UITextField = self.view.viewWithTag(13) as! UITextField
+      //  let thetextfieldMarque : UITextField = self.view.viewWithTag(11) as! UITextField
+        let thetextfieldtypedegaz : UILabel = self.view.viewWithTag(12) as! UILabel
+        let quantité : UILabel = self.view.viewWithTag(13) as! UILabel
         
         
         
         let listePieces = arrayGaz[(indexPath as NSIndexPath).row]
-        let dateFormatter = DateFormatter()
+       let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy, hh:mm"
-        theLabelDate.text = dateFormatter.string(from: listePieces.value(forKey: "noteEditedDate") as! Date)
+       theLabelDate.text = dateFormatter.string(from: listePieces.value(forKey: "date") as! Date)
         
-      
+         quantité.text = listePieces["quantite"]as? String
         theLabelInstal.text = listePieces["nomInstal"] as? String
         theLabelBati.text = listePieces["nomBati"] as? String
       
-        thetextfieldMarque.text = listePieces["marque"]as? String
-        thetextfieldReference.text = listePieces["reference"] as? String
+       // thetextfieldMarque.text = listePieces["marque"]as? String
+        thetextfieldtypedegaz.text = listePieces["typeGaz"] as? String
         
         
        /* format date et type de gaz

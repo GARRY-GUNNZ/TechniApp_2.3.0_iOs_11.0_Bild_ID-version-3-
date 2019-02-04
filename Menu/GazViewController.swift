@@ -14,7 +14,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     @IBOutlet var pickerGaz: UIPickerView!
     @IBOutlet var boutongaz: DesignableButton!
     @IBOutlet var textfiledGaz: UITextField!
-    @IBOutlet var segmendGaz: UISegmentedControl!
+    //@IBOutlet var segmendGaz: UISegmentedControl!
     @IBOutlet weak var tblPieces: UITableView!
     @IBOutlet weak var viewWait: UIView!
     var arrayGaz: Array<CKRecord> = []
@@ -68,7 +68,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
     
     @objc func listeGaz ()
     {
-       self.viewWait.isHidden = false
+      // self.viewWait.isHidden = false
        // view.bringSubview(toFront: viewWaitFitre)
         arrayGaz = [CKRecord]()
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
@@ -102,7 +102,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
                    self.tblPieces.reloadData()
                     self.tblPieces.isHidden = false
                     //self.refresh.endRefreshing()
-                   self.viewWait.isHidden = true
+                 //  self.viewWait.isHidden = true
                 })
             } else {
                 print(self.description)
@@ -132,7 +132,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
 
      func contratData ()
     {
-      self.viewWait.isHidden = false
+  //    self.viewWait.isHidden = false
         //view.bringSubview(toFront: viewWait)
         choixContrats = [CKRecord]()
         let monContainaire = CKContainer.init(identifier: "iCloud.kerck.TechniApp")
@@ -153,7 +153,7 @@ class GazViewController: UITableViewController,UIPickerViewDelegate,UIPickerView
                     // self.pickerGaz.reloadData()
                     self.pickerGaz.reloadAllComponents()
                     //self.refresh.endRefreshing()
-                   self.viewWait.isHidden = true
+                 //  self.viewWait.isHidden = true
                     
                    // self.listeGaz ()
                 })
